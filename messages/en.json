@@ -1,0 +1,21 @@
+{
+  "Index": {
+    "opening": "Welcome to Che Commerce Website"
+  },
+  "Navigation": {
+    "welcome": "welcome {name}",
+    "home": "Home",
+    "orders": "Orders",
+    "categories": "Categories",
+    "user": "User",
+    "account_setting": "Account Setting",
+    "language": "Language",
+    "currency": "Currency",
+    "cart": "Cart",
+    "contact_us": "Contact Us"
+  },
+  "NotFound": {
+    "not_found": "Page Not Found",
+    "back_to_home": "Back to Home"
+  }
+}

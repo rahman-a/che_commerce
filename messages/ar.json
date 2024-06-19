@@ -1,0 +1,21 @@
+{
+  "Index": {
+    "opening": "مرحباً بك فى متجر شًىً"
+  },
+  "Navigation": {
+    "welcome": "مرحباً {name}",
+    "home": "الـرئـيـسـيـة",
+    "orders": "الطلبات",
+    "categories": "التصنيفات",
+    "user": "المستخدم",
+    "account_setting": "إعدادات الحساب",
+    "language": "اللغة",
+    "currency": "العملة",
+    "cart": "السلة",
+    "contact_us": "تواصل معنا"
+  },
+  "NotFound": {
+    "not_found": "الصفحة غير موجودة",
+    "back_to_home": "العودة للصفحة للرئيسية"
+  }
+}
