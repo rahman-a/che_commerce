@@ -17,7 +17,7 @@ export default function Footer({}: Props) {
       <section className='flex flex-col items-center space-y-5 md:space-y-0 px-5 py-2'>
         <div
           className='flex items-center justify-between flex-col md:flex-row 
-        w-full h-full space-y-5 md:space-y-0 rtl:flex-row-reverse'
+        w-full h-full space-y-5 md:space-y-0 rtl:md:flex-row-reverse'
         >
           <div className='flex flex-col items-center justify-between space-y-2'>
             <p className='flex items-center justify-center text-sm md:text-lg font-bold'>
