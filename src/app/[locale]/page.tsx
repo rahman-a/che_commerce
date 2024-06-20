@@ -1,3 +1,4 @@
+import LanguageChanger from '@/components/Language-Changer'
 import { Logo } from '@/icons'
 import { useTranslations } from 'next-intl'
 
@@ -9,6 +10,7 @@ export default function Home() {
         {t('opening')}
       </h1>
       <Logo className='w-48 h-48' />
+      <LanguageChanger />
     </main>
   )
 }

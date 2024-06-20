@@ -3,7 +3,7 @@
     "opening": "Welcome to Che Commerce Website"
   },
   "Navigation": {
-    "welcome": "welcome {name}",
+    "welcome": "Welcome {name}",
     "home": "Home",
     "orders": "Orders",
     "categories": "Categories",
@@ -12,7 +12,11 @@
     "language": "Language",
     "currency": "Currency",
     "cart": "Cart",
-    "contact_us": "Contact Us"
+    "contact_us": "Contact Us",
+    "or": "or",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign up"
   },
   "NotFound": {
     "not_found": "Page Not Found",

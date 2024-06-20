@@ -12,7 +12,11 @@
     "language": "اللغة",
     "currency": "العملة",
     "cart": "السلة",
-    "contact_us": "تواصل معنا"
+    "contact_us": "تواصل معنا",
+    "or": "أو",
+    "logout": "خروج",
+    "login": "تسجيل دخول",
+    "signup": "إنشاء حساب"
   },
   "NotFound": {
     "not_found": "الصفحة غير موجودة",

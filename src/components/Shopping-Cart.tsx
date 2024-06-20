@@ -13,7 +13,7 @@ export default function ShoppingCart(props: IShoppingCartProps) {
       >
         <span className='text-secondary text-sm font-semibold'>2</span>
       </div>
-      <CartIcon size={28} />
+      <CartIcon size={26} />
     </Link>
   )
 }
