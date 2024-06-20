@@ -40,3 +40,11 @@
     @apply border-border;
   }
 }
+
+.main-footer::before {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 100%;
+  background-color: hsl(var(--primary));
+}

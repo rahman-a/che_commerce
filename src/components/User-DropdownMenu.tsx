@@ -25,18 +25,18 @@ export default function UserDropdownMenu({}: Props) {
       <DropdownMenuContent>
         <div>
           <DropdownMenuLabel>
-            <span className='text-secondary'>
+            <p className='text-secondary text-center w-full'>
               {t('welcome', {
                 name: locale === 'en' ? 'Abdelaziz' : 'عبد العزيز',
               })}
-            </span>
+            </p>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
             <LinkItem
               text={t('account_setting')}
               url='/setting'
-              className='[&>span]:text-sm'
+              className='[&>span]:text-sm rtl:flex-row-reverse !justify-start w-full'
             >
               <UserIcon className='text-primary w-6 h-6' />
             </LinkItem>
@@ -45,13 +45,13 @@ export default function UserDropdownMenu({}: Props) {
             <LinkItem
               text={t('orders')}
               url='/orders'
-              className='[&>span]:text-sm'
+              className='[&>span]:text-sm rtl:flex-row-reverse !justify-start w-full'
             >
               <OrdersIcon className='text-primary w-6 h-6' />
             </LinkItem>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <LogoutBtn className='[&>span]:text-sm' />
+            <LogoutBtn className='[&>span]:text-sm rtl:flex-row-reverse !justify-start w-full' />
           </DropdownMenuItem>
         </div>
       </DropdownMenuContent>

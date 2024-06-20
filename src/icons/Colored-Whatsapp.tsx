@@ -2,7 +2,7 @@ import React from 'react'
 
 type SVGComponentProps = React.SVGProps<SVGSVGElement>
 
-export default function ColoredWhatsapp(props: SVGComponentProps) {
+export function ColoredWhatsapp(props: SVGComponentProps) {
   return (
     <svg
       width='1em'

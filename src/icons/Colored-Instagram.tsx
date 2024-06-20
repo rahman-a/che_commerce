@@ -2,7 +2,7 @@ import React from 'react'
 
 type SVGComponentProps = React.SVGProps<SVGSVGElement>
 
-export default function ColoredInstagram(props: SVGComponentProps) {
+export function ColoredInstagram(props: SVGComponentProps) {
   return (
     <svg
       width='1em'
