@@ -18,6 +18,11 @@
     "login": "Login",
     "signup": "Sign up"
   },
+  "Footer": {
+    "payment_methods": "Payment Methods",
+    "contact_us": "Contact Us",
+    "all_rights_reserved": "All rights reserved"
+  },
   "NotFound": {
     "not_found": "Page Not Found",
     "back_to_home": "Back to Home"

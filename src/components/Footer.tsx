@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import VisaImage from '../images/visa.webp'
 import MastercardImage from '../images/mastercard.png'
 import knetImage from '../images/knet.png'
@@ -10,6 +11,7 @@ import { ColoredInstagram, ColoredWhatsapp } from '../icons'
 type Props = {}
 
 export default function Footer({}: Props) {
+  const t = useTranslations('Footer')
   return (
     <footer className='h-28 w-full main-footer'>
       <section className='flex flex-col items-center space-y-5 md:space-y-0 px-5 py-2'>
@@ -19,7 +21,7 @@ export default function Footer({}: Props) {
         >
           <div className='flex flex-col items-center justify-between space-y-2'>
             <p className='flex items-center justify-center text-sm md:text-lg font-bold'>
-              Payment Methods
+              {t('payment_methods')}
             </p>
             <div className='flex items-center space-x-2'>
               <Image
@@ -65,7 +67,7 @@ export default function Footer({}: Props) {
           </div>
           <div className='flex flex-col items-center justify-center space-y-2'>
             <p className='flex items-center justify-center text-sm md:text-lg font-bold'>
-              Contact us
+              {t('contact_us')}
             </p>
             <div className='flex items-center space-x-8 rtl:space-x-0'>
               <a href='/' className='rtl:ml-8'>
@@ -78,7 +80,7 @@ export default function Footer({}: Props) {
           </div>
         </div>
         <div className='flex items-center justify-center md:translate-x-10'>
-          <p className=' text-lg'>All rights reserved &copy;</p>
+          <p className=' text-lg'>{t('all_rights_reserved')}&copy;</p>
         </div>
       </section>
     </footer>

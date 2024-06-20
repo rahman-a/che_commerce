@@ -18,6 +18,11 @@
     "login": "تسجيل دخول",
     "signup": "إنشاء حساب"
   },
+  "Footer": {
+    "payment_methods": "طرق الدفع",
+    "contact_us": "تواصل معنا",
+    "all_rights_reserved": "جميع الحقوق محفوظة"
+  },
   "NotFound": {
     "not_found": "الصفحة غير موجودة",
     "back_to_home": "العودة للصفحة للرئيسية"
