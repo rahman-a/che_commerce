@@ -1,17 +1,13 @@
 import createMiddleware from 'next-intl/middleware'
+import { localePrefix, defaultLocale, locales, pathnames } from './config'
 
 export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'ar'],
-
-  // Used when no locale matches
-  defaultLocale: 'en',
+  defaultLocale,
+  locales,
+  localePrefix,
+  pathnames,
 })
 
-// export const config = {
-//   // Match only internationalized pathnames
-//   matcher: ['/', '/(ar|en)/:path*'],
-// }
 export const config = {
   matcher: [
     // Enable a redirect to a matching locale at the root
@@ -21,6 +17,8 @@ export const config = {
     // all requests that have a locale prefix
     '/(ar|en)/:path*',
 
-    '/((?!api|_next|_vercel|.*\\..*).*)',
+    // Enable redirects that add missing locales
+    // (e.g. `/pathnames` -> `/en/pathnames`)
+    '/((?!_next|_vercel|.*\\..*).*)',
   ],
 }

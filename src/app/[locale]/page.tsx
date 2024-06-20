@@ -1,8 +1,16 @@
 import LanguageChanger from '@/components/Language-Changer'
 import { Logo } from '@/icons'
 import { useTranslations } from 'next-intl'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
-export default function Home() {
+type Props = {
+  params: {
+    locale: string
+  }
+}
+
+export default function Home({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale)
   const t = useTranslations('Index')
   return (
     <main className='flex min-h-screen flex-col items-center space-y-36 p-10 md:p-24'>
