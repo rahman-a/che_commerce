@@ -12,7 +12,7 @@ export function ColoredInstagram(props: SVGComponentProps) {
       xmlns='http://www.w3.org/2000/svg'
       {...props}
     >
-      <g clip-path='url(#clip0_218_7914)'>
+      <g clipPath='url(#clip0_218_7914)'>
         <path
           d='M22.0596 28.3149L6.65408 28.3295C3.26486 28.3326 0.489559 25.5627 0.485707 22.1735L0.471072 6.76797C0.467991 3.37876 3.23791 0.60345 6.62712 0.599599L22.0326 0.584964C25.4219 0.581882 28.1972 3.3518 28.201 6.74101L28.2157 22.1465C28.2195 25.5365 25.4488 28.3118 22.0596 28.3149Z'
           fill='url(#paint0_radial_218_7914)'
@@ -43,13 +43,13 @@ export function ColoredInstagram(props: SVGComponentProps) {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(10.7851 28.3496) scale(34.5846 34.5846)'
         >
-          <stop stop-color='#FFDD55' />
-          <stop offset='0.328' stop-color='#FF543F' />
-          <stop offset='0.348' stop-color='#FC5245' />
-          <stop offset='0.504' stop-color='#E64771' />
-          <stop offset='0.643' stop-color='#D53E91' />
-          <stop offset='0.761' stop-color='#CC39A4' />
-          <stop offset='0.841' stop-color='#C837AB' />
+          <stop stopColor='#FFDD55' />
+          <stop offset='0.328' stopColor='#FF543F' />
+          <stop offset='0.348' stopColor='#FC5245' />
+          <stop offset='0.504' stopColor='#E64771' />
+          <stop offset='0.643' stopColor='#D53E91' />
+          <stop offset='0.761' stopColor='#CC39A4' />
+          <stop offset='0.841' stopColor='#C837AB' />
         </radialGradient>
         <radialGradient
           id='paint1_radial_218_7914'
@@ -59,8 +59,8 @@ export function ColoredInstagram(props: SVGComponentProps) {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(4.93559 0.240139) scale(22.9643 15.2318)'
         >
-          <stop stop-color='#4168C9' />
-          <stop offset='0.999' stop-color='#4168C9' stop-opacity='0' />
+          <stop stopColor='#4168C9' />
+          <stop offset='0.999' stopColor='#4168C9' stopOpacity='0' />
         </radialGradient>
         <clipPath id='clip0_218_7914'>
           <rect

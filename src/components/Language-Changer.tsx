@@ -27,7 +27,6 @@ export default function LanguageChanger({ className }: ILanguageChangerProps) {
     ar: 'English',
     en: 'العربية',
   }
-  // change html direction based on locale
   const changeDirection = (locale: Locale) => {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
     router.push('/')
@@ -42,13 +41,13 @@ export default function LanguageChanger({ className }: ILanguageChangerProps) {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={() => changeDirection('ar')}>
-          <div className='flex items-center space-x-2 rtl:flex-row-reverse cursor-pointer'>
+          <div className='flex items-center space-x-2 w-full justify-end cursor-pointer'>
             <p className='rtl:ml-2'>العربية</p>
             <Image src={kwFlag} alt='kuwait Flag' width={24} height={17} />
           </div>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => changeDirection('en')}>
-          <div className='flex items-center space-x-2 rtl:flex-row-reverse cursor-pointer'>
+          <div className='flex items-center space-x-2 w-full justify-end cursor-pointer'>
             <p className='rtl:ml-2'>English</p>
             <Image src={usFlag} alt='US Flag' width={24} height={17} />
           </div>
