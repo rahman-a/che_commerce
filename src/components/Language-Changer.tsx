@@ -11,6 +11,9 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
+import kwFlag from '../images/flag_of_kw.png'
+import usFlag from '../images/flag_of_usa.png'
+import Image from 'next/image'
 
 export interface ILanguageChangerProps {
   className?: string
@@ -38,11 +41,17 @@ export default function LanguageChanger({ className }: ILanguageChangerProps) {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem onClick={() => changeDirection('en')}>
-          English
-        </DropdownMenuItem>
         <DropdownMenuItem onClick={() => changeDirection('ar')}>
-          العربية
+          <div className='flex items-center space-x-2 rtl:flex-row-reverse cursor-pointer'>
+            <p className='rtl:ml-2'>العربية</p>
+            <Image src={kwFlag} alt='kuwait Flag' width={24} height={17} />
+          </div>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => changeDirection('en')}>
+          <div className='flex items-center space-x-2 rtl:flex-row-reverse cursor-pointer'>
+            <p className='rtl:ml-2'>English</p>
+            <Image src={usFlag} alt='US Flag' width={24} height={17} />
+          </div>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
