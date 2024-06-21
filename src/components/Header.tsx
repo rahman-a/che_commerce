@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 import LinkItem from './Link-Item'
 import { Home as HomeIcon, Category as CategoryIcon } from '../icons'
 import UserDropdownMenu from './User-DropdownMenu'
+import LanguageChanger from './Language-Changer'
 export interface IHeaderProps {}
 
 export default function Header(props: IHeaderProps) {
@@ -43,8 +44,9 @@ export default function Header(props: IHeaderProps) {
             <CategoryIcon className='w-6 h-6' />
           </LinkItem>
         </nav>
-        <div className='hidden md:flex space-x-5 '>
-          <div className='w-[0.1rem] h-10 my-3'></div>
+        <div className='hidden md:flex items-center justify-between space-x-5 rtl:flex-row-reverse'>
+          <LanguageChanger className='flex' />
+          <div className='w-[0.1rem] h-10 my-3 bg-black'></div>
           <Link href='/'>
             <Logo className='w-16 h-16' />
           </Link>

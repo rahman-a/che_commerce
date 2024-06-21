@@ -18,6 +18,10 @@
     "login": "Login",
     "signup": "Sign up"
   },
+  "Slider": {
+    "more_than": "More than just",
+    "a_clause": "A Clause"
+  },
   "Footer": {
     "payment_methods": "Payment Methods",
     "contact_us": "Contact Us",

@@ -2,11 +2,14 @@
 import * as React from 'react'
 import { useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import { cn } from '@/lib/utils'
 
-export interface ILanguageChangerProps {}
+export interface ILanguageChangerProps {
+  className?: string
+}
 type Locale = 'en' | 'ar'
 
-export default function LanguageChanger(props: ILanguageChangerProps) {
+export default function LanguageChanger({ className }: ILanguageChangerProps) {
   const router = useRouter()
   const locale = useLocale() as Locale
   const language = {
@@ -22,7 +25,10 @@ export default function LanguageChanger(props: ILanguageChangerProps) {
     router.refresh()
   }
   return (
-    <button className='bg-primary px-1 rounded-sm' onClick={changeDirection}>
+    <button
+      className={cn('bg-primary px-1 rounded-sm', className)}
+      onClick={changeDirection}
+    >
       {language[locale]}
     </button>
   )

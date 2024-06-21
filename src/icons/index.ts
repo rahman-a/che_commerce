@@ -1,4 +1,5 @@
 export * from './Logo'
+export * from './Logo-Transparent'
 export * from './Menu-Ham'
 export * from './Orders'
 export * from './Cart'

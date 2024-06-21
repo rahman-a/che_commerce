@@ -18,6 +18,10 @@
     "login": "تسجيل دخول",
     "signup": "إنشاء حساب"
   },
+  "Slider": {
+    "more_than": "أكثر من مجرد",
+    "a_clause": "عباية"
+  },
   "Footer": {
     "payment_methods": "طرق الدفع",
     "contact_us": "تواصل معنا",
