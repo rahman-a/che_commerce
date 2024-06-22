@@ -1,6 +1,6 @@
 {
-  "Index": {
-    "opening": "Welcome to Che Commerce Website"
+  "General": {
+    "kw": "kw"
   },
   "Navigation": {
     "welcome": "Welcome {name}",
@@ -20,7 +20,23 @@
   },
   "Slider": {
     "more_than": "More than just",
-    "a_clause": "A Clause"
+    "a_clause": "Abaya"
+  },
+  "Main_Page": {
+    "categories": "Categories",
+    "newest": "Newest",
+    "best_selling": "Best Selling",
+    "trending": "Trending",
+    "abaya": "Abaya",
+    "abayas": "Abayas",
+    "blank": "Blank",
+    "embroidery": "Embroidery",
+    "practical": "Practical",
+    "occasions": "Occasions",
+    "shak": "Shak",
+    "underwear": "Underwear",
+    "white_abaya": "White Abaya",
+    "special_design": "Our Special Design"
   },
   "Footer": {
     "payment_methods": "Payment Methods",

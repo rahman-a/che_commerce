@@ -1,6 +1,6 @@
 {
-  "Index": {
-    "opening": "مرحباً بك فى متجر شًىً"
+  "General": {
+    "kw": "د.ك"
   },
   "Navigation": {
     "welcome": "مرحباً {name}",
@@ -21,6 +21,22 @@
   "Slider": {
     "more_than": "أكثر من مجرد",
     "a_clause": "عباية"
+  },
+  "Main_Page": {
+    "categories": "التصنيفات",
+    "newest": "الأحدث",
+    "best_selling": "الأكثر مبيعاً",
+    "trending": "رائج الآن",
+    "abaya": "عباية",
+    "abayas": "عبايات",
+    "blank": "سادة",
+    "embroidery": "التطريز",
+    "practical": "العملية",
+    "occasions": "المناسبات",
+    "shak": "الشك",
+    "underwear": "داخلية",
+    "white_abaya": "عبايه بيضاء",
+    "special_design": "التصيميم الخاص بنا"
   },
   "Footer": {
     "payment_methods": "طرق الدفع",

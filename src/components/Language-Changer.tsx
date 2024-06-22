@@ -35,9 +35,9 @@ export default function LanguageChanger({ className }: ILanguageChangerProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <button className={cn('bg-primary px-1 rounded-sm', className)}>
+        <p className={cn('bg-primary px-1 rounded-sm', className)}>
           {language[locale]}
-        </button>
+        </p>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={() => changeDirection('ar')}>
