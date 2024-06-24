@@ -14,7 +14,7 @@ export default function SizesSlider({}: Props) {
       opts={{
         align: 'start',
       }}
-      className='w-full max-w-sm'
+      className='w-full max-w-sm -translate-x-5'
     >
       <CarouselContent>
         {Array.from({ length: 20 }).map((_, index) => (
