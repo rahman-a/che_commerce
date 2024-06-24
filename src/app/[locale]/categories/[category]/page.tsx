@@ -8,11 +8,17 @@ import ProductCard from '@/components/Product-Card'
 import { products } from '@/demo/products'
 import Link from 'next/link'
 
-type Props = {}
+type Props = {
+  params: {
+    locale: string
+    category: string
+  }
+}
 
-export default function Categories({}: Props) {
+export default function Category({ params }: Props) {
   const t = useTranslations('Main_Page')
   const locale = useLocale()
+  const { category } = params
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10'>
       <div className='flex items-center'>
@@ -21,7 +27,7 @@ export default function Categories({}: Props) {
           className='absolute top-2 left-48 md:left-56 flex items-center justify-center text-lg md:text-xl font-bold 
       space-x-1 rtl:flex-row-reverse rtl:space-x-0 rtl:left-auto rtl:right-48 md:rtl:right-56'
         >
-          <span className='text-secondary rtl:mr-1'>{t('embroidery')}</span>
+          <span className='text-secondary rtl:mr-1'>{t(category)}</span>
           <span>{t('abayas')}</span>
         </h2>
       </div>

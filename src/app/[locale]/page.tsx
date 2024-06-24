@@ -26,12 +26,12 @@ export default function Home({ params: { locale } }: Props) {
           className='w-full grid grid-rows-6 sm:grid-rows-3 lg:grid-rows-2 
         grid-flow-col gap-5 place-items-center'
         >
-          <CategoryCard category={t('blank')} />
-          <CategoryCard category={t('embroidery')} />
-          <CategoryCard category={t('practical')} />
-          <CategoryCard category={t('occasions')} />
-          <CategoryCard category={t('shak')} />
-          <CategoryCard category={t('underwear')} />
+          <CategoryCard category='blank' />
+          <CategoryCard category='embroidery' />
+          <CategoryCard category='practical' />
+          <CategoryCard category='occasions' />
+          <CategoryCard category='shak' />
+          <CategoryCard category='underwear' />
         </div>
       </section>
       <section
