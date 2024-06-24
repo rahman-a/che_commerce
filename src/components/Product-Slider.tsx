@@ -15,6 +15,7 @@ import SliderImage from './Slider-Image'
 import abaya1 from '../images/demo/products/abaya_1.png'
 import abaya2 from '../images/demo/products/abaya_2.png'
 import abaya3 from '../images/demo/products/abaya_3.png'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -46,9 +47,12 @@ export default function ProductSlider({}: Props) {
         <CarouselContent className='h-full'>
           {products.map((product) => (
             <CarouselItem key={product.id} className='h-full'>
-              <div className='relative flex items-center justify-center h-full w-full'>
+              <Link
+                href={`/products/${product.id}`}
+                className='relative flex items-center justify-center h-full w-full'
+              >
                 <SliderImage src={product.src} alt={product.alt} isLogo />
-              </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

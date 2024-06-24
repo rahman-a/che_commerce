@@ -41,6 +41,21 @@
   }
 }
 
+/* .price-range-slider-thumb:after {
+  position: absolute;
+  top: 1.5rem;
+  content: attr(aria-valuenow);
+  font-size: 0.8rem;
+} */
+
+/* .price-range-slider-thumb[aria-label='Minimum']:after {
+  left: 0;
+}
+
+.price-range-slider-thumb[aria-label='Maximum']:after {
+  right: 0;
+} */
+
 .main-footer::before {
   content: '';
   display: block;

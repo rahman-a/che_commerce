@@ -1,13 +1,11 @@
 'use client'
 import * as React from 'react'
 import { useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname, useParams } from 'next/navigation'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
@@ -22,6 +20,8 @@ type Locale = 'en' | 'ar'
 
 export default function LanguageChanger({ className }: ILanguageChangerProps) {
   const router = useRouter()
+  const pathname = usePathname()
+  const params = useParams()
   const locale = useLocale() as Locale
   const language = {
     ar: 'English',
@@ -29,7 +29,11 @@ export default function LanguageChanger({ className }: ILanguageChangerProps) {
   }
   const changeDirection = (locale: Locale) => {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
-    router.push('/')
+    const updatedUrl =
+      pathname === `/${params.locale}`
+        ? '/'
+        : pathname.replace(`/${params.locale}/`, `/${locale}/`)
+    router.push(updatedUrl)
     router.refresh()
   }
   return (

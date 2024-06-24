@@ -18,7 +18,7 @@ export default function UserDropdownMenu({}: Props) {
   const t = useTranslations('Navigation')
   const locale = useLocale()
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger>
         <UserIcon className='w-6 h-6' />
       </DropdownMenuTrigger>

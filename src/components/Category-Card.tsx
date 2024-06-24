@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Logo, StrokeLine } from '../icons'
+import Link from 'next/link'
 type Props = {
   category: string
 }
@@ -8,7 +9,10 @@ type Props = {
 export default function CategoryCard({ category }: Props) {
   const t = useTranslations('Main_Page')
   return (
-    <div className='w-80 h-56 rounded-xl bg-primary p-5 space-y-2'>
+    <Link
+      href='/categories/blank'
+      className='w-80 h-56 rounded-xl bg-primary p-5 space-y-2'
+    >
       <div className='flex flex-col justify-between space-y-2 text-secondary'>
         <Logo className='w-full h-32' />
         <StrokeLine className='w-full' />
@@ -20,6 +24,6 @@ export default function CategoryCard({ category }: Props) {
         <span className='text-secondary rtl:mr-1'>{category}</span>
         <span>{t('abayas')}</span>
       </h2>
-    </div>
+    </Link>
   )
 }

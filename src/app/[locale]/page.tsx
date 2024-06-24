@@ -36,7 +36,7 @@ export default function Home({ params: { locale } }: Props) {
       </section>
       <section
         className='flex flex-col items-center justify-center 
-      w-full md:w-[calc(100vw-5rem)] py-5 px-6 lg:px-14 mt-10 max-w-screen-2xl'
+      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 mt-10 max-w-screen-2xl'
       >
         <MoreProductsSliders />
       </section>

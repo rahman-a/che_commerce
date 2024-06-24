@@ -3,6 +3,7 @@ import React from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { getLangDir } from 'rtl-detect'
 import Autoplay from 'embla-carousel-autoplay'
+import Link from 'next/link'
 
 import abaya1 from '@/images/demo/products/abaya_1.png'
 import abaya2 from '@/images/demo/products/abaya_2.png'
@@ -114,10 +115,10 @@ export default function MoreProductsSliders({}: Props) {
         ]}
         className='w-full'
       >
-        <CarouselContent className='space-x-5 justify-between'>
+        <CarouselContent className='space-x-3 justify-between'>
           {products.map((product, index) => (
-            <CarouselItem key={product.id} className='basis-56'>
-              <div className='p-1'>
+            <CarouselItem key={product.id} className='basis-56 rtl:ml-3'>
+              <Link href='/products/1'>
                 <ProductCard
                   src={product.src.src}
                   alt={product.alt}
@@ -126,7 +127,7 @@ export default function MoreProductsSliders({}: Props) {
                   price={product.price}
                   discount={product.discount}
                 />
-              </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
