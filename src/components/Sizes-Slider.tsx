@@ -1,4 +1,6 @@
 import React from 'react'
+import { useLocale, useTranslations } from 'next-intl'
+import { getLangDir } from 'rtl-detect'
 import {
   Carousel,
   CarouselContent,
@@ -9,12 +11,14 @@ import {
 type Props = {}
 
 export default function SizesSlider({}: Props) {
+  const locale = useLocale()
   return (
     <Carousel
       opts={{
         align: 'start',
+        direction: getLangDir(locale),
       }}
-      className='w-full max-w-sm -translate-x-5'
+      className='w-full max-w-sm -translate-x-5 rtl:translate-x-5 md:rtl:translate-x-0 md:-translate-x-0'
     >
       <CarouselContent>
         {Array.from({ length: 20 }).map((_, index) => (

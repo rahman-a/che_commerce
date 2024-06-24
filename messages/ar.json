@@ -38,6 +38,15 @@
     "white_abaya": "عبايه بيضاء",
     "special_design": "التصيميم الخاص بنا"
   },
+  "Category": {
+    "filter": "فلتر",
+    "sort": "تصنيف بـ",
+    "price_low_high": "السعر: من الأقل للأعلى",
+    "price_high_low": "السعر: من الأعلى للأقل",
+    "price_range": "نطاق السعر",
+    "sizes": "المقاسات",
+    "abaya_types": "نوع العباية"
+  },
   "Footer": {
     "payment_methods": "طرق الدفع",
     "contact_us": "تواصل معنا",

@@ -25,7 +25,7 @@
   "Main_Page": {
     "categories": "Categories",
     "newest": "Newest",
-    "best_selling": "Best Selling",
+    "best_selling": "Best Sellers",
     "trending": "Trending",
     "abaya": "Abaya",
     "abayas": "Abayas",
@@ -37,6 +37,15 @@
     "underwear": "Underwear",
     "white_abaya": "White Abaya",
     "special_design": "Our Special Design"
+  },
+  "Category": {
+    "filter": "Filter",
+    "sort": "Sort By",
+    "price_low_high": "Price: Low to High",
+    "price_high_low": "Price: High to Low",
+    "price_range": "Price Range",
+    "sizes": "The Sizes",
+    "abaya_types": "Abaya Types"
   },
   "Footer": {
     "payment_methods": "Payment Methods",
