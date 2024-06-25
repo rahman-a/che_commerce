@@ -3,7 +3,7 @@ import React from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { getLangDir } from 'rtl-detect'
 import CategoryFilter from '@/components/Category-Filter'
-import CategorySort from '@/components/Category-Sort'
+import SortBy, { SortItem } from '@/components/SortBy'
 import ProductCard from '@/components/Product-Card'
 import { products } from '@/demo/products'
 import Link from 'next/link'
@@ -17,6 +17,7 @@ type Props = {
 
 export default function Category({ params }: Props) {
   const t = useTranslations('Main_Page')
+  const tg = useTranslations('Category')
   const locale = useLocale()
   const { category } = params
   return (
@@ -33,7 +34,12 @@ export default function Category({ params }: Props) {
       </div>
       <section className='flex items-center space-x-5 rtl:space-x-0 py-5'>
         <CategoryFilter />
-        <CategorySort />
+        <SortBy>
+          <SortItem>{tg('price_low_high')}</SortItem>
+          <SortItem>{tg('price_high_low')}</SortItem>
+          <SortItem>{t('newest')}</SortItem>
+          <SortItem>{t('best_selling')}</SortItem>
+        </SortBy>
       </section>
       <section className='grid place-items-center gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 py-5'>
         {products(t).map((product, index) => (
