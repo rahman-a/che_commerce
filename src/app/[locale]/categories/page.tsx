@@ -3,15 +3,18 @@ import React from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { getLangDir } from 'rtl-detect'
 import CategoryFilter from '@/components/Category-Filter'
-import CategorySort from '@/components/Category-Sort'
+import SortBy, { SortItem } from '@/components/SortBy'
 import ProductCard from '@/components/Product-Card'
 import { products } from '@/demo/products'
 import Link from 'next/link'
+import { DropdownMenuItem } from '@radix-ui/react-dropdown-menu'
 
 type Props = {}
 
 export default function Categories({}: Props) {
   const t = useTranslations('Main_Page')
+  const tg = useTranslations('Category')
+  const tm = useTranslations('Main_Page')
   const locale = useLocale()
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10'>
@@ -27,7 +30,12 @@ export default function Categories({}: Props) {
       </div>
       <section className='flex items-center space-x-5 rtl:space-x-0 py-5'>
         <CategoryFilter />
-        <CategorySort />
+        <SortBy>
+          <SortItem>{tg('price_low_high')}</SortItem>
+          <SortItem>{tg('price_high_low')}</SortItem>
+          <SortItem>{tm('newest')}</SortItem>
+          <SortItem>{tm('best_selling')}</SortItem>
+        </SortBy>
       </section>
       <section className='grid place-items-center gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 py-5'>
         {products(t).map((product, index) => (

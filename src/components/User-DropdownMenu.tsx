@@ -35,7 +35,7 @@ export default function UserDropdownMenu({}: Props) {
           <DropdownMenuItem>
             <LinkItem
               text={t('account_setting')}
-              url='/setting'
+              url='/profile'
               className='[&>span]:text-sm rtl:flex-row-reverse !justify-start w-full'
             >
               <UserIcon className='text-primary w-6 h-6' />

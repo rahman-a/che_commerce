@@ -65,7 +65,34 @@
     "product_note_title": "Product Note",
     "subtotal": "Subtotal",
     "product_note_description": "if you have any notes about the product, you can add them here.",
-    "type_note_here": "Type your note here"
+    "type_note_here": "Type your note here",
+    "no_note_found": "No notes found"
+  },
+  "Orders": {
+    "orders": "Orders",
+    "order_number": "Order Number",
+    "order_date": "Order Date",
+    "order_status": "Status",
+    "order_total": "Total",
+    "order_details": "Details",
+    "order_items": "Order Items",
+    "order_quantity": "Quantity",
+    "delivery_date": "Expected Delivery Date",
+    "in_progress": "In Progress",
+    "list_orders_history": "A list of orders history"
+  },
+  "Profile": {
+    "account_info": "Account Information",
+    "address": "Address",
+    "name": "Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "country": "Country",
+    "city": "City",
+    "governorate": "Governorate",
+    "state": "State",
+    "neighborhood": "Neighborhood",
+    "other_details": "Other Details"
   },
   "Footer": {
     "payment_methods": "Payment Methods",
@@ -74,11 +101,12 @@
   },
   "NotFound": {
     "not_found": "Page Not Found",
-    "back_to_home": "Back to Home"
+    "back_to_home": "Home Page"
   },
   "Demo": {
     "product_name": "Golden White Abaya",
     "product_size": "50",
-    "product_type": "embroidery"
+    "product_type": "embroidery",
+    "note_example": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolor ex architecto distinctio odio, laborum vero optio minus pariatur eaque voluptate, libero laudantium totam ratione!"
   }
 }

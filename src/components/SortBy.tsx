@@ -9,11 +9,12 @@ import {
 import { Button } from '@/components/ui/button'
 import { Play } from 'lucide-react'
 
-type Props = {}
+type Props = {
+  children: React.ReactNode
+}
 
-export default function CategorySort({}: Props) {
+export default function SortBy({ children }: Props) {
   const t = useTranslations('Category')
-  const tm = useTranslations('Main_Page')
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
@@ -27,21 +28,10 @@ export default function CategorySort({}: Props) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='min-w-44'>
-        <div className='flex flex-col rtl:items-end'>
-          <DropdownMenuItem>
-            <p>{t('price_low_high')}</p>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <p>{t('price_high_low')}</p>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <p>{tm('newest')}</p>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <p>{tm('best_selling')}</p>
-          </DropdownMenuItem>
-        </div>
+        <div className='flex flex-col rtl:items-end'>{children}</div>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
+
+export { DropdownMenuItem as SortItem }

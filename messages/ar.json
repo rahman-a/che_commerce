@@ -65,7 +65,34 @@
     "product_note_title": "ملحوظة للمنتج",
     "subtotal": "الإجمالى",
     "product_note_description": "إذا كنت تمتلك اى ملحوظة خاصة بطلب المنتج, فاكتبها هنا",
-    "type_note_here": "اكتب الملاحظة هنا"
+    "type_note_here": "اكتب الملاحظة هنا",
+    "no_note_found": "لم يتم العثور على اى ملاحظة"
+  },
+  "Orders": {
+    "orders": "الطلبات",
+    "order_number": "رقم الطلب",
+    "order_date": "تاريخ الطلب",
+    "order_status": "الحالة",
+    "order_total": "الإجمالى",
+    "order_details": "التفاصيل",
+    "order_items": "محتويات الطلب",
+    "order_quantity": "الكمية",
+    "delivery_date": "الوقت المتوقع للتسليم",
+    "in_progress": "قيد العمل",
+    "list_orders_history": "قائمة بتاريخ الطلبات"
+  },
+  "Profile": {
+    "account_info": "معلومات الحساب",
+    "address": "العنوان",
+    "name": "الاسم",
+    "email": "البريد الإلكترونى",
+    "phone": "رقم الهاتف",
+    "country": "الدولة",
+    "city": "المدينة",
+    "governorate": "المحافظة",
+    "state": "الولاية",
+    "neighborhood": "الحى",
+    "other_details": "تفاصيل أخرى"
   },
   "Footer": {
     "payment_methods": "طرق الدفع",
@@ -74,11 +101,12 @@
   },
   "NotFound": {
     "not_found": "الصفحة غير موجودة",
-    "back_to_home": "العودة للصفحة للرئيسية"
+    "back_to_home": "الصفحة للرئيسية"
   },
   "Demo": {
     "product_name": "عباية تطريز ذهبي",
     "product_size": "50",
-    "product_type": "مطرز"
+    "product_type": "مطرز",
+    "note_example": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد"
   }
 }

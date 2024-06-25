@@ -24,9 +24,9 @@ export default function DeleteBtn({ className, btnClassName }: Props) {
         </button>
       </PopoverTrigger>
       <PopoverContent className={cn('w-32', className)}>
-        <div className='flex items-center justify-center space-x-3'>
+        <div className='flex items-center justify-center'>
           <Button variant='destructive'>
-            <Trash className='mr-2 rtl:ml-2 rtl:mr-0 h-4 w-4' />
+            <Trash className='mr-1 rtl:ml-1 rtl:mr-0 h-4 w-4' />
             <span>{t('confirm_delete')}</span>
           </Button>
         </div>

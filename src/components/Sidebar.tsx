@@ -48,7 +48,7 @@ export default function Sidebar(props: ISidebarProps) {
         <footer className='space-y-12'>
           <div className='mt-6'>
             <div className='flex flex-col space-y-5'>
-              <LinkItem text={t('account_setting')} url='/setting'>
+              <LinkItem text={t('account_setting')} url='/profile'>
                 <UserIcon className='text-primary w-6 h-6' />
               </LinkItem>
               <LogoutBtn />

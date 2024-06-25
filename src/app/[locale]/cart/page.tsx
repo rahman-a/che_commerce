@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { getLangDir } from 'rtl-detect'
 import Title from '@/components/Title'
-import CartProductCard from '@/components/Cart-Product-Card'
+import OrderProductCard from '@/components/Order-Product-Card'
 import CartItemsTotal from '@/components/Cart-Items-Total'
 
 export interface ICartProps {
@@ -22,9 +22,9 @@ export default function Cart({ params: { locale } }: ICartProps) {
         {t('cart_items')}&nbsp;:
       </h2>
       <section className='py-5 space-y-5 flex flex-col 2xl:items-center'>
-        <CartProductCard />
-        <CartProductCard />
-        <CartProductCard />
+        <OrderProductCard />
+        <OrderProductCard />
+        <OrderProductCard />
       </section>
       <section className='flex justify-end py-5'>
         <CartItemsTotal />
