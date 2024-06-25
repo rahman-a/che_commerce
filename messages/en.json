@@ -1,6 +1,12 @@
 {
   "General": {
-    "kw": "kw"
+    "kw": "kw",
+    "delete": "delete",
+    "add": "add",
+    "cancel": "cancel",
+    "save": "save",
+    "close": "close",
+    "confirm_delete": "Confirm Delete?"
   },
   "Navigation": {
     "welcome": "Welcome {name}",
@@ -47,6 +53,20 @@
     "sizes": "The Sizes",
     "abaya_types": "Abaya Types"
   },
+  "Cart": {
+    "cart": "Cart",
+    "total": "Total",
+    "checkout": "Checkout",
+    "empty_cart": "Your cart is empty",
+    "continue_shopping": "Continue Shopping",
+    "cart_items": "Cart Items",
+    "coupon": "Coupon",
+    "have_coupon?": "Do you have a coupon?",
+    "product_note_title": "Product Note",
+    "subtotal": "Subtotal",
+    "product_note_description": "if you have any notes about the product, you can add them here.",
+    "type_note_here": "Type your note here"
+  },
   "Footer": {
     "payment_methods": "Payment Methods",
     "contact_us": "Contact Us",
@@ -55,5 +75,10 @@
   "NotFound": {
     "not_found": "Page Not Found",
     "back_to_home": "Back to Home"
+  },
+  "Demo": {
+    "product_name": "Golden White Abaya",
+    "product_size": "50",
+    "product_type": "embroidery"
   }
 }

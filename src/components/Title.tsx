@@ -18,7 +18,7 @@ export default function Title({ title, className, direction }: Props) {
     >
       <h1
         className={cn(
-          'text-3xl font-extrabold -translate-y-3',
+          'w-full text-3xl font-extrabold -translate-y-3 text-end pr-3 rtl:pl-3 rtl:pr-0',
           direction === 'rtl' ? 'pr-8' : 'pl-8'
         )}
       >

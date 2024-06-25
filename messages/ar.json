@@ -1,6 +1,12 @@
 {
   "General": {
-    "kw": "د.ك"
+    "kw": "د.ك",
+    "delete": "حذف",
+    "add": "إضافة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "close": "غلق",
+    "confirm_delete": "تأكيد الحذف"
   },
   "Navigation": {
     "welcome": "مرحباً {name}",
@@ -47,6 +53,20 @@
     "sizes": "المقاسات",
     "abaya_types": "نوع العباية"
   },
+  "Cart": {
+    "cart": "السلة",
+    "total": "المجموع الكلى",
+    "checkout": "إستكمال الشراء",
+    "empty_cart": "السلة فارغة",
+    "continue_shopping": "متابعة التسوق",
+    "cart_items": "محتويات السلة",
+    "coupon": "كود الخصم",
+    "have_coupon?": "هل لديك كوبون خصم؟",
+    "product_note_title": "ملحوظة للمنتج",
+    "subtotal": "الإجمالى",
+    "product_note_description": "إذا كنت تمتلك اى ملحوظة خاصة بطلب المنتج, فاكتبها هنا",
+    "type_note_here": "اكتب الملاحظة هنا"
+  },
   "Footer": {
     "payment_methods": "طرق الدفع",
     "contact_us": "تواصل معنا",
@@ -55,5 +75,10 @@
   "NotFound": {
     "not_found": "الصفحة غير موجودة",
     "back_to_home": "العودة للصفحة للرئيسية"
+  },
+  "Demo": {
+    "product_name": "عباية تطريز ذهبي",
+    "product_size": "50",
+    "product_type": "مطرز"
   }
 }
