@@ -17,8 +17,11 @@ export default function OrderProductRow({}: Props) {
       <TableCell>12</TableCell>
       <TableCell>12/05/2024</TableCell>
       <TableCell>30/05/2024</TableCell>
-      <TableCell>
-        <Badge className='text-secondary' variant='outline'>
+      <TableCell className='p-0'>
+        <Badge
+          className='text-secondary px-1 md:px-2 text-[9px] md:text-xs text-center'
+          variant='outline'
+        >
           {to('in_progress')}
         </Badge>
       </TableCell>

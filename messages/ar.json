@@ -89,10 +89,16 @@
     "phone": "رقم الهاتف",
     "country": "الدولة",
     "city": "المدينة",
+    "region": "المنطقة",
     "governorate": "المحافظة",
     "state": "الولاية",
     "neighborhood": "الحى",
-    "other_details": "تفاصيل أخرى"
+    "other_details": "تفاصيل أخرى",
+    "select_country": "إختر الدولة",
+    "select_city": "إختر المدينة",
+    "select_region": "إختر المنطقة",
+    "select_governorate": "إختر المحافظة",
+    "save_continue": "حفظ ومتابعة"
   },
   "Footer": {
     "payment_methods": "طرق الدفع",

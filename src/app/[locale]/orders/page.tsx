@@ -34,7 +34,7 @@ export default function Cart({ params: { locale } }: ICartProps) {
           <SortItem>{tg('price_high_low')}</SortItem>
         </SortBy>
       </section>
-      <Table>
+      <Table className='text-xs md:text-sm'>
         <TableCaption>{t('list_orders_history')}</TableCaption>
         <TableHeader>
           <TableRow>

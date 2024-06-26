@@ -89,10 +89,16 @@
     "phone": "Phone Number",
     "country": "Country",
     "city": "City",
+    "region": "Region",
     "governorate": "Governorate",
     "state": "State",
     "neighborhood": "Neighborhood",
-    "other_details": "Other Details"
+    "other_details": "Other Details",
+    "select_country": "Select Country",
+    "select_city": "Select City",
+    "select_region": "Select Region",
+    "select_governorate": "Select Governorate",
+    "save_continue": "Save & Continue"
   },
   "Footer": {
     "payment_methods": "Payment Methods",
