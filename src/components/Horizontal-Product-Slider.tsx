@@ -25,7 +25,7 @@ const products = [
   { id: 3, src: abaya3, alt: 'abaya3' },
 ]
 
-export default function ProductSlider({}: Props) {
+export default function HorizontalProductSlider({}: Props) {
   const t = useTranslations('Slider')
   const locale = useLocale()
   return (

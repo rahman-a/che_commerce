@@ -98,7 +98,8 @@
     "select_city": "إختر المدينة",
     "select_region": "إختر المنطقة",
     "select_governorate": "إختر المحافظة",
-    "save_continue": "حفظ ومتابعة"
+    "save_continue": "حفظ ومتابعة",
+    "enter_phone_number": "أدخل رقم الهاتف"
   },
   "Footer": {
     "payment_methods": "طرق الدفع",

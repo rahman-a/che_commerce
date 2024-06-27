@@ -98,7 +98,8 @@
     "select_city": "Select City",
     "select_region": "Select Region",
     "select_governorate": "Select Governorate",
-    "save_continue": "Save & Continue"
+    "save_continue": "Save & Continue",
+    "enter_phone_number": "Enter phone number"
   },
   "Footer": {
     "payment_methods": "Payment Methods",

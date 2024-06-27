@@ -21,7 +21,7 @@ export default function Profile({}: Props) {
         direction={getLangDir(locale)}
         className='[&>h1]:-translate-x-4'
       />
-      <section className='flex md:items-center flex-col md:flex-row space-x-0 md:space-x-5 space-y-8 md:space-y-0 justify-between py-5'>
+      <section className='flex md:items-center flex-col md:flex-row space-x-0 md:space-x-5 space-y-8 md:space-y-0 justify-between pt-8 pb-5'>
         <ProfileInfo />
       </section>
       <Title

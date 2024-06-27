@@ -1,7 +1,7 @@
 import CategoryCard from '@/components/Category-Card'
 import MoreProductsSliders from '@/components/More-Products-Sliders'
 
-import ProductSlider from '@/components/Product-Slider'
+import HorizontalProductSlider from '@/components/Horizontal-Product-Slider'
 import { useTranslations } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 
@@ -16,7 +16,7 @@ export default function Home({ params: { locale } }: Props) {
   const t = useTranslations('Main_Page')
   return (
     <main className='flex min-h-screen flex-col items-center'>
-      <ProductSlider />
+      <HorizontalProductSlider />
       <section
         className='flex flex-col items-center justify-center space-y-10 
        py-5 px-6 lg:px-14 w-full mt-10 max-w-screen-2xl'
