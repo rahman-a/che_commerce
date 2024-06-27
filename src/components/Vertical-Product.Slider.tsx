@@ -26,13 +26,13 @@ export default function VerticalProductSlider({ products }: Props) {
   const locale = useLocale()
 
   React.useEffect(() => {
-    setCurrentSrc(abaya2.src)
+    setCurrentSrc(abaya1.src)
   }, [])
   return (
     <>
       <figure
         className='grow-[2] grid place-content-center 
-      w-48 h-96 md:w-auto md:h-auto translate-x-9 md:translate-x-0'
+      w-48 h-96 md:w-auto md:h-auto'
       >
         <EasyZoomOnHover
           mainImage={{
@@ -56,20 +56,20 @@ export default function VerticalProductSlider({ products }: Props) {
         /> */}
       </figure>
       <Carousel
-        className='min-w-60 h-[calc(100vh-130px)] mt-2 [&>div]:md:relative'
+        className='min-w-28 h-[calc(100vh-130px)] mt-2 [&>div]:md:relative'
         orientation='vertical'
         opts={{
           direction: getLangDir(locale),
         }}
       >
         <CarouselContent
-          className='h-full md:absolute md:inset-y-0 md:left-0 
-        md:-right-4 md:overflow-y-scroll'
+          className='h-full w-full md:absolute md:inset-y-0 
+        md:left-4 md:overflow-y-scroll rtl:right-4 rtl:left-0'
         >
           {products.map((product) => (
             <CarouselItem
               key={product.id}
-              className='grid place-content-center h-full shrink cursor-pointer'
+              className='grid place-content-center h-20 w-full shrink cursor-pointer'
               onClick={() => setCurrentSrc(product.src)}
             >
               <Image

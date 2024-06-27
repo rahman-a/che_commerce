@@ -13,14 +13,14 @@ type Props = {}
 export default function Product({}: Props) {
   const products: Product[] = [
     { id: 1, src: abaya1.src, alt: 'abaya1' },
-    { id: 2, src: abaya2.src, alt: 'abaya2' },
-    { id: 3, src: abaya3.src, alt: 'abaya3' },
-    { id: 4, src: abaya4.src, alt: 'abaya4' },
-    // { id: 5, src: abaya5.src, alt: 'abaya5' },
+    { id: 2, src: abaya1.src, alt: 'abaya2' },
+    { id: 3, src: abaya1.src, alt: 'abaya3' },
+    { id: 4, src: abaya1.src, alt: 'abaya4' },
+    { id: 5, src: abaya1.src, alt: 'abaya5' },
   ]
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-2 sm:px-5 md:p-10'>
-      <section className='flex items-center'>
+    <main className='relative flex min-h-screen flex-col pt-4 px-2 sm:px-5 md:p-10'>
+      <section className='flex items-center rtl:flex-row-reverse'>
         <VerticalProductSlider products={products} />
       </section>
     </main>
