@@ -101,6 +101,25 @@
     "save_continue": "Save & Continue",
     "enter_phone_number": "Enter phone number"
   },
+  "Product": {
+    "free_scarf": "Free Scarf",
+    "with_free_scarf": "With Free Scarf",
+    "classic_abaya": "Classic Abaya",
+    "golden_embroidery_abaya": "Golden Embroidery Abaya",
+    "size": "Size",
+    "small": "Small (sm)",
+    "medium": "Medium (md)",
+    "large": "Large (lg)",
+    "x_large": "X Large (xl)",
+    "select_abaya_size": "Select Abaya Size",
+    "abaya_type": "Abaya Type",
+    "select_abaya_type": "Select Abaya Type",
+    "notes": "Notes",
+    "note_example": "Please inform us if you have any special notes about the product",
+    "example_placeholder": "i want silver embroidery with wider sleeves",
+    "design_details": "Design Details",
+    "add_to_cart": "Add to Cart"
+  },
   "Footer": {
     "payment_methods": "Payment Methods",
     "contact_us": "Contact Us",

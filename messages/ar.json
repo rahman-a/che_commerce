@@ -101,6 +101,25 @@
     "save_continue": "حفظ ومتابعة",
     "enter_phone_number": "أدخل رقم الهاتف"
   },
+  "Product": {
+    "free_scarf": "ملفع مجانى",
+    "with_free_scarf": "مع ملفع مجانى",
+    "classic_abaya": "عباية كلاسيك",
+    "golden_embroidery_abaya": "عباية تطريز ذهبى",
+    "size": "القياس",
+    "small": "صغير (sm)",
+    "medium": "متوسط (md)",
+    "large": "كبير (lg)",
+    "x_large": "كبير جدا (xl)",
+    "select_abaya_size": "إختر مقاس العباية",
+    "abaya_type": "نوع العباية",
+    "select_abaya_type": "أختر نوع العباية",
+    "notes": "ملاحظات",
+    "note_example": "إذا كان لديك ملاحظات عن المنتج يرجى إعلامنا بها",
+    "example_placeholder": "أريد مطرز فضى مع اكمام عريضة",
+    "design_details": "تفاصيل التصميم",
+    "add_to_cart": "أضف للسلة"
+  },
   "Footer": {
     "payment_methods": "طرق الدفع",
     "contact_us": "تواصل معنا",

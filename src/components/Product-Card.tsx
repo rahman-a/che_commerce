@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
+import DiscountBadge from './Discount-Badge'
 type Props = {
   discount?: number
   src: string
@@ -28,9 +29,10 @@ export default function ProductCard({
       <CardContent className='h-full !p-0'>
         <div className='relative flex flex-col items-center justify-between h-full p-1'>
           {discount && (
-            <div className='absolute bg-red-500 text-white rounded-lg top-2 left-2 z-10 px-2'>
-              <p className='tracking-widest'>-{discount}%</p>
-            </div>
+            <DiscountBadge
+              discount={discount}
+              className='absolute top-2 left-2'
+            />
           )}
           <figure className='relative w-full h-3/4 rounded-md overflow-hidden'>
             <Image src={src} alt={alt} fill style={{ objectFit: 'contain' }} />

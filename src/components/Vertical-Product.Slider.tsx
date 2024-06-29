@@ -46,14 +46,6 @@ export default function VerticalProductSlider({ products }: Props) {
           delayTimer={0}
           ref={imageRef}
         />
-        {/* <Image
-          src={currentSrc}
-          alt='abaya'
-          width={270}
-          height={660}
-          className='object-contain'
-          unoptimized
-        /> */}
       </figure>
       <Carousel
         className='min-w-28 h-[calc(100vh-130px)] mt-2 [&>div]:md:relative'
