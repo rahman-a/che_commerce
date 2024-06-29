@@ -16,7 +16,7 @@ export default function ScrollToSection({ section, className }: Props) {
   return (
     <button
       className={cn(
-        `flex items-center justify-center absolute bottom-10 
+        `flex items-center justify-center absolute bottom-20 
         left-2/4 bg-gray-600/50 p-2 rounded-full w-14 h-14 -translate-x-2/4 z-20 text-white`,
         className
       )}
