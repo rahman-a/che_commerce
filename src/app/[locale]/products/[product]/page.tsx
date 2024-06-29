@@ -1,7 +1,7 @@
 import React from 'react'
 import VerticalProductSlider from '@/components/Vertical-Product.Slider'
 import { useTranslations, useLocale } from 'next-intl'
-
+import { ArrowDown } from 'lucide-react'
 import abaya1 from '@/images/demo/products/abaya_1.png'
 // import abaya2 from '@/images/demo/products/abaya_2.png'
 // import abaya3 from '@/images/demo/products/abaya_3.png'
@@ -13,6 +13,7 @@ import DiscountBadge from '@/components/Discount-Badge'
 import Title from '@/components/Title'
 import { getLangDir } from 'rtl-detect'
 import AddToCart from '@/components/Add-To-Cart'
+import ScrollToSection from '@/components/Scroll-To-Section'
 
 type Props = {}
 
@@ -44,8 +45,9 @@ export default function Product({}: Props) {
           <DiscountBadge discount={20} />
         </div>
         <VerticalProductSlider products={products} />
+        <ScrollToSection section='product_info' className='flex md:hidden' />
       </section>
-      <section className='relative'>
+      <section className='relative' id='product_info'>
         <Title
           title={tp('classic_abaya')}
           className='hidden md:flex top-4 [&>h1]:-translate-x-4'
