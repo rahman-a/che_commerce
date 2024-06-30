@@ -1,51 +1,61 @@
 import React from 'react'
 import sizesImage from '@/images/sizes.png'
+import { cn } from '@/lib/utils'
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
-import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogTrigger,
-} from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import Image from 'next/image'
-import { DialogClose } from '@radix-ui/react-dialog'
-import { Button } from './ui/button'
-type Props = {}
+type Props = {
+  className?: string
+  image?: string
+  children?: React.ReactNode
+}
 
-export default function SizesTablePopover(props: Props) {
+export default function SizesTablePopover({
+  className,
+  image,
+  children,
+}: Props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
         <button
-          className='flex items-center justify-center bg-primary 
-               w-8 h-8 p-1 rtl:!mr-3 cursor-pointer text-sm font-bold circle'
+          className={cn(
+            `flex items-center justify-center bg-primary 
+               w-8 h-8 p-1 rtl:!mr-3 cursor-pointer text-sm font-bold circle`,
+            className
+          )}
         >
           ?
         </button>
       </PopoverTrigger>
       <PopoverContent className='p-0'>
-        <ShowImage />
+        {children ? children : <ShowImage image={image} />}
       </PopoverContent>
     </Popover>
   )
 }
 
-export function ShowImage() {
+export function ShowImage({ image }: { image?: string }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <figure className='relative w-96 cursor-pointer'>
-          <Image src={sizesImage} height={495} alt='sizes' unoptimized />
+          <Image
+            src={image ?? sizesImage}
+            height={495}
+            alt='sizes'
+            unoptimized
+          />
         </figure>
       </DialogTrigger>
       <DialogContent className='max-w-screen-lg grid place-content-center p-0'>
         <figure className='relative'>
           <Image
-            src={sizesImage}
+            src={image ?? sizesImage}
             width={1000}
             height={495}
             alt='sizes'

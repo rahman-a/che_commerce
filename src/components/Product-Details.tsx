@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 type Props = {
   className?: string
+  isTitle?: boolean
   description: {
     en: {
       title: string
@@ -15,12 +16,18 @@ type Props = {
   }
 }
 
-export default function ProductDetails({ className, description }: Props) {
+export default function ProductDetails({
+  className,
+  description,
+  isTitle,
+}: Props) {
   const t = useTranslations('Product')
   const locale = useLocale() as 'en' | 'ar'
   return (
     <div className={cn('flex flex-col space-y-3', className)}>
-      <h3 className='text-2xl min-w-fit'>{t('design_details')}:</h3>
+      {isTitle && (
+        <h3 className='text-2xl min-w-fit'>{t('design_details')}:</h3>
+      )}
       <article className='bg-primary p-2 rounded-md'>
         <h4>{description[locale].title}</h4>
         <ul>

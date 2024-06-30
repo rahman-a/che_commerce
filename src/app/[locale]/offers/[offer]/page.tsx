@@ -14,6 +14,7 @@ import Title from '@/components/Title'
 import { getLangDir } from 'rtl-detect'
 import AddToCart from '@/components/Add-To-Cart'
 import ScrollToSection from '@/components/Scroll-To-Section'
+import OfferCollections from '@/components/Offer-Collections'
 
 type Props = {}
 
@@ -32,7 +33,7 @@ export default function Product({}: Props) {
   return (
     <main className='flex min-h-screen flex-col'>
       <Title
-        title={tp('classic_abaya')}
+        title={tp('offer_collection')}
         className='flex md:hidden top-24 [&>h1]:-translate-x-4'
         direction={getLangDir(locale)}
       />
@@ -42,36 +43,22 @@ export default function Product({}: Props) {
             className='p-1 md:px-3'
             text={tp('with_free_scarf')}
           />
-          <DiscountBadge discount={20} />
         </div>
-        <VerticalProductSlider products={products} isThumbnails />
-        <ScrollToSection section='product_info' className='flex md:hidden' />
+        <VerticalProductSlider products={products} isThumbnails isOffer />
+        <ScrollToSection
+          section='offer-collections'
+          className='flex md:hidden'
+        />
       </section>
-      <section className='relative' id='product_info'>
+      <section className='relative'>
         <Title
-          title={tp('classic_abaya')}
+          title={tp('offer_collection')}
           className='hidden md:flex top-4 [&>h1]:-translate-x-4'
           direction={getLangDir(locale)}
         />
-        <div className='pt-4 px-2 sm:px-5 md:p-10'>
-          <h3
-            className='absolute top-2 right-4 md:right-16 rtl:left-4 rtl:md:left-16 rtl:right-auto line-through
-         decoration-red-500 decoration-2 text-2xl'
-          >
-            70 {tg('kw')}
-          </h3>
-          <div className='relative flex items-center justify-between mt-8'>
-            <h3 className='text-2xl md:text-4xl font-bold'>
-              {tp('golden_embroidery_abaya')}
-            </h3>
-            <h3 className='text-2xl md:text-4xl text-secondary font-bold'>
-              70 {tg('kw')}
-            </h3>
-          </div>
-        </div>
       </section>
-      <section className='py-10 pt-4 px-2 sm:px-5'>
-        <AddToCart />
+      <section className='mt-8 mb-10 md:my-20 px-2 sm:px-5'>
+        <OfferCollections />
       </section>
     </main>
   )

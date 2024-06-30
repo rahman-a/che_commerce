@@ -27,30 +27,8 @@ import { Textarea } from './ui/textarea'
 import ProductQuantityControl from './Product-Quantity-Control'
 import { Input } from './ui/input'
 import SizesTablePopover from './Sizes-Table-Popover'
+import { demoProductDescription } from '@/demo/products'
 type Props = {}
-
-const demoProductDescription = {
-  en: {
-    title: 'The Product consist of Abaya, Dress and scarf',
-    points: [
-      { id: 1, text: 'color: Black' },
-      { id: 2, text: 'Front opening design' },
-      { id: 3, text: 'net bracelets' },
-      { id: 4, text: 'sleeveless dress' },
-      { id: 5, text: 'Dry Clean' },
-    ],
-  },
-  ar: {
-    title: 'المنتج يتكون من عباية وفستان وشال',
-    points: [
-      { id: 1, text: 'اللون: أسود' },
-      { id: 2, text: 'تصميم فتحة أمامية' },
-      { id: 3, text: 'أساور شبكية' },
-      { id: 4, text: 'فستان بلا أكمام' },
-      { id: 5, text: 'تنظيف جاف' },
-    ],
-  },
-}
 
 // Define the schema for the form fields [sizes, types,note, quantity]
 const schema = z.object({
@@ -147,6 +125,7 @@ export default function AddToCart({}: Props) {
         <div className='flex flex-col-reverse md:flex-row justify-between gap-20 mt-20'>
           <ProductDetails
             description={demoProductDescription}
+            isTitle
             className='basis-2/4 [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:rtl:pr-4'
           />
           <FormField
