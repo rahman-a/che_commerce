@@ -6,7 +6,8 @@
     "cancel": "cancel",
     "save": "save",
     "close": "close",
-    "confirm_delete": "Confirm Delete?"
+    "confirm_delete": "Confirm Delete?",
+    "change": "Change"
   },
   "Navigation": {
     "welcome": "Welcome {name}",
@@ -73,13 +74,27 @@
     "order_number": "Order Number",
     "order_date": "Order Date",
     "order_status": "Status",
-    "order_total": "Total",
+    "order_total": "Order Total",
     "order_details": "Details",
     "order_items": "Order Items",
     "order_quantity": "Quantity",
     "delivery_date": "Expected Delivery Date",
     "in_progress": "In Progress",
-    "list_orders_history": "A list of orders history"
+    "list_orders_history": "A list of orders history",
+    "shipping_address": "Shipping Address",
+    "payment_method": "Payment Method",
+    "review_items": "Review Items",
+    "order_summary": "Order Summary",
+    "items": "Items",
+    "shipping_handling": "Shipping & Handling",
+    "total": "Total",
+    "enter_coupon": "Enter Coupon Code",
+    "apply_coupon": "Apply Coupon",
+    "coupon_applied": "Coupon Applied",
+    "place_order": "Place your order",
+    "knet": "Knet by Myfatoorah",
+    "myfatoora": "Myfatoora - Gulf States",
+    "mc_visa": "MasterCard / Visa"
   },
   "Profile": {
     "account_info": "Account Information",
@@ -99,7 +114,19 @@
     "select_region": "Select Region",
     "select_governorate": "Select Governorate",
     "save_continue": "Save & Continue",
-    "enter_phone_number": "Enter phone number"
+    "enter_phone_number": "Enter phone number",
+    "enter_email": "Enter your email",
+    "email/phone": "E-mail/Mobile number",
+    "enter_email_mobile": "Enter your email or mobile number (prefix with country code)",
+    "password": "Password",
+    "enter_password": "Enter your password",
+    "forgot_password": "Forgot Password?",
+    "login": "Login",
+    "signup": "Sign up",
+    "register": "Register",
+    "dont_have_account": "Don't have an account?",
+    "send_reset_link": "Send Password Reset Link",
+    "create_account": "Create a new account"
   },
   "Product": {
     "free_scarf": "Free Scarf",

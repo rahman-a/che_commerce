@@ -47,13 +47,13 @@ export default function Sidebar(props: ISidebarProps) {
         </div>
         <footer className='space-y-12'>
           <div className='mt-6'>
-            <div className='flex flex-col space-y-5'>
+            {/* <div className='flex flex-col space-y-5'>
               <LinkItem text={t('account_setting')} url='/profile'>
                 <UserIcon className='text-primary w-6 h-6' />
               </LinkItem>
               <LogoutBtn />
-            </div>
-            {/* <div className='flex flex-col items-center justify-between'>
+            </div> */}
+            <div className='flex flex-col items-center justify-between'>
               <Link
                 locale={locale}
                 className='text-sm text-primary underline text-center'
@@ -69,7 +69,7 @@ export default function Sidebar(props: ISidebarProps) {
               >
                 {t('signup')}
               </Link>
-            </div> */}
+            </div>
           </div>
           <div className='flex flex-col items-center space-y-5'>
             <h2 className='text-lg font-bold'>{t('contact_us')}</h2>

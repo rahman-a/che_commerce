@@ -14,6 +14,7 @@ import Title from '@/components/Title'
 import { getLangDir } from 'rtl-detect'
 import AddToCart from '@/components/Add-To-Cart'
 import ScrollToSection from '@/components/Scroll-To-Section'
+import MoreProductsSliders from '@/components/More-Products-Sliders'
 
 type Props = {}
 
@@ -72,6 +73,14 @@ export default function Product({}: Props) {
       </section>
       <section className='py-10 pt-4 px-2 sm:px-5'>
         <AddToCart />
+      </section>
+      <section className='flex items-center justify-center'>
+        <div
+          className='flex flex-col items-center justify-center 
+      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 mt-10 max-w-screen-2xl'
+        >
+          <MoreProductsSliders />
+        </div>
       </section>
     </main>
   )

@@ -23,7 +23,12 @@ export default function ProductQuantityControl({ variant }: Props) {
       <button className='text-xl' onClick={handleIncrement}>
         +
       </button>
-      <input type='number' name='quantity' value={quantity} />
+      <input
+        type='text'
+        name='quantity'
+        value={quantity}
+        className='w-full bg-transparent text-center text-white'
+      />
       <button className='text-xl' onClick={handleDecrement}>
         -
       </button>

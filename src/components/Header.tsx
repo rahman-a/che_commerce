@@ -20,10 +20,10 @@ export default function Header(props: IHeaderProps) {
       <div className='flex items-center justify-between rtl:flex-row-reverse h-full px-4'>
         <div className='flex items-center rtl:flex-row-reverse space-x-4'>
           <div className='hidden md:block'>
-            {/* <Link href='/login'>
+            <Link href='/login'>
               <User className='w-6 h-6 cursor-pointer' />
-            </Link> */}
-            <UserDropdownMenu />
+            </Link>
+            {/* <UserDropdownMenu /> */}
           </div>
           <ShoppingCart />
           <Search size={24} className='cursor-pointer' />

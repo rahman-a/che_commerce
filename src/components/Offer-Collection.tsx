@@ -19,11 +19,12 @@ import ProductDetails from './Product-Details'
 import { demoProductDescription, abayaTypes, abayaSizes } from '@/demo/products'
 type Props = {
   className?: string
+  group: string
 }
 
 // Define the schema for the form fields [sizes, types,note, quantity]
 
-export default function OfferCollection({ className }: Props) {
+export default function OfferCollection({ className, group }: Props) {
   const t = useTranslations('Product')
   const tm = useTranslations('Main_Page')
   const to = useTranslations('Orders')
@@ -38,9 +39,7 @@ export default function OfferCollection({ className }: Props) {
         className
       )}
     >
-      <h2 className='text-2xl sm:text-3xl tracking-wider'>
-        {t('first_choice')}
-      </h2>
+      <h2 className='text-2xl sm:text-3xl tracking-wider'>{group}</h2>
       <div className='flex flex-col justify-center space-y-5'>
         {/* /////////////////////////////////////////////// */}
         <div className='flex flex-col md:flex-row md:items-center space-y-3 md:space-y-0 md:space-x-3 rtl:space-x-0'>
@@ -72,11 +71,11 @@ export default function OfferCollection({ className }: Props) {
         </div>
         {/* /////////////////////////////////////////////// */}
         <div className='flex flex-col md:flex-row md:items-center space-y-3 md:space-y-0 space-x-0 md:space-x-3 rtl:space-x-0'>
-          <div className='flex items-center space-x-1 w-24'>
+          <div className='flex items-center space-x-8 w-24'>
             <Label className='text-lg md:text-2xl' htmlFor='abaya'>
               {t('size')}
             </Label>
-            <SizesTablePopover className='w-4 h-4 md:w-6 md:h-6 text-xs rtl:!mr-1' />
+            <SizesTablePopover className='w-4 h-4 text-xs rtl:!mr-1' />
           </div>
           <Select dir={getLangDir(locale)}>
             <SelectTrigger className='xl:w-60 rtl:!mr-2'>

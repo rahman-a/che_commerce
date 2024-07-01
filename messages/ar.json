@@ -6,7 +6,8 @@
     "cancel": "إلغاء",
     "save": "حفظ",
     "close": "غلق",
-    "confirm_delete": "تأكيد الحذف"
+    "confirm_delete": "تأكيد الحذف",
+    "change": "تغيير"
   },
   "Navigation": {
     "welcome": "مرحباً {name}",
@@ -73,13 +74,27 @@
     "order_number": "رقم الطلب",
     "order_date": "تاريخ الطلب",
     "order_status": "الحالة",
-    "order_total": "الإجمالى",
+    "order_total": "إجمالى الطلب",
     "order_details": "التفاصيل",
     "order_items": "محتويات الطلب",
     "order_quantity": "الكمية",
     "delivery_date": "الوقت المتوقع للتسليم",
     "in_progress": "قيد العمل",
-    "list_orders_history": "قائمة بتاريخ الطلبات"
+    "list_orders_history": "قائمة بتاريخ الطلبات",
+    "shipping_address": "عنوان الشحن",
+    "payment_method": "طريقة الدفع",
+    "review_items": "معاينة محتويات الطلب",
+    "order_summary": "ملخص الطلب",
+    "items": "محتويات الطلب",
+    "shipping_handling": "الشحن والتسليم",
+    "total": "الإجمالى",
+    "enter_coupon": "أدخل كوبون الخصم",
+    "apply_coupon": "تطبيق الكوبون",
+    "coupon_applied": "تم تطبيق الكوبون",
+    "place_order": "أكمل الطلب",
+    "knet": "Knet by Myfatoorah",
+    "myfatoora": "Myfatoora - دول الخليج",
+    "mc_visa": "MasterCard / Visa"
   },
   "Profile": {
     "account_info": "معلومات الحساب",
@@ -99,7 +114,19 @@
     "select_region": "إختر المنطقة",
     "select_governorate": "إختر المحافظة",
     "save_continue": "حفظ ومتابعة",
-    "enter_phone_number": "أدخل رقم الهاتف"
+    "enter_phone_number": "أدخل رقم الهاتف",
+    "enter_email": "أدخل بريدك الإلكترونى",
+    "email/phone": "البريد الإلكترونى / رقم الهاتف",
+    "enter_email_mobile": "أدخل بريدك الإلكترونى أو رقم الهاتف (مع كود الدولة)",
+    "password": "كلمة المرور",
+    "enter_password": "أدخل كلمة المرور",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "register": "تسجيل",
+    "dont_have_account": "ليس لديك حساب؟",
+    "send_reset_link": "إرسال رابط إعادة تعيين كلمة المرور",
+    "create_account": "إنشاء حساب جديد"
   },
   "Product": {
     "free_scarf": "ملفع مجانى",

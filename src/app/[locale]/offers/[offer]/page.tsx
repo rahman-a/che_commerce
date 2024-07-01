@@ -15,12 +15,11 @@ import { getLangDir } from 'rtl-detect'
 import AddToCart from '@/components/Add-To-Cart'
 import ScrollToSection from '@/components/Scroll-To-Section'
 import OfferCollections from '@/components/Offer-Collections'
+import MoreProductsSliders from '@/components/More-Products-Sliders'
 
 type Props = {}
 
 export default function Product({}: Props) {
-  const t = useTranslations('Main_Page')
-  const tg = useTranslations('General')
   const tp = useTranslations('Product')
   const locale = useLocale()
   const products: Product[] = [
@@ -59,6 +58,14 @@ export default function Product({}: Props) {
       </section>
       <section className='mt-8 mb-10 md:my-20 px-2 sm:px-5'>
         <OfferCollections />
+      </section>
+      <section className='flex items-center justify-center'>
+        <div
+          className='flex flex-col items-center justify-center 
+      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 mt-10 max-w-screen-2xl'
+        >
+          <MoreProductsSliders />
+        </div>
       </section>
     </main>
   )
