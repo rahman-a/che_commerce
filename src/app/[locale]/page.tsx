@@ -19,12 +19,12 @@ export default function Home({ params: { locale } }: Props) {
       <HorizontalProductSlider />
       <section
         className='flex flex-col items-center justify-center space-y-10 
-       py-5 px-6 lg:px-14 w-full mt-10 max-w-screen-2xl'
+       py-5 px-4 lg:px-14 w-full mt-10 max-w-screen-2xl'
       >
         <h2 className='text-4xl font-bold'>{t('categories')}</h2>
         <div
-          className='w-full grid grid-rows-6 sm:grid-rows-3 lg:grid-rows-2 
-        grid-flow-col gap-5 place-items-center'
+          className='w-full grid grid-rows-3 lg:grid-rows-2 
+        grid-flow-col gap-6 -translate-x-2 rtl:translate-x-2 md:translate-x-0'
         >
           <CategoryCard category='blank' />
           <CategoryCard category='embroidery' />
