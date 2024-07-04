@@ -71,6 +71,40 @@ export const products = (t: any) => [
     price: 100,
     discount: 20,
   },
+  {
+    id: 9,
+    src: abaya1,
+    alt: 'abaya',
+    name: t('white_abaya'),
+    description: t('special_design'),
+    price: 100,
+  },
+  {
+    id: 10,
+    src: abaya2,
+    alt: 'abaya',
+    name: t('white_abaya'),
+    description: t('special_design'),
+    price: 100,
+    discount: 20,
+  },
+  {
+    id: 11,
+    src: abaya3,
+    alt: 'abaya',
+    name: t('white_abaya'),
+    description: t('special_design'),
+    price: 100,
+  },
+  {
+    id: 12,
+    src: abaya4,
+    alt: 'abaya',
+    name: t('white_abaya'),
+    description: t('special_design'),
+    price: 100,
+    discount: 20,
+  },
 ]
 
 export const demoProductDescription = {

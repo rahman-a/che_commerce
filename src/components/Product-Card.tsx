@@ -25,30 +25,36 @@ export default function ProductCard({
 }: Props) {
   const t = useTranslations('General')
   return (
-    <Card className={cn('w-56 h-96 md:h-80 relative bg-card', className)}>
+    <Card
+      className={cn(
+        `w-44 sm:w-48 h-72 md:h-80 relative bg-card shadow-md hover:shadow-none 
+        transition-all duration-300 ease-in-out`,
+        className
+      )}
+    >
       <CardContent className='h-full !p-0'>
         <div className='relative flex flex-col items-center justify-between h-full p-1'>
           {discount && (
             <DiscountBadge
               discount={discount}
-              className='absolute top-2 left-2'
+              className='text-sm sm:text-md absolute top-2 left-2'
             />
           )}
           <figure className='relative w-full h-3/4 rounded-md overflow-hidden'>
             <Image src={src} alt={alt} fill style={{ objectFit: 'contain' }} />
           </figure>
           <div className='flex justify-center w-full space-x-2 pb-1 mt-1'>
-            <div className='flex flex-col space-y-2  w-2/3'>
-              <h3 className='text-md font-bold'>{name}</h3>
-              <p className='text-sm'>{description}</p>
+            <div className='flex flex-col justify-end space-y-2  w-2/3'>
+              <h3 className='text-sm sm:text-md font-bold'>{name}</h3>
+              <p className='text-xs sm:text-sm'>{description}</p>
             </div>
-            <div className='flex flex-col space-y-2'>
+            <div className='flex flex-col justify-center space-y-2'>
               {discount && (
-                <p className='line-through decoration-red-500 decoration-2 text-sm'>
+                <p className='line-through decoration-red-500 decoration-2 text-end text-sm'>
                   {(price * discount) / 100} {t('kw')}
                 </p>
               )}
-              <h3 className='text-md font-bold'>
+              <h3 className='text-sm sm:text-md text-end font-bold w-max'>
                 {price} {t('kw')}
               </h3>
             </div>

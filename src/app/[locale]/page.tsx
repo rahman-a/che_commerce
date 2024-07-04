@@ -24,7 +24,7 @@ export default function Home({ params: { locale } }: Props) {
         <h2 className='text-4xl font-bold'>{t('categories')}</h2>
         <div
           className='w-full grid grid-rows-3 lg:grid-rows-2 
-        grid-flow-col gap-6 -translate-x-2 rtl:translate-x-2 md:translate-x-0'
+        grid-flow-col gap-4 xs:gap-6 md:gap-20 place-content-center place-items-center'
         >
           <CategoryCard category='blank' />
           <CategoryCard category='embroidery' />
@@ -36,7 +36,7 @@ export default function Home({ params: { locale } }: Props) {
       </section>
       <section
         className='flex flex-col items-center justify-center 
-      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 mt-10 max-w-screen-2xl'
+      w-full px-3 py-5 xs:px-6 lg:px-14 mt-10 max-w-screen-2xl'
       >
         <MoreProductsSliders />
       </section>
