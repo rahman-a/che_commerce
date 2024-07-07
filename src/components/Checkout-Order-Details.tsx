@@ -9,7 +9,7 @@ import myfatoorah from '@/images/fatoura.png'
 import knet from '@/images/knet.png'
 import visa from '@/images/visa.webp'
 import Image from 'next/image'
-import OrderProductCard from './Order-Product-Card'
+import OrderProductCard from './Cart-Product-Card'
 type Props = {}
 
 export default function CheckoutOrderDetails({}: Props) {

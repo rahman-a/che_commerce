@@ -94,7 +94,11 @@
     "place_order": "Place your order",
     "knet": "Knet by Myfatoorah",
     "myfatoora": "Myfatoora - Gulf States",
-    "mc_visa": "MasterCard / Visa"
+    "mc_visa": "MasterCard / Visa",
+    "invoice_details": "Invoice Details",
+    "have_account?": "Have an account?",
+    "create_order_once": "Create an order (for once)",
+    "payment": "Payment"
   },
   "Profile": {
     "account_info": "Account Information",

@@ -12,7 +12,7 @@ import ProductOfferBadge from '@/components/Product-Offer-Badge'
 import DiscountBadge from '@/components/Discount-Badge'
 import Title from '@/components/Title'
 import { getLangDir } from 'rtl-detect'
-import AddToCart from '@/components/Add-To-Cart'
+import AddToCart from '@/components/Product-Options'
 import ScrollToSection from '@/components/Scroll-To-Section'
 import OfferCollections from '@/components/Offer-Collections'
 import MoreProductsSliders from '@/components/More-Products-Sliders'
@@ -44,19 +44,15 @@ export default function Product({}: Props) {
           />
         </div>
         <VerticalProductSlider products={products} isThumbnails isOffer />
-        <ScrollToSection
-          section='offer-collections'
-          className='flex md:hidden'
-        />
       </section>
       <section className='relative'>
         <Title
           title={tp('offer_collection')}
-          className='hidden md:flex top-4 [&>h1]:-translate-x-4'
+          className='hidden md:flex top-8 xl:top-0 [&>h1]:-translate-x-4'
           direction={getLangDir(locale)}
         />
       </section>
-      <section className='mt-8 mb-10 md:my-20 px-2 sm:px-5'>
+      <section className='mt-8 mb-10 md:mt-32 lg:my-20 px-2 sm:px-5'>
         <OfferCollections />
       </section>
       <section className='flex items-center justify-center'>

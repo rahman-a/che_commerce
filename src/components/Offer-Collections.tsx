@@ -6,6 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Separator } from '@/components/ui/separator'
 import OfferCollection from './Offer-Collection'
+import AddToCart from './Add-To-Cart'
+import { Form } from './ui/form'
 
 type Props = {}
 
@@ -58,14 +60,20 @@ export default function OfferCollections({}: Props) {
   })
 
   return (
-    <form
-      className='grid grid-col-1 xl:grid-cols-3 grid-flow-row gap-8 
-    xl:gap-2 [&>div:not(:last-child)]:after:xl:flex mt-10 md:mt-0'
-      id='offer-collections'
-    >
-      <OfferCollection group={t('first_choice')} />
-      <OfferCollection group={t('second_choice')} />
-      <OfferCollection group={t('third_choice')} />
+    <form className='mt-10 md:mt-0' id='offer-collections'>
+      <div
+        className='grid grid-col-1 xl:grid-cols-3 grid-flow-row gap-8 
+    xl:gap-2 [&>div:not(:last-child)]:after:xl:flex'
+      >
+        <OfferCollection group={t('first_choice')} />
+        <div className='block xl:hidden w-full h-1 bg-primary rounded-full -my-4'></div>
+        <OfferCollection group={t('second_choice')} />
+        <div className='block xl:hidden w-full h-1 bg-primary rounded-full -my-4'></div>
+        <OfferCollection group={t('third_choice')} />
+      </div>
+      <Form {...form}>
+        <AddToCart className='[&>div]:hidden mt-10' />
+      </Form>
     </form>
   )
 }

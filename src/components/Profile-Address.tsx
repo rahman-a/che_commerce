@@ -43,25 +43,19 @@ export default function ProfileAddress({}: Props) {
         </SelectInput>
       </div>
       <div className='grid w-full max-w-sm items-center gap-1.5'>
-        <Label htmlFor='city' aria-required>
-          {t('city')} <span className='text-secondary'>*</span>
+        <Label htmlFor='region' aria-required>
+          {t('region')} <span className='text-secondary'>*</span>
         </Label>
         <SelectInput
-          id='city'
-          onValueChange={(value) => console.log('City: ', value)}
+          id='region'
+          onValueChange={(value) => console.log('region: ', value)}
         >
-          <SelectLabel>{t('select_city')}</SelectLabel>
+          <SelectLabel>{t('select_region')}</SelectLabel>
           <SelectItem value='kuwait'>Kuwait</SelectItem>
           <SelectItem value='egypt'>Egypt</SelectItem>
           <SelectItem value='usa'>USA</SelectItem>
           <SelectItem value='canada'>Canada</SelectItem>
         </SelectInput>
-      </div>
-      <div className='grid w-full max-w-sm items-center gap-1.5'>
-        <Label htmlFor='region' aria-required>
-          {t('region')} <span className='text-secondary'>*</span>
-        </Label>
-        <Input id='region' name='region' type='text' />
       </div>
       <div className='grid w-full max-w-sm items-center gap-1.5'>
         <Label htmlFor='address' aria-required>

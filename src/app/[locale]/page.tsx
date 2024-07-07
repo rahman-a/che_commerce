@@ -21,7 +21,7 @@ export default function Home({ params: { locale } }: Props) {
         className='flex flex-col items-center justify-center space-y-10 
        py-5 px-4 lg:px-14 w-full mt-10 max-w-screen-2xl'
       >
-        <h2 className='text-4xl font-bold'>{t('categories')}</h2>
+        <h2 className='text-3xl sm:text-4xl font-bold'>{t('categories')}</h2>
         <div
           className='w-full grid grid-rows-3 lg:grid-rows-2 
         grid-flow-col gap-4 xs:gap-6 md:gap-20 place-content-center place-items-center'

@@ -5,6 +5,7 @@ import { Button } from './ui/button'
 import { Separator } from './ui/separator'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -54,8 +55,8 @@ export default function CheckoutOrderSummary({}: Props) {
           </span>
         </li>
       </ul>
-      <Button className='bg-primary w-full hover:bg-primary'>
-        {t('place_order')}
+      <Button className='bg-primary w-full hover:bg-primary' asChild>
+        <Link href='/checkout/payment'>{t('place_order')}</Link>
       </Button>
     </div>
   )

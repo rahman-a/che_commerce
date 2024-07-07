@@ -9,7 +9,7 @@ import {
 import { useTranslations } from 'next-intl'
 import { Button } from './ui/button'
 import { List } from 'lucide-react'
-import OrderProductCard from './Order-Product-Card'
+import OrderProductCard from './Cart-Product-Card'
 type Props = {}
 
 export default function OrdersItems({}: Props) {

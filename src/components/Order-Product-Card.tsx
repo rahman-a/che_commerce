@@ -1,25 +1,31 @@
 import React from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { cn } from '@/lib/utils'
 import abaya from '@/images/demo/products/abaya_1.png'
-import ProductNote from './Product-Note'
-import DeleteBtn from './Delete-Btn'
-import ProductQuantityControl from './Product-Quantity-Control'
+import { Badge } from './ui/badge'
+import CopyToClipboard from './CopyToClipboard'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetFooter,
+  SheetTrigger,
+} from '@/components/ui/sheet'
+import { Button } from './ui/button'
+import CartProductCard from './Cart-Product-Card'
 
-type Props = {
-  isOrder?: boolean
-  note?: string
-}
+type Props = {}
 
-export default function OrderProductCard({ isOrder, note }: Props) {
+function OrderProductCard({}: Props) {
   const t = useTranslations('General')
   const to = useTranslations('Orders')
-  const tDemo = useTranslations('Demo')
   return (
-    <div className='w-full max-w-screen-2xl flex items-center justify-between bg-primary p-2 rounded-md'>
+    <div
+      className='w-full max-w-screen-2xl flex items-center justify-between bg-card 
+    hover:bg-primary cursor-pointer p-2 rounded-lg'
+    >
       <div className='flex space-x-3'>
-        <figure className='p-2 bg-white flex items-center justify-center rounded-md rtl:ml-3'>
+        <figure className='p-2 bg-white flex items-center justify-center rounded-lg rtl:ml-3'>
           <Image
             src={abaya}
             alt='Abaya'
@@ -29,47 +35,72 @@ export default function OrderProductCard({ isOrder, note }: Props) {
           />
         </figure>
         <div className='flex flex-col space-y-2'>
-          <h2
-            className={cn(
-              'flex items-center space-x-1 text-xs sm:text-sm font-light tracking-wide',
-              isOrder ? 'md:text-base' : 'md:text-lg'
-            )}
-          >
-            <span>{tDemo('product_name')}</span>
-            <span>-</span>
-            <span>{tDemo('product_size')}</span>
-            <span>-</span>
-            <span>{tDemo('product_type')}</span>
+          <h2 className='flex items-center space-x-2 rtl:space-x-reverse text-xs sm:text-sm lg:text-lg lg:font-light tracking-wide'>
+            <span>#854123</span>
+            <CopyToClipboard text='#854123' />
           </h2>
-          {isOrder ? (
+          <div className='flex items-center space-x-5 md:space-x-8 rtl:space-x-reverse'>
             <p className='flex items-center space-x-1 tracking-wide'>
               <span>{to('order_quantity')}:</span>
               <span>12</span>
             </p>
-          ) : (
-            <ProductQuantityControl />
-          )}
+            <h3 className='lg:text-lg text-secondary lg:font-light tracking-wide'>
+              50,00 {t('kw')}
+            </h3>
+          </div>
         </div>
       </div>
-      <div className='flex flex-col items-center space-y-2 px-2'>
-        <h3
-          className={cn(
-            'text-xs sm:text-sm md:text-lg text-secondary font-light tracking-wide',
-            isOrder ? 'md:text-base' : 'md:text-lg'
-          )}
-        >
-          50,00 {t('kw')}
+      <div className='hidden flex-col space-y-2 px-2 md:flex'>
+        <h3 className='flex items-center space-x-5 rtl:space-x-reverse text-xs sm:text-sm lg:text-base text-slate-500 tracking-wide'>
+          <span className='w-44'>{to('order_date')}</span>
+          <span>14/06/2024</span>
         </h3>
-        <div
-          className={cn(
-            'w-full flex items-center space-x-2 text-white rtl:space-x-0',
-            isOrder ? 'justify-end' : 'justify-center'
-          )}
+        <h3 className='flex items-center space-x-5 rtl:space-x-reverse text-xs sm:text-sm lg:text-base text-slate-500 tracking-wide'>
+          <span className='w-44'>{to('delivery_date')}</span>
+          <span className='text-black'>16/06/2024</span>
+        </h3>
+      </div>
+      <div
+        className='relative flex flex-col items-center space-y-2 px-2 order-card-status 
+      before:rtl:left-auto before:rtl:-right-[1px] before:md:hidden'
+      >
+        <h3 className='text-sm lg:text-base font-bold tracking-wide'>
+          {to('order_status')}
+        </h3>
+        <Badge
+          className='text-xs text-secondary px-1 lg:px-2 text-center'
+          variant='outline'
         >
-          <ProductNote btnClassName='rtl:ml-2' isOrder={isOrder} note={note} />
-          {!isOrder && <DeleteBtn className='w-44 rtl:w-36' />}
-        </div>
+          {to('in_progress')}
+        </Badge>
       </div>
     </div>
+  )
+}
+
+export default function OrdersItems({}: Props) {
+  const t = useTranslations('General')
+  const tDemo = useTranslations('Demo')
+  const DemoNote = tDemo('note_example')
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <OrderProductCard />
+      </SheetTrigger>
+      <SheetContent className='w-full sm:max-w-xl'>
+        <div className='flex flex-col space-y-2 py-4'>
+          <CartProductCard isOrder note={DemoNote} />
+          <CartProductCard isOrder />
+          <CartProductCard isOrder note={DemoNote} />
+        </div>
+        <SheetFooter>
+          <SheetClose asChild>
+            <Button type='submit' className='hover:bg-primary'>
+              {t('close')}
+            </Button>
+          </SheetClose>
+        </SheetFooter>
+      </SheetContent>
+    </Sheet>
   )
 }

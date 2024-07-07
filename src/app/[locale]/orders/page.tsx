@@ -1,25 +1,18 @@
-import * as React from 'react'
+import React from 'react'
 import { useTranslations } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { getLangDir } from 'rtl-detect'
 import Title from '@/components/Title'
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table'
-import OrderProductRow from '@/components/Order-Product-Row'
 import SortBy, { SortItem } from '@/components/SortBy'
-export interface ICartProps {
+import OrderProductCard from '@/components/Order-Product-Card'
+
+type Props = {
   params: {
     locale: string
   }
 }
 
-export default function Cart({ params: { locale } }: ICartProps) {
+export default function Orders({ params: { locale } }: Props) {
   const t = useTranslations('Orders')
   const tg = useTranslations('Category')
   const tm = useTranslations('Main_Page')
@@ -34,35 +27,11 @@ export default function Cart({ params: { locale } }: ICartProps) {
           <SortItem>{tg('price_high_low')}</SortItem>
         </SortBy>
       </section>
-      <Table className='text-xs md:text-sm'>
-        <TableCaption>{t('list_orders_history')}</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className='w-[100px] rtl:text-right'>
-              {t('order_number')}
-            </TableHead>
-            <TableHead className='rtl:text-right'>{t('order_items')}</TableHead>
-            <TableHead className='rtl:text-right'>
-              {t('order_quantity')}
-            </TableHead>
-            <TableHead className='rtl:text-right'>{t('order_date')}</TableHead>
-            <TableHead className='rtl:text-right'>
-              {t('delivery_date')}
-            </TableHead>
-            <TableHead className='rtl:text-right'>
-              {t('order_status')}
-            </TableHead>
-            <TableHead className='text-right'>{t('order_total')}</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          <OrderProductRow />
-          <OrderProductRow />
-          <OrderProductRow />
-          <OrderProductRow />
-          <OrderProductRow />
-        </TableBody>
-      </Table>
+      <section className='py-5 space-y-5 flex flex-col 2xl:items-center'>
+        <OrderProductCard />
+        <OrderProductCard />
+        <OrderProductCard />
+      </section>
     </main>
   )
 }

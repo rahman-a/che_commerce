@@ -3,12 +3,13 @@ import React from 'react'
 import Image from 'next/image'
 import { getLangDir } from 'rtl-detect'
 import { useTranslations, useLocale } from 'next-intl'
+import dynamic from 'next/dynamic'
 import { cn } from '@/lib/utils'
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
 import { Product } from '@/types/products'
 import abaya1 from '@/images/demo/products/abaya_1.png'
 import abaya2 from '@/images/demo/products/abaya_2.png'
-import { EasyZoomOnHover } from 'easy-magnify'
+const EasyZoomOnHover = dynamic(() => import('./ImageMagnify'), { ssr: false })
 
 type Props = {
   products: Product[]
@@ -33,12 +34,12 @@ export default function VerticalProductSlider({
   return (
     <>
       <figure
-        className='relative grow-[2] grid place-content-center 
+        className='relative grow-[2] grid place-content-center place-items-end rtl:place-items-start
       w-48 h-96 md:w-auto md:h-auto'
       >
         <h3
           className={cn(
-            `hidden text-2xl md:text-4xl font-bold absolute -top-24 md:top-8 left-3/4 md:left-24 lg:left-48 xl:left-[30rem]`,
+            `hidden text-2xl md:text-4xl font-bold absolute -top-4 md:top-20 right-3/4 md:left-24 lg:left-48 xl:left-[30rem]`,
             isOffer ? 'block' : 'hidden'
           )}
         >
@@ -62,13 +63,14 @@ export default function VerticalProductSlider({
             src: currentSrc,
             alt: 'abaya',
           }}
-          delayTimer={0}
-          ref={imageRef}
+          options={{
+            delayTimer: 0,
+          }}
         />
         <h3
           className={cn(
             `hidden items-center text-2xl md:text-4xl font-bold absolute 
-        -bottom-40 md:-bottom-10 left-0 md:left-auto md:right-0 xl:right-40 xl:bottom-16`,
+        -bottom-28 md:-bottom-10 -right-9 -0 md:left-auto md:right-0 xl:right-40 xl:bottom-16`,
             isOffer ? 'flex' : 'hidden'
           )}
         >
@@ -87,7 +89,7 @@ export default function VerticalProductSlider({
       </figure>
       <Carousel
         className={cn(
-          'min-w-28 h-[calc(100vh-130px)] mt-2 [&>div]:md:relative',
+          'min-w-max h-[32rem] sm:min-w-28 xl:h-[calc(100vh-130px)] mt-2 [&>div]:md:relative',
           isThumbnails ? 'block' : 'hidden'
         )}
         orientation='vertical'
@@ -97,7 +99,7 @@ export default function VerticalProductSlider({
       >
         <CarouselContent
           className='h-full w-full md:absolute md:inset-y-0 
-        md:left-4 md:overflow-y-scroll rtl:right-4 rtl:left-0'
+        md:left-4 md:overflow-y-scroll rtl:right-4 rtl:left-0 space-y-2 md:space-y-5'
         >
           {products.map((product) => (
             <CarouselItem

@@ -26,9 +26,11 @@ export default function ProductDetails({
   return (
     <div className={cn('flex flex-col space-y-3', className)}>
       {isTitle && (
-        <h3 className='text-2xl min-w-fit'>{t('design_details')}:</h3>
+        <h3 className='text-xl md:text-2xl min-w-fit'>
+          {t('design_details')}:
+        </h3>
       )}
-      <article className='bg-primary p-2 rounded-md'>
+      <article className='text-sm md:text-base bg-primary p-2 rounded-md'>
         <h4>{description[locale].title}</h4>
         <ul>
           {description[locale].points.map((point) => (

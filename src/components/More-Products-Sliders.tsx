@@ -32,8 +32,8 @@ export default function MoreProductsSliders({}: Props) {
         </button>
       </div>
       <div
-        className='grid place-items-center grid-cols-2 md:grid-cols-3
-      lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 grid-flow-row gap-4'
+        className='grid place-items-center grid-cols-2 md:grid-cols-4
+      lg:grid-cols-5 2xl:grid-cols-6 grid-flow-row gap-4'
       >
         {products(t).map((product, index) => (
           <Link href='/products/1' key={product.id}>

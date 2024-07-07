@@ -1,13 +1,19 @@
 import * as React from 'react'
 import { Search } from 'lucide-react'
-import { MenuHam, Logo, User } from '@/icons'
+import {
+  MenuHam,
+  Logo,
+  User,
+  Home as HomeIcon,
+  Category as CategoryIcon,
+  ColoredInstagram,
+} from '@/icons'
 import ShoppingCart from './Shopping-Cart'
 import Sidebar from './Sidebar'
 import { Sheet, SheetTrigger } from './ui/sheet'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import LinkItem from './Link-Item'
-import { Home as HomeIcon, Category as CategoryIcon } from '../icons'
 import UserDropdownMenu from './User-DropdownMenu'
 import LanguageChanger from './Language-Changer'
 export interface IHeaderProps {}
@@ -26,7 +32,9 @@ export default function Header(props: IHeaderProps) {
             {/* <UserDropdownMenu /> */}
           </div>
           <ShoppingCart />
-          <Search size={24} className='cursor-pointer' />
+          <div className='grid place-content-center w-8 h-8 circle bg-white md:bg-transparent'>
+            <Search size={23} className='cursor-pointer' />
+          </div>
         </div>
         <nav className='hidden md:flex space-x-28 rtl:space-x-0'>
           <LinkItem
@@ -51,9 +59,21 @@ export default function Header(props: IHeaderProps) {
             <Logo className='w-16 h-16' />
           </Link>
         </div>
+        <Link href='/' className='md:hidden'>
+          <Logo className='w-14 h-14 cursor-pointer' />
+        </Link>
         <Sheet>
-          <SheetTrigger className='md:hidden'>
-            <MenuHam width={28} height={28} className='cursor-pointer' />
+          <SheetTrigger className='flex rtl:flex-row-reverse items-center space-x-2 md:hidden'>
+            <Link href='https://www.instagram.com '>
+              <ColoredInstagram className='w-8 h-8' />
+            </Link>
+            <div className='grid place-content-center w-10 h-10 circle bg-white rtl:ml-2'>
+              <MenuHam
+                width={28}
+                height={28}
+                className='cursor-pointer translate-x-[0.1rem]'
+              />
+            </div>
           </SheetTrigger>
           <Sidebar />
         </Sheet>

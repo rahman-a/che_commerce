@@ -3,8 +3,8 @@ import VerticalProductSlider from '@/components/Vertical-Product.Slider'
 import { useTranslations, useLocale } from 'next-intl'
 import { ArrowDown } from 'lucide-react'
 import abaya1 from '@/images/demo/products/abaya_1.png'
-// import abaya2 from '@/images/demo/products/abaya_2.png'
-// import abaya3 from '@/images/demo/products/abaya_3.png'
+import abaya2 from '@/images/demo/products/abaya_2.png'
+import abaya3 from '@/images/demo/products/abaya_3.png'
 // import abaya4 from '@/images/demo/products/abaya_4.png'
 // import abaya5 from '@/images/demo/products/abaya_5.png'
 import { type Product } from '@/types/products'
@@ -12,9 +12,8 @@ import ProductOfferBadge from '@/components/Product-Offer-Badge'
 import DiscountBadge from '@/components/Discount-Badge'
 import Title from '@/components/Title'
 import { getLangDir } from 'rtl-detect'
-import AddToCart from '@/components/Add-To-Cart'
-import ScrollToSection from '@/components/Scroll-To-Section'
 import MoreProductsSliders from '@/components/More-Products-Sliders'
+import ProductOptions from '@/components/Product-Options'
 
 type Props = {}
 
@@ -25,10 +24,14 @@ export default function Product({}: Props) {
   const locale = useLocale()
   const products: Product[] = [
     { id: 1, src: abaya1.src, alt: 'abaya1' },
-    { id: 2, src: abaya1.src, alt: 'abaya2' },
-    { id: 3, src: abaya1.src, alt: 'abaya3' },
+    { id: 2, src: abaya2.src, alt: 'abaya2' },
+    { id: 3, src: abaya3.src, alt: 'abaya3' },
     { id: 4, src: abaya1.src, alt: 'abaya4' },
-    { id: 5, src: abaya1.src, alt: 'abaya5' },
+    { id: 5, src: abaya2.src, alt: 'abaya5' },
+    { id: 6, src: abaya3.src, alt: 'abaya6' },
+    { id: 7, src: abaya1.src, alt: 'abaya7' },
+    { id: 8, src: abaya2.src, alt: 'abaya8' },
+    { id: 9, src: abaya3.src, alt: 'abaya9' },
   ]
   return (
     <main className='flex min-h-screen flex-col'>
@@ -46,7 +49,6 @@ export default function Product({}: Props) {
           <DiscountBadge discount={20} />
         </div>
         <VerticalProductSlider products={products} isThumbnails />
-        <ScrollToSection section='product_info' className='flex md:hidden' />
       </section>
       <section className='relative' id='product_info'>
         <Title
@@ -72,12 +74,12 @@ export default function Product({}: Props) {
         </div>
       </section>
       <section className='py-10 pt-4 px-2 sm:px-5'>
-        <AddToCart />
+        <ProductOptions />
       </section>
-      <section className='flex items-center justify-center'>
+      <section className='flex items-center justify-center md:mt-16'>
         <div
           className='flex flex-col items-center justify-center 
-      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 mt-10 max-w-screen-2xl'
+      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 max-w-screen-2xl'
         >
           <MoreProductsSliders />
         </div>

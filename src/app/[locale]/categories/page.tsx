@@ -37,7 +37,10 @@ export default function Categories({}: Props) {
           <SortItem>{tm('best_selling')}</SortItem>
         </SortBy>
       </section>
-      <section className='grid place-items-center gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 py-5'>
+      <section
+        className='grid place-items-center grid-cols-2 sm:grid-cols-3
+      lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 grid-flow-row gap-4'
+      >
         {products(t).map((product, index) => (
           <Link href='/products/1' key={product.id}>
             <ProductCard
@@ -47,7 +50,6 @@ export default function Categories({}: Props) {
               description={product.description}
               price={product.price}
               discount={product.discount}
-              className='w-72 md:w-56'
             />
           </Link>
         ))}

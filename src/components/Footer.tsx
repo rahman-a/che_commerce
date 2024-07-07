@@ -13,31 +13,24 @@ type Props = {}
 export default function Footer({}: Props) {
   const t = useTranslations('Footer')
   return (
-    <footer className='h-28 w-full main-footer'>
-      <section className='flex flex-col items-center space-y-5 md:space-y-0 px-5 py-2'>
+    <footer className='h-28 w-full main-footer py-5'>
+      <section className='flex flex-col items-center space-y-5 md:space-y-2 px-5 py-5'>
         <div
-          className='flex items-center justify-between flex-col md:flex-row 
-        w-full h-full space-y-5 md:space-y-0 rtl:md:flex-row-reverse'
+          className='flex items-center justify-between flex-row 
+        w-full h-full rtl:flex-row-reverse'
         >
           <div className='flex flex-col items-center justify-between space-y-2'>
-            <p className='flex items-center justify-center text-sm md:text-lg font-bold'>
+            <p className='flex items-center justify-center text-xs sm:text-sm md:text-lg font-bold'>
               {t('payment_methods')}
             </p>
-            <div className='flex items-center space-x-2'>
-              <Image
-                src={VisaImage}
-                alt='Visa'
-                width={40}
-                height={40}
-                title='Visa Card'
-                className='rtl:ml-2'
-              />
+            <div className='flex items-center space-x-1 sm:space-x-2'>
               <Image
                 src={MastercardImage}
                 alt='Mastercard'
                 width={35}
                 height={35}
                 title='Mastercard'
+                className='w-7 h-5 sm:w-10 sm:h-8 rtl:ml-2'
               />
               <Image
                 src={knetImage}
@@ -45,6 +38,7 @@ export default function Footer({}: Props) {
                 width={35}
                 height={35}
                 title='Knet Gateway'
+                className='w-7 h-5 sm:w-10 sm:h-8'
               />
               <Image
                 src={fatouraImage}
@@ -52,7 +46,7 @@ export default function Footer({}: Props) {
                 width={35}
                 height={35}
                 title='Fatoura Gateway'
-                className='rtl:ml-0'
+                className='w-7 h-5 sm:w-10 sm:h-8 rtl:ml-0'
               />
             </div>
           </div>
@@ -63,24 +57,27 @@ export default function Footer({}: Props) {
               width={150}
               height={150}
               unoptimized
+              className='w-28 h-12 sm:w-40 sm:h-16'
             />
           </div>
           <div className='flex flex-col items-center justify-center space-y-2'>
-            <p className='flex items-center justify-center text-sm md:text-lg font-bold'>
+            <p className='flex items-center justify-center text-xs sm:text-sm md:text-lg font-bold'>
               {t('contact_us')}
             </p>
-            <div className='flex items-center space-x-8 rtl:space-x-0'>
-              <a href='/' className='rtl:ml-8'>
-                <ColoredWhatsapp className='w-8 h-8' />
+            <div className='flex items-center space-x-2 sm:space-x-8 rtl:space-x-0'>
+              <a href='/' className='rtl:ml-2 rtl:sm:ml-8'>
+                <ColoredWhatsapp className='w-7 h-6 sm:w-8 sm:h-8' />
               </a>
               <a href='/'>
-                <ColoredInstagram className='w-8 h-8' />
+                <ColoredInstagram className='w-7 h-6 sm:w-8 sm:h-8' />
               </a>
             </div>
           </div>
         </div>
-        <div className='flex items-center justify-center md:translate-x-10'>
-          <p className=' text-lg'>{t('all_rights_reserved')}&copy;</p>
+        <div className='flex items-center justify-center translate-x-5'>
+          <p className='text-sm sm:text-lg'>
+            {t('all_rights_reserved')} &copy;
+          </p>
         </div>
       </section>
     </footer>
