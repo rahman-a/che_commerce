@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import abaya from '@/images/demo/products/abaya_1.png'
 import { Badge } from './ui/badge'
 import CopyToClipboard from './CopyToClipboard'
@@ -13,6 +13,8 @@ import {
 } from '@/components/ui/sheet'
 import { Button } from './ui/button'
 import CartProductCard from './Cart-Product-Card'
+import Title from './Title'
+import { getLangDir } from 'rtl-detect'
 
 type Props = {}
 
@@ -35,7 +37,7 @@ function OrderProductCard({}: Props) {
           />
         </figure>
         <div className='flex flex-col justify-evenly space-y-2'>
-          <h2 className='flex items-center space-x-2 rtl:space-x-reverse text-xs sm:text-sm lg:text-lg lg:font-light tracking-wide'>
+          <h2 className='flex items-center space-x-2 rtl:space-x-reverse font-semibold text-sm lg:text-lg lg:font-light tracking-wider'>
             <span>#854123</span>
             <CopyToClipboard text='#854123' />
           </h2>
@@ -81,14 +83,31 @@ function OrderProductCard({}: Props) {
 export default function OrdersItems({}: Props) {
   const t = useTranslations('General')
   const tDemo = useTranslations('Demo')
+  const to = useTranslations('Orders')
   const DemoNote = tDemo('note_example')
+  const locale = useLocale()
   return (
     <Sheet>
       <SheetTrigger asChild>
         <OrderProductCard />
       </SheetTrigger>
       <SheetContent className='w-full sm:max-w-xl'>
-        <div className='flex flex-col space-y-2 py-4'>
+        <div className='flex md:hidden flex-col space-y-2 px-2 mt-10 mb-5'>
+          <h3 className='flex items-center space-x-5 rtl:space-x-reverse text-sm lg:text-base text-slate-500 tracking-wide'>
+            <span className='w-44'>{to('order_date')}</span>
+            <span>14/06/2024</span>
+          </h3>
+          <h3 className='flex items-center space-x-5 rtl:space-x-reverse text-sm lg:text-base text-slate-500 tracking-wide'>
+            <span className='w-44'>{to('delivery_date')}</span>
+            <span className='text-black'>16/06/2024</span>
+          </h3>
+        </div>
+        <div className='flex flex-col space-y-2 mt-20 py-4'>
+          <Title
+            className='top-40 md:top-16 [&>h1]:text-xl [&>h1]:md:text-3xl md:left-auto md:-right-2 md:pl-0 md:pr-8'
+            title={to('order_items')}
+            direction={getLangDir(locale)}
+          />
           <CartProductCard isOrder note={DemoNote} />
           <CartProductCard isOrder />
           <CartProductCard isOrder note={DemoNote} />

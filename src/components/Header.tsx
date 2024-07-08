@@ -24,7 +24,7 @@ export default function Header(props: IHeaderProps) {
   return (
     <header className='bg-primary h-14 md:px-5'>
       <div className='flex items-center justify-between rtl:flex-row-reverse h-full px-4'>
-        <div className='flex items-center rtl:flex-row-reverse space-x-4'>
+        <div className='flex items-center rtl:flex-row-reverse space-x-5 rtl:space-x-reverse'>
           <div className='hidden md:block'>
             <Link href='/login'>
               <User className='w-6 h-6 cursor-pointer' />
@@ -32,8 +32,8 @@ export default function Header(props: IHeaderProps) {
             {/* <UserDropdownMenu /> */}
           </div>
           <ShoppingCart />
-          <div className='grid place-content-center w-8 h-8 circle bg-white md:bg-transparent'>
-            <Search size={23} className='cursor-pointer' />
+          <div className='grid place-content-center w-7 h-7 circle bg-white md:bg-transparent'>
+            <Search size={20} className='cursor-pointer' />
           </div>
         </div>
         <nav className='hidden md:flex space-x-28 rtl:space-x-0'>
@@ -60,17 +60,17 @@ export default function Header(props: IHeaderProps) {
           </Link>
         </div>
         <Link href='/' className='md:hidden'>
-          <Logo className='w-14 h-14 cursor-pointer' />
+          <Logo className='w-16 h-16 cursor-pointer' />
         </Link>
         <Sheet>
-          <SheetTrigger className='flex rtl:flex-row-reverse items-center space-x-2 md:hidden'>
+          <SheetTrigger className='flex rtl:flex-row-reverse items-center space-x-5 md:hidden'>
             <Link href='https://www.instagram.com '>
-              <ColoredInstagram className='w-8 h-8' />
+              <ColoredInstagram className='w-6 h-6' />
             </Link>
-            <div className='grid place-content-center w-10 h-10 circle bg-white rtl:ml-2'>
+            <div className='grid place-content-center w-7 h-7 circle bg-white rtl:ml-2'>
               <MenuHam
-                width={28}
-                height={28}
+                width={20}
+                height={20}
                 className='cursor-pointer translate-x-[0.1rem]'
               />
             </div>

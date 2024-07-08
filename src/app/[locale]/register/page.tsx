@@ -14,7 +14,7 @@ export default function Register({}: Props) {
   const t = useTranslations('Profile')
   unstable_setRequestLocale(locale)
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-2 sm:px-5 md:p-10'>
+    <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10'>
       <Title
         title={t('create_account')}
         direction={getLangDir(locale)}
@@ -23,12 +23,12 @@ export default function Register({}: Props) {
       <Title
         title={t('address')}
         direction={getLangDir(locale)}
-        className='top-[22rem] md:top-48'
+        className='top-[25rem] md:top-48'
       />
       <section className='flex md:items-center flex-col md:flex-row space-x-0 md:space-x-5 space-y-8 md:space-y-0 justify-between pt-8 pb-5'>
         <ProfileInfo />
       </section>
-      <section className='flex items-center flex-wrap space-y-10 justify-between py-5 mt-20'>
+      <section className='flex items-center flex-wrap space-y-6 justify-between py-5 mt-20'>
         <ProfileAddress />
       </section>
       <section className='py-5'>
