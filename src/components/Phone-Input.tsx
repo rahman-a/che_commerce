@@ -16,10 +16,10 @@ export default function PhoneInput({ onChange, phone }: Props) {
   return (
     <PhoneInputNumber
       placeholder={t('enter_phone_number')}
-      labels={ar}
+      labels={locale === 'ar' ? ar : undefined}
       direction={getLangDir(locale)}
       className='[&>input]:p-2 [&>input]:border [&>input]:rounded-md 
-      [&>input]:rtl:text-right [&>div]:rtl:ml-1'
+      [&>input]:rtl:text-right [&>div]:rtl:ml-1 [&>input]:placeholder:text-gray-400'
       value={phone}
       onChange={onChange}
     />

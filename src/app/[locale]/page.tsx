@@ -19,12 +19,14 @@ export default function Home({ params: { locale } }: Props) {
       <HorizontalProductSlider />
       <section
         className='flex flex-col items-center justify-center space-y-10 
-       py-5 px-4 lg:px-14 w-full mt-10 max-w-screen-2xl'
+       py-5 px-4 lg:px-14 w-full md:mt-10 max-w-screen-2xl'
       >
-        <h2 className='text-3xl sm:text-4xl font-bold'>{t('categories')}</h2>
+        <h2 className='text-2xl md:text-3xl sm:text-4xl md:font-bold'>
+          {t('categories')}
+        </h2>
         <div
           className='w-full grid grid-rows-3 lg:grid-rows-2 
-        grid-flow-col gap-4 xs:gap-6 md:gap-20 place-content-center place-items-center'
+        grid-flow-col gap-7 md:gap-20 place-content-center place-items-center'
         >
           <CategoryCard category='blank' />
           <CategoryCard category='embroidery' />
@@ -36,7 +38,7 @@ export default function Home({ params: { locale } }: Props) {
       </section>
       <section
         className='flex flex-col items-center justify-center 
-      w-full px-3 py-5 xs:px-6 lg:px-14 mt-10 max-w-screen-2xl'
+      w-full px-3 py-5 xs:px-6 lg:px-14 md:mt-10 max-w-screen-2xl'
       >
         <MoreProductsSliders />
       </section>

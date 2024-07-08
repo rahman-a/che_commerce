@@ -19,7 +19,7 @@ export default function GuestCheckout({}: Props) {
   unstable_setRequestLocale(locale)
 
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-2 sm:px-5 md:p-10'>
+    <main className='relative flex min-h-screen flex-col my-10 py-10 px-6 md:p-10'>
       <Title
         title={t('invoice_details')}
         direction={getLangDir(locale)}
@@ -41,7 +41,7 @@ export default function GuestCheckout({}: Props) {
       <Title
         title={t('shipping_address')}
         direction={getLangDir(locale)}
-        className='top-[29rem] md:top-60 [&>h1]:-translate-x-4'
+        className='top-[30rem] md:top-60 [&>h1]:-translate-x-4'
       />
       <section className='flex flex-col space-y-5 pt-8 pb-5 mt-10 md:mt-0'>
         <h2>{t('create_order_once')}</h2>
@@ -53,7 +53,7 @@ export default function GuestCheckout({}: Props) {
         </div>
       </section>
 
-      <section className='flex items-center flex-wrap space-y-10 justify-between py-5 mt-20'>
+      <section className='flex items-center flex-wrap space-y-6 justify-between py-5 mt-20'>
         <ProfileAddress />
       </section>
       <section className='py-5'>

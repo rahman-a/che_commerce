@@ -28,7 +28,7 @@ export default function SelectInput({
   const locale = useLocale()
   return (
     <Select onValueChange={onValueChange} dir={getLangDir(locale)}>
-      <SelectTrigger className='w-full md:w-60'>
+      <SelectTrigger className='w-full md:w-60 [&>span]:text-gray-400'>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent className={className} {...props}>

@@ -13,23 +13,35 @@ export default function ProfileInfo({}: Props) {
 
   return (
     <>
-      <div className='grid w-full max-w-sm items-center gap-1.5'>
-        <Label htmlFor='name' aria-required>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='name' className='font-bold' aria-required>
           {t('name')} <span className='text-secondary'>*</span>
         </Label>
-        <Input id='name' name='name' type='text' />
+        <Input
+          id='name'
+          name='name'
+          type='text'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_name')}
+        />
       </div>
-      <div className='grid w-full max-w-sm items-center gap-1.5'>
-        <Label htmlFor='email' aria-required>
-          {t('email')} <span className='text-secondary'>*</span>
-        </Label>
-        <Input id='email' name='email' type='email' />
-      </div>
-      <div className='grid w-full max-w-sm items-center gap-1.5'>
-        <Label htmlFor='phone' aria-required>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='phone' className='font-bold' aria-required>
           {t('phone')} <span className='text-secondary'>*</span>
         </Label>
         <PhoneInput onChange={setPhone} phone={phone} />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='email' className='font-bold' aria-required>
+          {t('email')} <span className='text-secondary'>*</span>
+        </Label>
+        <Input
+          id='email'
+          name='email'
+          type='email'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_email')}
+        />
       </div>
     </>
   )

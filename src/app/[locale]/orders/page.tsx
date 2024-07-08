@@ -18,7 +18,7 @@ export default function Orders({ params: { locale } }: Props) {
   const tm = useTranslations('Main_Page')
   unstable_setRequestLocale(locale)
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-2 sm:px-5 md:p-10'>
+    <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10'>
       <Title title={t('orders')} direction={getLangDir(locale)} />
       <section className='flex items-center space-x-5 rtl:space-x-0 py-5'>
         <SortBy>

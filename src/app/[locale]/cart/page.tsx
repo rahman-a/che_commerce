@@ -21,7 +21,7 @@ export default function Cart({ params: { locale } }: ICartProps) {
       <h2 className='text-xl md:text-3xl space-x-1 rtl:space-x-0 mt-5'>
         {t('cart_items')}&nbsp;:
       </h2>
-      <section className='py-5 space-y-5 flex flex-col 2xl:items-center'>
+      <section className=' px-2 py-5 space-y-5 flex flex-col 2xl:items-center'>
         <CartProductCard />
         <CartProductCard />
         <CartProductCard />

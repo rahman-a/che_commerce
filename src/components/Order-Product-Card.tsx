@@ -25,7 +25,7 @@ function OrderProductCard({}: Props) {
     hover:bg-primary cursor-pointer p-2 rounded-lg'
     >
       <div className='flex space-x-3'>
-        <figure className='p-2 bg-white flex items-center justify-center rounded-lg rtl:ml-3'>
+        <figure className='w-14 p-2 bg-white flex items-center justify-center rounded-lg rtl:ml-3'>
           <Image
             src={abaya}
             alt='Abaya'
@@ -34,7 +34,7 @@ function OrderProductCard({}: Props) {
             className='object-contain'
           />
         </figure>
-        <div className='flex flex-col space-y-2'>
+        <div className='flex flex-col justify-evenly space-y-2'>
           <h2 className='flex items-center space-x-2 rtl:space-x-reverse text-xs sm:text-sm lg:text-lg lg:font-light tracking-wide'>
             <span>#854123</span>
             <CopyToClipboard text='#854123' />

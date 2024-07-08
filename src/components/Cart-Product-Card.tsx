@@ -19,7 +19,7 @@ export default function CartProductCard({ isOrder, note }: Props) {
   return (
     <div className='w-full max-w-screen-2xl flex items-center justify-between bg-primary p-2 rounded-md'>
       <div className='flex space-x-3'>
-        <figure className='p-2 bg-white flex items-center justify-center rounded-md rtl:ml-3'>
+        <figure className='w-14 p-2 bg-white flex items-center justify-center rounded-md rtl:ml-3'>
           <Image
             src={abaya}
             alt='Abaya'
@@ -28,10 +28,10 @@ export default function CartProductCard({ isOrder, note }: Props) {
             className='object-contain'
           />
         </figure>
-        <div className='flex flex-col space-y-2'>
+        <div className='flex flex-col justify-evenly space-y-2'>
           <h2
             className={cn(
-              'flex items-center space-x-1 text-xs sm:text-sm md:font-light tracking-wide',
+              'flex items-center space-x-1 text-xs md:text-sm font-semibold md:font-light tracking-wide',
               isOrder ? 'md:text-base' : 'md:text-lg'
             )}
           >
@@ -54,7 +54,7 @@ export default function CartProductCard({ isOrder, note }: Props) {
       <div className='flex flex-col items-center space-y-2 px-2'>
         <h3
           className={cn(
-            'text-xs sm:text-sm md:text-lg text-secondary font-light tracking-wide',
+            'md:text-lg text-secondary tracking-wide',
             isOrder ? 'md:text-base' : 'md:text-lg'
           )}
         >
