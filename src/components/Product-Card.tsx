@@ -40,13 +40,13 @@ export default function ProductCard({
               className='text-sm sm:text-md absolute top-2 left-2'
             />
           )}
-          <figure className='relative w-full h-3/4 rounded-md overflow-hidden'>
+          <figure className='relative w-full h-[85%] rounded-md overflow-hidden'>
             <Image src={src} alt={alt} fill style={{ objectFit: 'contain' }} />
           </figure>
           <div className='flex justify-center w-full space-x-2 pb-1 mt-1'>
             <div className='flex flex-col justify-end space-y-2  w-2/3'>
               <h3 className='text-sm sm:text-md font-bold'>{name}</h3>
-              <p className='text-xs sm:text-sm'>{description}</p>
+              <p className='text-xs sm:text-sm font-light'>{description}</p>
             </div>
             <div className='flex flex-col justify-center space-y-2'>
               {discount && (
