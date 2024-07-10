@@ -35,6 +35,7 @@ export default function Header(props: IHeaderProps) {
           <div className='grid place-content-center w-7 h-7  circle bg-white md:bg-transparent'>
             <Search size={20} className='cursor-pointer' />
           </div>
+          <ColoredInstagram className='w-7 h-7 sm:w-8 sm:h-8 invisible opacity-0' />
         </div>
         <nav className='hidden md:flex space-x-28 rtl:space-x-0'>
           <LinkItem

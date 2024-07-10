@@ -14,7 +14,7 @@ export default function Footer({}: Props) {
   const t = useTranslations('Footer')
   return (
     <footer className='h-28 w-full main-footer py-5'>
-      <section className='flex flex-col items-center space-y-5 md:space-y-2 px-5 py-5'>
+      <section className='flex flex-col items-center space-y-2 px-5 py-5'>
         <div
           className='flex items-center justify-between flex-row 
         w-full h-full rtl:flex-row-reverse'
