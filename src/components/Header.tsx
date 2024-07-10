@@ -22,9 +22,9 @@ export default function Header(props: IHeaderProps) {
   const t = useTranslations('Navigation')
 
   return (
-    <header className='bg-primary h-14 md:px-5'>
+    <header className='fixed w-full top-0 left-0 z-20 bg-primary h-14 md:px-5 shadow-md'>
       <div className='flex items-center justify-between rtl:flex-row-reverse h-full px-4'>
-        <div className='flex items-center rtl:flex-row-reverse space-x-5 rtl:space-x-reverse'>
+        <div className='flex items-center rtl:flex-row-reverse space-x-5 rtl:space-x-reverse rtl:md:space-x-5'>
           <div className='hidden md:block'>
             <Link href='/login'>
               <User className='w-6 h-6 cursor-pointer' />
@@ -32,7 +32,7 @@ export default function Header(props: IHeaderProps) {
             {/* <UserDropdownMenu /> */}
           </div>
           <ShoppingCart />
-          <div className='grid place-content-center w-7 h-7 circle bg-white md:bg-transparent'>
+          <div className='grid place-content-center w-7 h-7  circle bg-white md:bg-transparent'>
             <Search size={20} className='cursor-pointer' />
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function Header(props: IHeaderProps) {
             <Logo className='w-16 h-16' />
           </Link>
         </div>
-        <Link href='/' className='md:hidden'>
+        <Link href='/' className='md:hidden -translate-x-4'>
           <Logo className='w-16 h-16 cursor-pointer' />
         </Link>
         <Sheet>

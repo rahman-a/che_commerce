@@ -44,17 +44,27 @@ export default function ProductCard({
             <Image src={src} alt={alt} fill style={{ objectFit: 'contain' }} />
           </figure>
           <div className='flex justify-center w-full space-x-2 pb-1 mt-1'>
-            <div className='flex flex-col justify-end space-y-2  w-2/3'>
-              <h3 className='text-sm sm:text-md font-bold'>{name}</h3>
-              <p className='text-xs sm:text-sm font-light'>{description}</p>
+            <div className='flex flex-col justify-end space-y-0  w-2/3'>
+              <h3 className='text-lg font-dubia font-medium'>{name}</h3>
+              <p className='text-xs sm:text-sm font-dubia font-light'>
+                {description}
+              </p>
             </div>
-            <div className='flex flex-col justify-center space-y-2'>
+            <div
+              className={cn(
+                `flex flex-col justify-center`,
+                discount ? 'translate-y-[7px]' : 'translate-y-auto'
+              )}
+            >
               {discount && (
-                <p className='line-through decoration-red-500 decoration-2 text-end text-sm'>
+                <p
+                  className='font-dubia line-through decoration-red-500 
+                decoration-1 text-end text-[10px]'
+                >
                   {(price * discount) / 100} {t('kw')}
                 </p>
               )}
-              <h3 className='text-sm sm:text-md text-end font-bold w-max'>
+              <h3 className='font-dubia text-lg text-end w-max'>
                 {price} {t('kw')}
               </h3>
             </div>

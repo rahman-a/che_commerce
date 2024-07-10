@@ -8,18 +8,13 @@ import ProductCard from '@/components/Product-Card'
 import { products } from '@/demo/products'
 import Link from 'next/link'
 
-type Props = {
-  params: {
-    locale: string
-    category: string
-  }
-}
+type Props = {}
 
-export default function Category({ params }: Props) {
+export default function Category({}: Props) {
   const t = useTranslations('Main_Page')
   const tg = useTranslations('Category')
+  const tm = useTranslations('Main_Page')
   const locale = useLocale()
-  const { category } = params
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10'>
       <div className='flex items-center'>
@@ -28,7 +23,7 @@ export default function Category({ params }: Props) {
           className='absolute top-2 left-48 md:left-56 flex items-center justify-center text-lg md:text-xl font-bold 
       space-x-1 rtl:flex-row-reverse rtl:space-x-0 rtl:left-auto rtl:right-48 md:rtl:right-56'
         >
-          <span className='text-secondary rtl:mr-1'>{t(category)}</span>
+          <span className='text-secondary rtl:mr-1'>{t('embroidery')}</span>
           <span>{t('abayas')}</span>
         </h2>
       </div>
@@ -37,11 +32,14 @@ export default function Category({ params }: Props) {
         <SortBy>
           <SortItem>{tg('price_low_high')}</SortItem>
           <SortItem>{tg('price_high_low')}</SortItem>
-          <SortItem>{t('newest')}</SortItem>
-          <SortItem>{t('best_selling')}</SortItem>
+          <SortItem>{tm('newest')}</SortItem>
+          <SortItem>{tm('best_selling')}</SortItem>
         </SortBy>
       </section>
-      <section className='grid place-items-center gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 py-5'>
+      <section
+        className='grid place-items-center grid-cols-2 sm:grid-cols-3
+      lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 grid-flow-row gap-4'
+      >
         {products(t).map((product, index) => (
           <Link href='/products/1' key={product.id}>
             <ProductCard
@@ -51,7 +49,6 @@ export default function Category({ params }: Props) {
               description={product.description}
               price={product.price}
               discount={product.discount}
-              className='w-72 md:w-56'
             />
           </Link>
         ))}

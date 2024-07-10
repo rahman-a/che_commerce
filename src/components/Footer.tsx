@@ -20,7 +20,7 @@ export default function Footer({}: Props) {
         w-full h-full rtl:flex-row-reverse'
         >
           <div className='flex flex-col items-center justify-between space-y-2'>
-            <p className='flex items-center justify-center text-xs sm:text-sm md:text-lg font-bold'>
+            <p className='flex items-center justify-center text-[11px] sm:text-sm md:text-lg font-bold'>
               {t('payment_methods')}
             </p>
             <div className='flex items-center space-x-1 sm:space-x-2'>
@@ -50,32 +50,34 @@ export default function Footer({}: Props) {
               />
             </div>
           </div>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center -translate-x-3 md:translate-x-2'>
             <Image
               src={msiImage}
               alt='MSI'
               width={150}
               height={150}
               unoptimized
-              className='w-28 h-12 sm:w-40 sm:h-16'
+              className='w-[80px] h-[40px] sm:w-40 sm:h-16'
             />
           </div>
+
           <div className='flex flex-col items-center justify-center space-y-2'>
-            <p className='flex items-center justify-center text-xs sm:text-sm md:text-lg font-bold'>
-              {t('contact_us')}
+            <p className='flex items-center justify-center text-[11px] sm:text-sm md:text-lg font-bold'>
+              {t('social_media')}
             </p>
-            <div className='flex items-center space-x-2 sm:space-x-8 rtl:space-x-0'>
-              <a href='/' className='rtl:ml-2 rtl:sm:ml-8'>
+
+            <div className='flex items-center space-x-2 sm:space-x-8 rtl:space-x-reverse'>
+              <a href='/'>
                 <ColoredWhatsapp className='w-7 h-6 sm:w-8 sm:h-8' />
               </a>
               <a href='/'>
-                <ColoredInstagram className='w-7 h-6 sm:w-8 sm:h-8' />
+                <ColoredInstagram className='w-7 h-7 sm:w-8 sm:h-8' />
               </a>
             </div>
           </div>
         </div>
-        <div className='flex items-center justify-center translate-x-5'>
-          <p className='text-sm sm:text-lg'>
+        <div className='flex items-center justify-center md:translate-x-5'>
+          <p className='text-xs font-light sm:text-lg'>
             {t('all_rights_reserved')} &copy;
           </p>
         </div>

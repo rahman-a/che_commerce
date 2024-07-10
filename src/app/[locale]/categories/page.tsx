@@ -7,7 +7,6 @@ import SortBy, { SortItem } from '@/components/SortBy'
 import ProductCard from '@/components/Product-Card'
 import { products } from '@/demo/products'
 import Link from 'next/link'
-import { DropdownMenuItem } from '@radix-ui/react-dropdown-menu'
 
 type Props = {}
 

@@ -48,7 +48,7 @@
 }
 
 .transparent-slider-logo {
-  transform: translate(-7px, 62px);
+  transform: translate(-7px, 57px);
 }
 @media (min-width: 640px) {
   .EasyImageZoomOnMoveContainer .EasyImageZoomOnMoveImage:has(+ img:hover) {

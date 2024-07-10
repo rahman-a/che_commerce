@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Almarai } from 'next/font/google'
+import localFont from 'next/font/local'
 import { getLangDir } from 'rtl-detect'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
@@ -8,6 +9,31 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const almarai = Almarai({ subsets: ['arabic'], weight: ['300', '400', '700'] })
+const dubia = localFont({
+  src: [
+    {
+      path: '../../../public/assets/fonts/Dubai-Regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../../public/assets/fonts/Dubai-Bold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../../public/assets/fonts/Dubai-Light.woff',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../../public/assets/fonts/Dubai-Medium.woff',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-dubai',
+})
 
 export const metadata: Metadata = {
   title: 'Che Commerce Website',
@@ -28,7 +54,7 @@ export default async function RootLayout({
   const messages = await getMessages()
   return (
     <html lang={locale} dir={direction}>
-      <body className={almarai.className}>
+      <body className={`${dubia.variable} ${almarai.className}`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

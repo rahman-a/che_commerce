@@ -5,12 +5,29 @@ import abaya4 from '@/images/demo/products/abaya_4.png'
 import abaya5 from '@/images/demo/products/abaya_5.png'
 export const products = (t: any) => [
   {
+    id: 5,
+    src: abaya5,
+    alt: 'abaya',
+    name: t('white_abaya'),
+    description: t('special_design'),
+    price: 60,
+  },
+  {
+    id: 4,
+    src: abaya4,
+    alt: 'abaya',
+    name: t('white_abaya'),
+    description: t('special_design'),
+    price: 60,
+    discount: 20,
+  },
+  {
     id: 1,
     src: abaya1,
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
   },
   {
     id: 2,
@@ -18,7 +35,7 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
     discount: 20,
   },
   {
@@ -27,32 +44,16 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
   },
-  {
-    id: 4,
-    src: abaya4,
-    alt: 'abaya',
-    name: t('white_abaya'),
-    description: t('special_design'),
-    price: 100,
-    discount: 20,
-  },
-  {
-    id: 5,
-    src: abaya5,
-    alt: 'abaya',
-    name: t('white_abaya'),
-    description: t('special_design'),
-    price: 100,
-  },
+
   {
     id: 6,
     src: abaya3,
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
   },
   {
     id: 7,
@@ -60,7 +61,7 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
   },
   {
     id: 8,
@@ -68,7 +69,7 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
     discount: 20,
   },
   {
@@ -77,7 +78,7 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
   },
   {
     id: 10,
@@ -85,7 +86,7 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
     discount: 20,
   },
   {
@@ -94,7 +95,7 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
   },
   {
     id: 12,
@@ -102,7 +103,7 @@ export const products = (t: any) => [
     alt: 'abaya',
     name: t('white_abaya'),
     description: t('special_design'),
-    price: 100,
+    price: 60,
     discount: 20,
   },
 ]

@@ -43,7 +43,7 @@
     "shak": "الشك",
     "underwear": "داخلية",
     "white_abaya": "عبايه بيضاء",
-    "special_design": "التصيميم الخاص بنا"
+    "special_design": "تصميم خاص فينا"
   },
   "Category": {
     "filter": "فلتر",
@@ -173,6 +173,7 @@
   "Footer": {
     "payment_methods": "طرق الدفع",
     "contact_us": "تواصل معنا",
+    "social_media": "وسائل التواصل",
     "all_rights_reserved": "جميع الحقوق محفوظة"
   },
   "NotFound": {

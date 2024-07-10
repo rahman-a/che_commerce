@@ -18,10 +18,10 @@ export default function Home({ params: { locale } }: Props) {
     <main className='flex min-h-screen flex-col items-center'>
       <HorizontalProductSlider />
       <section
-        className='flex flex-col items-center justify-center space-y-10 
-       py-5 px-4 lg:px-14 w-full md:mt-10 max-w-screen-2xl'
+        className='flex flex-col items-center justify-center space-y-5
+       md:py-5 px-4 lg:px-14 w-full md:mt-10 max-w-screen-2xl'
       >
-        <h2 className='text-2xl md:text-3xl sm:text-4xl md:font-bold'>
+        <h2 className='text-xl md:text-3xl sm:text-4xl md:font-bold mt-4'>
           {t('categories')}
         </h2>
         <div
@@ -38,7 +38,7 @@ export default function Home({ params: { locale } }: Props) {
       </section>
       <section
         className='flex flex-col items-center justify-center 
-      w-full px-3 py-5 xs:px-6 lg:px-14 md:mt-10 max-w-screen-2xl'
+      w-full px-3 md:py-5 xs:px-6 lg:px-14 md:mt-10 max-w-screen-2xl'
       >
         <MoreProductsSliders />
       </section>
