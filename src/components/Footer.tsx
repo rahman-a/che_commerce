@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import VisaImage from '../images/visa.webp'
 import MastercardImage from '../images/mastercard.png'
 import knetImage from '../images/knet.png'
 import fatouraImage from '../images/fatoura.png'

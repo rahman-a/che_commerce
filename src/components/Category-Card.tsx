@@ -11,7 +11,7 @@ export default function CategoryCard({ category }: Props) {
   return (
     <Link
       href={`/categories/${category}`}
-      className='w-40 h-32 md:w-80 md:h-56 rounded-2xl bg-primary p-2 md:p-5 
+      className='w-40 h-32 md:w-72 md:h-56 xl:w-80 xl:h-56 rounded-2xl bg-primary p-2 md:p-5 
        md:space-y-2 shadow-md hover:shadow-none transition-all duration-300 ease-in-out'
     >
       <div className='flex flex-col items-center justify-between md:space-y-2 text-secondary'>

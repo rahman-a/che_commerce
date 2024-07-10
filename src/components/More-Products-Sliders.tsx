@@ -31,20 +31,22 @@ export default function MoreProductsSliders({}: Props) {
           {t('newest')}
         </button>
       </div>
-      <div className='grid place-items-center grid-cols-2 sm:flex items-center justify-center flex-wrap gap-4'>
+      <ul className='grid place-items-center grid-cols-2 sm:flex items-center justify-center flex-wrap gap-4'>
         {products(t).map((product, index) => (
-          <Link href='/products/1' key={product.id}>
-            <ProductCard
-              src={product.src.src}
-              alt={product.alt}
-              name={product.name}
-              description={product.description}
-              price={product.price}
-              discount={product.discount}
-            />
-          </Link>
+          <li key={product.id}>
+            <Link href='/products/1'>
+              <ProductCard
+                src={product.src.src}
+                alt={product.alt}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                discount={product.discount}
+              />
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }

@@ -34,13 +34,13 @@ export default function HorizontalProductSlider({}: Props) {
           loop: true,
           direction: getLangDir(locale),
         }}
-        plugins={[
-          Autoplay({
-            delay: 3500,
-            stopOnMouseEnter: true,
-            stopOnInteraction: false,
-          }),
-        ]}
+        // plugins={[
+        //   Autoplay({
+        //     delay: 3500,
+        //     stopOnMouseEnter: true,
+        //     stopOnInteraction: false,
+        //   }),
+        // ]}
       >
         <CarouselContent>
           {products.map((product) => (

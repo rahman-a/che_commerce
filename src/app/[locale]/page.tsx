@@ -26,7 +26,7 @@ export default function Home({ params: { locale } }: Props) {
         </h2>
         <div
           className='w-full grid grid-rows-3 lg:grid-rows-2 
-        grid-flow-col gap-7 md:gap-20 place-content-center place-items-center'
+        grid-flow-col gap-7 md:gap-10 xl:gap-20 place-content-center place-items-center'
         >
           <CategoryCard category='blank' />
           <CategoryCard category='embroidery' />
