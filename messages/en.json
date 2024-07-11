@@ -5,6 +5,7 @@
     "add": "add",
     "cancel": "cancel",
     "save": "save",
+    "edit": "edit",
     "close": "close",
     "confirm_delete": "Confirm Delete?",
     "change": "Change"

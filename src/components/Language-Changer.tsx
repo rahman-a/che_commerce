@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils'
 import kwFlag from '../images/flag_of_kw.png'
 import usFlag from '../images/flag_of_usa.png'
 import Image from 'next/image'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 export interface ILanguageChangerProps {
   className?: string
@@ -27,6 +28,7 @@ export default function LanguageChanger({ className }: ILanguageChangerProps) {
     ar: 'English',
     en: 'العربية',
   }
+  const isMobileScreen = useMediaQuery('(max-width: 768px)')
   const changeDirection = (locale: Locale) => {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
     const updatedUrl =
@@ -37,7 +39,7 @@ export default function LanguageChanger({ className }: ILanguageChangerProps) {
     router.refresh()
   }
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={isMobileScreen}>
       <DropdownMenuTrigger>
         <p className={cn('bg-primary px-1 rounded-sm', className)}>
           {language[locale]}

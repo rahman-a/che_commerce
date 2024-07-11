@@ -14,6 +14,7 @@ import {
 import { cn } from '@/lib/utils'
 import { Button } from './ui/button'
 import { Textarea } from './ui/textarea'
+import { Note } from '@/icons'
 type Props = {
   className?: string
   btnClassName?: string
@@ -45,7 +46,7 @@ export default function ProductNote({
     <Dialog>
       <DialogTrigger asChild>
         <button className={btnClassName}>
-          <StickyNote size={20} />
+          <Note className='w-5 h-5' />
         </button>
       </DialogTrigger>
       <DialogContent className={cn('sm:max-w-[425px]', className)}>

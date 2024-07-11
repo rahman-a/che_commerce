@@ -6,6 +6,7 @@ import abaya from '@/images/demo/products/abaya_1.png'
 import ProductNote from './Product-Note'
 import DeleteBtn from './Delete-Btn'
 import ProductQuantityControl from './Product-Quantity-Control'
+import ProductCartEdit from './Product-Cart-Edit'
 
 type Props = {
   isOrder?: boolean
@@ -49,7 +50,7 @@ export default function CartProductCard({ isOrder, note }: Props) {
           )}
         </div>
       </div>
-      <div className='flex flex-col items-center space-y-2 px-2 mt-2'>
+      <div className='flex flex-col items-center space-y-2 mt-2'>
         <h3
           className={cn(
             'text-sm md:text-lg text-secondary tracking-wide w-max mb-2',
@@ -60,9 +61,10 @@ export default function CartProductCard({ isOrder, note }: Props) {
         </h3>
         <div
           className={cn(
-            'w-full flex items-center justify-end space-x-2 text-white rtl:space-x-0'
+            'w-full flex items-center justify-end space-x-2 text-white rtl:space-x-reverse'
           )}
         >
+          {!isOrder && <ProductCartEdit />}
           <ProductNote btnClassName='rtl:ml-2' isOrder={isOrder} note={note} />
           {!isOrder && <DeleteBtn className='w-44 rtl:w-36' />}
         </div>
