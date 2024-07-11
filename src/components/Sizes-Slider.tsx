@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { getLangDir } from 'rtl-detect'
 import {
@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 type Props = {}
-
+// max-w-sm -translate-x-5 rtl:translate-x-5 md:rtl:translate-x-0 md:-translate-x-0
 export default function SizesSlider({}: Props) {
   const locale = useLocale()
   return (
@@ -18,20 +18,26 @@ export default function SizesSlider({}: Props) {
         align: 'start',
         direction: getLangDir(locale),
       }}
-      className='w-full max-w-sm -translate-x-5 rtl:translate-x-5 md:rtl:translate-x-0 md:-translate-x-0'
+      className='w-full max-w-[16rem] md:max-w-sm'
     >
-      <CarouselContent>
+      <CarouselContent className='[&>div:last-child]:invisible'>
         {Array.from({ length: 20 }).map((_, index) => (
-          <CarouselItem key={index} className='basis-10 flex items-center'>
-            <div className='cursor-pointer hover:text-secondary text-lg'>
-              {index}5
-            </div>
-            <span className='block ml-2'>-</span>
-          </CarouselItem>
+          <Fragment key={index}>
+            <CarouselItem className='basis-8 flex items-center'>
+              <div className='cursor-pointer hover:text-secondary text-lg'>
+                {index}5
+              </div>
+            </CarouselItem>
+            <CarouselItem className='basis-1 flex items-center'>
+              <div className='cursor-pointer hover:text-secondary text-lg'>
+                -
+              </div>
+            </CarouselItem>
+          </Fragment>
         ))}
       </CarouselContent>
-      <CarouselPrevious className='hidden md:flex' />
-      <CarouselNext className='hidden md:flex' />
+      <CarouselPrevious />
+      <CarouselNext />
     </Carousel>
   )
 }

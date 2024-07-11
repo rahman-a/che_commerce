@@ -61,7 +61,7 @@ export default function CategoryFilter({}: Props) {
           <Play size={16} fill='black' className='rotate-90 rtl:!ml-0' />
         </Button>
       </DialogTrigger>
-      <DialogContent className='w-full sm:max-w-[425px] md:max-w-lg overflow-hidden'>
+      <DialogContent className='w-full max-w-[23rem] md:max-w-lg overflow-hidden rounded-lg opacity-80'>
         <div className='flex flex-col items-center justify-center space-y-10'>
           <h3 className='text-secondary text-xl'>{t('price_range')}</h3>
           <Slider
@@ -79,13 +79,13 @@ export default function CategoryFilter({}: Props) {
         </div>
         <div className='flex flex-col items-center justify-center space-y-3'>
           <h3 className='text-secondary text-xl'>{t('abaya_types')}</h3>
-          <div className='flex items-center flex-wrap'>
+          <div className='flex items-center flex-wrap space-x-4 space-x-reverse'>
             {abayasType.map((item) => (
               <Button
                 key={item.id}
                 variant='outline'
                 className={cn(
-                  'border-2 border-black mr-2 mb-2 rounded-xl capitalize h-auto p-2 hover:bg-secondary hover:text-white',
+                  'border-2 border-black mr-2 mb-2 rounded-md capitalize h-auto p-2 hover:bg-secondary hover:text-white',
                   type === item.name && 'bg-secondary text-white'
                 )}
                 onClick={() => setType(item.name)}
