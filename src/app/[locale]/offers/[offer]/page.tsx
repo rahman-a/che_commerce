@@ -16,11 +16,13 @@ import AddToCart from '@/components/Product-Options'
 import ScrollToSection from '@/components/Scroll-To-Section'
 import OfferCollections from '@/components/Offer-Collections'
 import MoreProductsSliders from '@/components/More-Products-Sliders'
+import ProductNamePrice from '@/components/Product-Name-Price'
 
 type Props = {}
 
 export default function Product({}: Props) {
   const tp = useTranslations('Product')
+  const tg = useTranslations('General')
   const locale = useLocale()
   const products: Product[] = [
     { id: 1, src: abaya1.src, alt: 'abaya1' },
@@ -36,8 +38,14 @@ export default function Product({}: Props) {
         className='flex md:hidden top-24 [&>h1]:-translate-x-4'
         direction={getLangDir(locale)}
       />
-      <section className='relative flex items-center rtl:flex-row-reverse mt-20 md:mt-0 pt-4 px-2 sm:px-5 md:p-10'>
-        <div className='absolute top-5 left-2 md:left-20 md:top-20 flex flex-col items-start rtl:items-end space-y-3'>
+      <section
+        className='relative grid grid-cols-[1fr_300px] place-content-center sm:flex sm:items-center 
+        sm:flex-row-reverse sm:rtl:flex-row mt-32 md:mt-16 xl:mt-8 pt-4 px-2 sm:px-5 md:p-10'
+      >
+        <div
+          className='absolute -top-5 right-5 rtl:right-auto rtl:left-5 md:left-20 md:top-20 
+        flex flex-col items-end md:items-start md:rtl:items-end space-y-3'
+        >
           <ProductOfferBadge
             className='p-1 md:px-3'
             text={tp('with_free_scarf')}
@@ -51,14 +59,20 @@ export default function Product({}: Props) {
           className='hidden md:flex top-8 xl:top-0 [&>h1]:-translate-x-4'
           direction={getLangDir(locale)}
         />
+        <ProductNamePrice
+          name={tp('abaya_collection')}
+          price={99}
+          discount={20}
+          className='[&>div_h3:nth-of-type(1)]:lg:invisible [&>div]:xl:mt-0'
+        />
       </section>
-      <section className='mt-8 mb-10 md:mt-32 lg:my-20 px-2 sm:px-5'>
+      <section className='mt-2 px-5 sm:px-5'>
         <OfferCollections />
       </section>
-      <section className='flex items-center justify-center'>
+      <section className='flex items-center justify-center md:mt-20'>
         <div
           className='flex flex-col items-center justify-center 
-      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 mt-10 max-w-screen-2xl'
+      w-full md:w-[calc(100vw-8rem)] py-5 px-4 lg:px-14 max-w-screen-2xl'
         >
           <MoreProductsSliders />
         </div>

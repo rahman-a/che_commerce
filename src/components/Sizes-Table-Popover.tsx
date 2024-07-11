@@ -25,7 +25,7 @@ export default function SizesTablePopover({
         <button
           className={cn(
             `flex items-center justify-center bg-primary 
-               w-8 h-8 p-1 rtl:!mr-3 cursor-pointer text-sm font-bold circle`,
+               w-[22px] h-[22px] p-1 rtl:!mr-3 cursor-pointer text-xs font-bold circle`,
             className
           )}
         >

@@ -16,12 +16,13 @@ export default function ProductOfferBadge({
   return (
     <div
       className={cn(
-        'relative z-10 flex items-center space-x-1 rtl:space-x-0 bg-secondary p-2 rounded-sm',
+        `relative z-10 flex items-center space-x-1 rtl:space-x-0 bg-secondary p-2 rounded-sm 
+        `,
         className
       )}
     >
       {children ? children : <FreeScarf className='w-5 h-5' />}
-      <span className='text-xs md:text-lg text-white inline-block rtl:!mr-1'>
+      <span className='text-xs md:text-lg xl:text-xl text-white inline-block rtl:!mr-1'>
         {text}
       </span>
     </div>

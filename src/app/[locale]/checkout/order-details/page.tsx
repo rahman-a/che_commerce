@@ -11,7 +11,7 @@ export default function Checkout({}: Props) {
   const locale = useLocale()
   const t = useTranslations('Cart')
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10'>
+    <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10 mt-20'>
       <Title
         title={t('checkout')}
         direction={getLangDir(locale)}

@@ -47,7 +47,7 @@ export default function AddToCart({ className }: Props) {
           <FormItem className='flex items-center space-x-2 basis-2/4'>
             <FormLabel
               htmlFor='quantity'
-              className='text-xl md:text-2xl rtl:ml-5 min-w-fit'
+              className='text-base md:text-2xl rtl:ml-5 min-w-fit'
             >
               {to('order_quantity')}:
             </FormLabel>
@@ -58,8 +58,8 @@ export default function AddToCart({ className }: Props) {
       ></FormField>
       <button
         type='submit'
-        className='bg-secondary text-white h-8 w-32 md:w-40 md:h-auto 
-            text-sm md:text-lg font-bold py-1 px-2 md:py-2 md:px-5 rounded-lg'
+        className='bg-secondary text-white h-7 w-36 md:w-40 md:h-auto 
+            text-base md:text-lg font-bold py-1 px-2 md:py-2 md:px-5 rounded-lg'
       >
         {t('add_to_cart')}
       </button>
@@ -72,7 +72,7 @@ function QuantityInputController({ field }: QuantityInputProps) {
     <div className='relative max-w-[8rem] flex space-x-1 -translate-y-2'>
       <span
         role='button'
-        className='flex items-center justify-center w-10 h-10 
+        className='flex items-center justify-center w-8 h-8 
                     rounded-full text-secondary text-lg shadow-xl hover:shadow-md active:shadow-none font-bold'
         onClick={() =>
           field.value >= 1 && field.onChange(Number(field.value) + 1)
@@ -81,7 +81,7 @@ function QuantityInputController({ field }: QuantityInputProps) {
         +
       </span>
       <Input
-        className='w-8 block text-secondary text-lg font-bold 
+        className='w-8 block text-secondary text-base font-bold 
                       underline underline-offset-4 decoration-secondary border-0 focus:outline-none 
                       p-0 text-center'
         type='text'
@@ -90,7 +90,7 @@ function QuantityInputController({ field }: QuantityInputProps) {
       />
       <span
         role='button'
-        className='flex items-center justify-center w-10 h-10 
+        className='flex items-center justify-center w-8 h-8 
                     rounded-full text-secondary text-lg shadow-xl 
                     hover:shadow-md active:shadow-none font-bold'
         onClick={() =>

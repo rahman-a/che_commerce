@@ -11,14 +11,14 @@ export default function Title({ title, className, direction }: Props) {
   return (
     <div
       className={cn(
-        'absolute top-4 bg-primary h-5 min-w-44 flex items-center rounded-xl',
+        'absolute top-4 bg-primary h-5 min-w-36 md:min-w-44 flex items-center rounded-xl',
         direction === 'rtl' ? '-right-2' : '-left-2',
         className
       )}
     >
       <h1
         className={cn(
-          'w-full text-3xl font-extrabold -translate-y-3 text-end pr-3 rtl:pl-3 rtl:pr-0',
+          'w-full text-xl md:text-2xl 2xl:text-3xl font-extrabold -translate-y-3 text-end pr-3 rtl:pl-3 rtl:pr-0',
           direction === 'rtl' ? 'pr-8' : 'pl-8'
         )}
       >

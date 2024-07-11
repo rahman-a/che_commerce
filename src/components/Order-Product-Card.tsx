@@ -91,8 +91,8 @@ export default function OrdersItems({}: Props) {
       <SheetTrigger asChild>
         <OrderProductCard />
       </SheetTrigger>
-      <SheetContent className='w-full sm:max-w-xl'>
-        <div className='flex md:hidden flex-col space-y-2 px-2 mt-10 mb-5'>
+      <SheetContent className='w-full sm:max-w-xl px-2'>
+        <div className='flex md:hidden flex-col space-y-2 mt-10 mb-5'>
           <h3 className='flex items-center space-x-5 rtl:space-x-reverse text-sm lg:text-base text-slate-500 tracking-wide'>
             <span className='w-44'>{to('order_date')}</span>
             <span>14/06/2024</span>

@@ -30,7 +30,7 @@ export default function ProductDetails({
           {t('design_details')}:
         </h3>
       )}
-      <article className='text-sm md:text-base bg-primary p-2 rounded-md'>
+      <article className='text-base md:text-base bg-primary p-2 rounded-md'>
         <h4>{description[locale].title}</h4>
         <ul>
           {description[locale].points.map((point) => (

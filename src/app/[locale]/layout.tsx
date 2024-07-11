@@ -8,28 +8,32 @@ import { unstable_setRequestLocale } from 'next-intl/server'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const almarai = Almarai({ subsets: ['arabic'], weight: ['300', '400', '700'] })
+const almarai = Almarai({
+  subsets: ['arabic'],
+  weight: ['300', '400', '700', '800'],
+})
 const dubia = localFont({
+  weight: 'regular',
   src: [
     {
       path: '../../../public/assets/fonts/Dubai-Regular.woff',
       weight: '400',
-      style: 'normal',
+      style: 'regular',
     },
     {
       path: '../../../public/assets/fonts/Dubai-Bold.woff',
       weight: '700',
-      style: 'normal',
+      style: 'bold',
     },
     {
       path: '../../../public/assets/fonts/Dubai-Light.woff',
       weight: '300',
-      style: 'normal',
+      style: 'light',
     },
     {
       path: '../../../public/assets/fonts/Dubai-Medium.woff',
       weight: '500',
-      style: 'normal',
+      style: 'medium',
     },
   ],
   variable: '--font-dubai',

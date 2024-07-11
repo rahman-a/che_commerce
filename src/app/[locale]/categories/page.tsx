@@ -16,7 +16,7 @@ export default function Categories({}: Props) {
   const tm = useTranslations('Main_Page')
   const locale = useLocale()
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10'>
+    <main className='relative flex min-h-screen flex-col my-10 py-10 px-5 md:p-10 mt-20'>
       <div className='flex items-center'>
         <Title title={t('categories')} direction={getLangDir(locale)} />
         <h2

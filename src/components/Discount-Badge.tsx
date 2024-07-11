@@ -13,7 +13,7 @@ export default function DiscountBadge({ discount, className }: Props) {
     <div
       className={cn('bg-red-500 text-white rounded-lg z-10 px-2', className)}
     >
-      <p className='tracking-widest flex items-center rtl:flex-row-reverse'>
+      <p className='tracking-widest flex items-center md:text-lg xl:text-xl rtl:flex-row-reverse'>
         <span>-</span>
         <span>{discount}%</span>
       </p>

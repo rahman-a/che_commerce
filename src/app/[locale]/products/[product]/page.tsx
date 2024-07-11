@@ -14,6 +14,7 @@ import Title from '@/components/Title'
 import { getLangDir } from 'rtl-detect'
 import MoreProductsSliders from '@/components/More-Products-Sliders'
 import ProductOptions from '@/components/Product-Options'
+import ProductNamePrice from '@/components/Product-Name-Price'
 
 type Props = {}
 
@@ -40,8 +41,14 @@ export default function Product({}: Props) {
         className='flex md:hidden top-24 [&>h1]:-translate-x-4'
         direction={getLangDir(locale)}
       />
-      <section className='relative flex items-center rtl:flex-row-reverse mt-20 md:mt-0 pt-4 px-2 sm:px-5 md:p-10'>
-        <div className='absolute top-5 left-2 md:left-20 md:top-20 flex flex-col items-start rtl:items-end space-y-3'>
+      <section
+        className='relative grid grid-cols-[1fr_300px] place-content-center sm:flex sm:items-center 
+        sm:flex-row-reverse sm:rtl:flex-row mt-32 md:mt-16 xl:mt-8 pt-4 px-2 sm:px-5 md:p-10'
+      >
+        <div
+          className='absolute -top-5 right-5 rtl:right-auto rtl:left-5 md:left-20 md:top-20 
+        flex flex-col items-end md:items-start md:rtl:items-end space-y-3'
+        >
           <ProductOfferBadge
             className='p-1 md:px-3'
             text={tp('with_free_scarf')}
@@ -56,30 +63,19 @@ export default function Product({}: Props) {
           className='hidden md:flex top-4 [&>h1]:-translate-x-4'
           direction={getLangDir(locale)}
         />
-        <div className='pt-4 px-2 sm:px-5 md:p-10'>
-          <h3
-            className='absolute top-2 right-4 md:right-16 rtl:left-4 rtl:md:left-16 rtl:right-auto line-through
-         decoration-red-500 decoration-2 text-2xl'
-          >
-            70 {tg('kw')}
-          </h3>
-          <div className='relative flex items-center justify-between mt-8'>
-            <h3 className='text-2xl md:text-4xl font-bold'>
-              {tp('golden_embroidery_abaya')}
-            </h3>
-            <h3 className='text-2xl md:text-4xl text-secondary font-bold'>
-              70 {tg('kw')}
-            </h3>
-          </div>
-        </div>
+        <ProductNamePrice
+          price={70}
+          discount={50}
+          name={tp('golden_embroidery_abaya')}
+        />
       </section>
-      <section className='py-10 pt-4 px-2 sm:px-5'>
+      <section className='pt-6 px-5 xl:px-16'>
         <ProductOptions />
       </section>
       <section className='flex items-center justify-center md:mt-16'>
         <div
           className='flex flex-col items-center justify-center 
-      w-full md:w-[calc(100vw-8rem)] py-5 px-6 lg:px-14 max-w-screen-2xl'
+      w-full md:w-[calc(100vw-8rem)] px-4 lg:px-14 max-w-screen-2xl'
         >
           <MoreProductsSliders />
         </div>

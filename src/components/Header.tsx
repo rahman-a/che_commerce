@@ -24,12 +24,12 @@ export default function Header(props: IHeaderProps) {
   return (
     <header className='fixed w-full top-0 left-0 z-20 bg-primary h-14 md:px-5 shadow-md'>
       <div className='flex items-center justify-between rtl:flex-row-reverse h-full px-4'>
-        <div className='flex items-center rtl:flex-row-reverse space-x-5 rtl:space-x-reverse rtl:md:space-x-5'>
+        <div className='flex items-center rtl:flex-row-reverse space-x-5 space-x-reverse md:space-x-5 rtl:md:space-x-5'>
           <div className='hidden md:block'>
-            <Link href='/login'>
+            {/* <Link href='/login'>
               <User className='w-6 h-6 cursor-pointer' />
-            </Link>
-            {/* <UserDropdownMenu /> */}
+            </Link> */}
+            <UserDropdownMenu />
           </div>
           <ShoppingCart />
           <div className='grid place-content-center w-7 h-7  circle bg-white md:bg-transparent'>
@@ -60,7 +60,7 @@ export default function Header(props: IHeaderProps) {
             <Logo className='w-16 h-16' />
           </Link>
         </div>
-        <Link href='/' className='md:hidden -translate-x-4'>
+        <Link href='/' className='md:hidden -translate-x-10'>
           <Logo className='w-16 h-16 cursor-pointer' />
         </Link>
         <Sheet>

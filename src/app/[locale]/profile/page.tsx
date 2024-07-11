@@ -15,7 +15,7 @@ export default function Profile({}: Props) {
   unstable_setRequestLocale(locale)
 
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10'>
+    <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10 mt-20'>
       <Title
         title={t('account_info')}
         direction={getLangDir(locale)}

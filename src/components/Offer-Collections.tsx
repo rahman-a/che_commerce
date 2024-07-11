@@ -60,19 +60,21 @@ export default function OfferCollections({}: Props) {
   })
 
   return (
-    <form className='mt-10 md:mt-0' id='offer-collections'>
+    <form id='offer-collections'>
       <div
         className='grid grid-col-1 xl:grid-cols-3 grid-flow-row gap-8 
     xl:gap-2 [&>div:not(:last-child)]:after:xl:flex'
       >
         <OfferCollection group={t('first_choice')} />
-        <div className='block xl:hidden w-full h-1 bg-primary rounded-full -my-4'></div>
+        <div className='block xl:hidden w-full h-1 bg-primary rounded-full -my-1'></div>
         <OfferCollection group={t('second_choice')} />
-        <div className='block xl:hidden w-full h-1 bg-primary rounded-full -my-4'></div>
+        <div className='block xl:hidden w-full h-1 bg-primary rounded-full -my-1'></div>
         <OfferCollection group={t('third_choice')} />
       </div>
       <Form {...form}>
-        <AddToCart className='[&>div]:hidden mt-10' />
+        <div className='flex justify-start md:justify-center px-1 rtl:px-0'>
+          <AddToCart className='[&>div]:hidden mt-8 [&>button]:lg:w-64 [&>button]:lg:text-xl' />
+        </div>
       </Form>
     </form>
   )

@@ -19,7 +19,7 @@ export default function GuestCheckout({}: Props) {
   unstable_setRequestLocale(locale)
 
   return (
-    <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10'>
+    <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10 mt-20'>
       <Title
         title={t('invoice_details')}
         direction={getLangDir(locale)}

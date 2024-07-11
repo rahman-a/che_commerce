@@ -22,6 +22,7 @@ export default function PhoneInput({ onChange, phone }: Props) {
       [&>input]:rtl:text-right [&>div]:rtl:ml-1 [&>input]:placeholder:text-gray-400'
       value={phone}
       onChange={onChange}
+      defaultCountry='KW'
     />
   )
 }

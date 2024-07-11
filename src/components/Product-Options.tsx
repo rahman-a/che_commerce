@@ -52,23 +52,23 @@ export default function ProductOptions({}: Props) {
   return (
     <Form {...form}>
       <form action='' onSubmit={(e) => e.preventDefault()}>
-        <div className='flex md:items-center flex-col md:flex-row gap-10 md:gap-20'>
+        <div className='flex md:items-center flex-col md:flex-row gap-5 md:gap-20 md:space-x-20 xl:space-x-40 rtl:space-x-reverse'>
           <FormField
             name='size'
             control={form.control}
             render={({ field }) => (
-              <FormItem className='flex items-center justify-between md:space-x-2 rtl:space-x-0 basis-2/4'>
+              <FormItem className='flex items-center justify-between md:space-x-2 rtl:space-x-reverse basis-2/4'>
                 <FormLabel
                   htmlFor='size'
-                  className='text-xl md:text-2xl mr-2 md:mr-0 min-w-fit'
+                  className='text-lg md:text-2xl mr-2 rtl:mr-0 md:mr-0 min-w-fit'
                 >
                   {t('size')}:
                 </FormLabel>
                 <div className='flex grow items-center space-x-3 rtl:space-x-0'>
-                  <SizesTablePopover className='rtl:ml-2' />
+                  <SizesTablePopover className='mr-6 rtl:ml-2' />
                   <Select dir={getLangDir(locale)}>
                     <FormControl>
-                      <SelectTrigger>
+                      <SelectTrigger className='h-9 [&_span]:text-xs [&_span]:md:text-base [&_span]:font-light'>
                         <SelectValue placeholder={t('select_abaya_size')} />
                       </SelectTrigger>
                     </FormControl>
@@ -94,13 +94,13 @@ export default function ProductOptions({}: Props) {
               >
                 <FormLabel
                   htmlFor='type'
-                  className='text-xl md:text-2xl mr-2 rtl:mr-0 rtl:ml-2 md:mr-0 md:ml-0 min-w-fit'
+                  className='text-lg md:text-2xl mr-2 rtl:mr-0 rtl:ml-5 md:mr-0 md:ml-0 min-w-fit'
                 >
                   {t('abaya_type')}:
                 </FormLabel>
                 <Select dir={getLangDir(locale)}>
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger className='h-9 [&_span]:text-xs [&_span]:md:text-base [&_span]:font-light'>
                       <SelectValue placeholder={t('select_abaya_type')} />
                     </SelectTrigger>
                   </FormControl>
@@ -119,7 +119,7 @@ export default function ProductOptions({}: Props) {
             )}
           ></FormField>
         </div>
-        <div className='flex flex-col md:flex-row justify-between gap-10 mt-10'>
+        <div className='flex flex-col md:flex-row justify-between gap-5 mt-6 md:mt-24 md:space-x-20 xl:space-x-40 rtl:space-x-reverse'>
           <FormField
             name='size'
             control={form.control}
@@ -129,18 +129,14 @@ export default function ProductOptions({}: Props) {
                   htmlFor='note'
                   className='flex items-center space-x-10 rtl:space-x-0'
                 >
-                  <span className='text-xl md:text-2xl rtl:ml-10'>
+                  <span className='text-lg md:text-2xl rtl:ml-10'>
                     {t('notes')}:
                   </span>
-                  <span className='text-xs sm:text-sm text-gray-500'>
+                  <span className='text-xs font-light sm:text-sm md:text-base text-gray-500'>
                     {t('note_example')}
                   </span>
                 </FormLabel>
-                <Textarea
-                  id='note'
-                  placeholder={t('example_placeholder')}
-                  className='h-full'
-                />
+                <Textarea id='note' className='h-full border-primary' />
                 <FormMessage />
               </FormItem>
             )}
