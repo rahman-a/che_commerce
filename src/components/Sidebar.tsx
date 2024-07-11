@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 import { SheetContent } from '@/components/ui/sheet'
 import LinkItem from './Link-Item'
@@ -15,12 +16,15 @@ import { ColoredInstagram, ColoredWhatsapp } from '@/icons'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import LogoutBtn from './Logout-Btn'
+import { useCurrentPage } from '@/hooks/useCurrentPage'
+import { cn } from '@/lib/utils'
 
 export interface ISidebarProps {}
 
 export default function Sidebar(props: ISidebarProps) {
   const t = useTranslations('Navigation')
   const locale = useLocale()
+  const isCurrentPage = useCurrentPage()
   return (
     <SheetContent className='w-[225px]'>
       <div className='flex flex-col items-center justify-between h-full'>
@@ -31,32 +35,80 @@ export default function Sidebar(props: ISidebarProps) {
             })}
           </h3>
           <nav className='space-y-8'>
-            <LinkItem text={t('home')} url='/'>
-              <HomeIcon className='text-primary w-6 h-6' />
+            <LinkItem
+              text={t('home')}
+              url='/'
+              className={isCurrentPage('') ? 'text-secondary' : ''}
+            >
+              <HomeIcon
+                className={cn(
+                  'text-primary w-6 h-6',
+                  isCurrentPage('') && 'text-secondary'
+                )}
+              />
             </LinkItem>
-            <LinkItem text={t('categories')} url='/categories'>
-              <CategoryIcon className='text-primary w-6 h-6' />
+            <LinkItem
+              text={t('categories')}
+              url='/categories'
+              className={isCurrentPage('/categories/*') ? 'text-secondary' : ''}
+            >
+              <CategoryIcon
+                className={cn(
+                  'text-primary w-6 h-6',
+                  isCurrentPage('/categories/*') && 'text-secondary'
+                )}
+              />
             </LinkItem>
-            <LinkItem text={t('cart')} url='/cart'>
-              <CartIcon className='text-primary w-6 h-6' />
+            <LinkItem
+              text={t('cart')}
+              url='/cart'
+              className={isCurrentPage('/cart') ? 'text-secondary' : ''}
+            >
+              <CartIcon
+                className={cn(
+                  'text-primary w-6 h-6',
+                  isCurrentPage('/cart') && 'text-secondary'
+                )}
+              />
             </LinkItem>
-            <LinkItem text={t('orders')} url='/orders'>
-              <OrdersIcon className='text-primary w-6 h-6' />
+            <LinkItem
+              text={t('orders')}
+              url='/orders'
+              className={isCurrentPage('/orders') ? 'text-secondary' : ''}
+            >
+              <OrdersIcon
+                className={cn(
+                  'text-primary w-6 h-6',
+                  isCurrentPage('/orders') && 'text-secondary'
+                )}
+              />
             </LinkItem>
           </nav>
         </div>
         <footer className='space-y-12'>
           <div className='mt-6'>
             <div className='flex flex-col space-y-5'>
-              <LinkItem text={t('account_setting')} url='/profile'>
-                <UserIcon className='text-primary w-6 h-6' />
+              <LinkItem
+                text={t('account_setting')}
+                url='/profile'
+                className={isCurrentPage('/profile') ? 'text-secondary' : ''}
+              >
+                <UserIcon
+                  className={cn(
+                    'text-primary w-6 h-6',
+                    isCurrentPage('/profile') && 'text-secondary'
+                  )}
+                />
               </LinkItem>
               <LogoutBtn />
             </div>
             {/* <div className='flex flex-col items-center justify-between'>
               <Link
                 locale={locale}
-                className='text-sm text-primary underline text-center'
+                className={cn(
+                  'text-sm text-primary underline text-center',
+                  isCurrentPage('/login') ? 'text-secondary' : ''
+                )}
                 href='/login'
               >
                 {t('login')}
@@ -64,8 +116,11 @@ export default function Sidebar(props: ISidebarProps) {
               <span>{t('or')}</span>
               <Link
                 locale={locale}
-                className='text-sm text-primary underline text-center'
-                href='/signup'
+                className={cn(
+                  'text-sm text-primary underline text-center',
+                  isCurrentPage('/register') ? 'text-secondary' : ''
+                )}
+                href='/register'
               >
                 {t('signup')}
               </Link>

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {
   DropdownMenu,
@@ -11,16 +12,24 @@ import { User as UserIcon, Orders as OrdersIcon } from '../icons'
 import { useTranslations, useLocale } from 'next-intl'
 import LinkItem from './Link-Item'
 import LogoutBtn from './Logout-Btn'
+import { useCurrentPage } from '@/hooks/useCurrentPage'
+import { cn } from '@/lib/utils'
 
 type Props = {}
 
 export default function UserDropdownMenu({}: Props) {
   const t = useTranslations('Navigation')
   const locale = useLocale()
+  const isCurrentPage = useCurrentPage()
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger>
-        <UserIcon className='w-6 h-6' />
+        <UserIcon
+          className={cn(
+            'w-6 h-6',
+            isCurrentPage(['/profile', '/orders']) && 'stroke-secondary'
+          )}
+        />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <div>

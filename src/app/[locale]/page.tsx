@@ -15,7 +15,7 @@ export default function Home({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale)
   const t = useTranslations('Main_Page')
   return (
-    <main className='flex min-h-screen flex-col items-center'>
+    <main className='flex min-h-screen flex-col items-center mt-5'>
       <HorizontalProductSlider />
       <section
         className='flex flex-col items-center justify-center space-y-5

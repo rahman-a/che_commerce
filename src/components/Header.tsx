@@ -16,6 +16,7 @@ import { useTranslations } from 'next-intl'
 import LinkItem from './Link-Item'
 import UserDropdownMenu from './User-DropdownMenu'
 import LanguageChanger from './Language-Changer'
+import HeaderNavbar from './Header-Navbar'
 export interface IHeaderProps {}
 
 export default function Header(props: IHeaderProps) {
@@ -37,22 +38,7 @@ export default function Header(props: IHeaderProps) {
           </div>
           <ColoredInstagram className='w-7 h-7 sm:w-8 sm:h-8 invisible opacity-0' />
         </div>
-        <nav className='hidden md:flex space-x-28 rtl:space-x-0'>
-          <LinkItem
-            text={t('home')}
-            url='/'
-            className='hover:text-secondary rtl:ml-28'
-          >
-            <HomeIcon className='w-6 h-6' />
-          </LinkItem>
-          <LinkItem
-            text={t('categories')}
-            url='/categories'
-            className='hover:text-secondary'
-          >
-            <CategoryIcon className='w-6 h-6' />
-          </LinkItem>
-        </nav>
+        <HeaderNavbar />
         <div className='hidden md:flex items-center justify-between space-x-5 rtl:flex-row-reverse'>
           <LanguageChanger className='flex' />
           <div className='w-[0.1rem] h-10 my-3 bg-black'></div>
