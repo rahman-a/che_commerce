@@ -40,7 +40,7 @@ export default function Home({ params: { locale } }: Props) {
         className='flex flex-col items-center justify-center 
       w-full px-3 md:py-5 xs:px-6 lg:px-14 md:mt-10 max-w-screen-2xl'
       >
-        <MoreProductsSliders />
+        <MoreProductsSliders isMainPage={true} />
       </section>
     </main>
   )

@@ -15,7 +15,7 @@ export default function ProfileInfo({}: Props) {
     <>
       <div className='grid w-full max-w-sm items-center gap-4'>
         <Label htmlFor='name' className='font-bold' aria-required>
-          {t('name')} <span className='text-secondary'>*</span>
+          {t('name')}: <span className='text-secondary'>*</span>
         </Label>
         <Input
           id='name'
@@ -27,13 +27,13 @@ export default function ProfileInfo({}: Props) {
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
         <Label htmlFor='phone' className='font-bold' aria-required>
-          {t('phone')} <span className='text-secondary'>*</span>
+          {t('phone')}: <span className='text-secondary'>*</span>
         </Label>
         <PhoneInput onChange={setPhone} phone={phone} />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
         <Label htmlFor='email' className='font-bold' aria-required>
-          {t('email')} <span className='text-secondary'>*</span>
+          {t('email')}: <span className='text-secondary'>*</span>
         </Label>
         <Input
           id='email'

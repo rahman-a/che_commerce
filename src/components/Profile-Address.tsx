@@ -13,9 +13,9 @@ export default function ProfileAddress({}: Props) {
   return (
     <>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        {/* <Label htmlFor='country' aria-required>
-          {t('country')} <span className='text-secondary'>*</span>
-        </Label> */}
+        <Label htmlFor='country' className='hidden md:flex' aria-required>
+          {t('country')}: <span className='text-secondary'>*</span>
+        </Label>
         <SelectInput
           id='country'
           onValueChange={(value) => console.log('Country: ', value)}
@@ -29,9 +29,9 @@ export default function ProfileAddress({}: Props) {
         </SelectInput>
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        {/* <Label htmlFor='governorate' aria-required>
-          {t('governorate')} <span className='text-secondary'>*</span>
-        </Label> */}
+        <Label htmlFor='governorate' className='hidden md:flex' aria-required>
+          {t('governorate')}: <span className='text-secondary'>*</span>
+        </Label>
         <SelectInput
           id='governorate'
           onValueChange={(value) => console.log('governorate: ', value)}
@@ -45,9 +45,9 @@ export default function ProfileAddress({}: Props) {
         </SelectInput>
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        {/* <Label htmlFor='region' aria-required>
-          {t('region')} <span className='text-secondary'>*</span>
-        </Label> */}
+        <Label htmlFor='region' className='hidden md:flex' aria-required>
+          {t('region')}: <span className='text-secondary'>*</span>
+        </Label>
         <SelectInput
           id='region'
           onValueChange={(value) => console.log('region: ', value)}
@@ -61,25 +61,71 @@ export default function ProfileAddress({}: Props) {
         </SelectInput>
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        {/* <Label htmlFor='address' aria-required>
-          {t('address')} <span className='text-secondary'>*</span>
-        </Label> */}
+        <Label htmlFor='block'>{t('block')}:</Label>
+        <Input
+          name='block'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_block')}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='street'>{t('street')}:</Label>
+        <Input
+          name='street'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_street')}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='neighborhood'>{t('neighborhood')}:</Label>
+        <Input
+          name='neighborhood'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_neighborhood')}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='building'>{t('building')}:</Label>
+        <Input
+          name='building'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_building')}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='floor'>{t('floor')}:</Label>
+        <Input
+          name='floor'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_floor')}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='apartment'>{t('apartment')}:</Label>
+        <Input
+          name='apartment'
+          className='placeholder:text-gray-400'
+          placeholder={t('enter_apartment')}
+        />
+      </div>
+      {/* <div className='grid w-full max-w-sm items-center gap-4'>
+        <Label htmlFor='address'>
+          {t('address')}
+        </Label>
         <Textarea
           id='address'
           name='address'
           className='placeholder:text-gray-400'
           placeholder={t('enter_address')}
         />
-      </div>
+      </div> */}
       <div className='grid w-full max-w-sm items-center gap-4'>
-        {/* <Label htmlFor='details' aria-required>
-          {t('other_details')} <span className='text-secondary'>*</span>
-        </Label> */}
+        <Label htmlFor='details'>{t('other_details')}:</Label>
         <Textarea
           id='details'
           name='details'
           className='placeholder:text-gray-400'
-          placeholder={t('other_details')}
+          placeholder={t('other_details_needed')}
         />
       </div>
     </>

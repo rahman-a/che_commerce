@@ -19,7 +19,8 @@ export default function PhoneInput({ onChange, phone }: Props) {
       labels={locale === 'ar' ? ar : undefined}
       direction={getLangDir(locale)}
       className='[&>input]:p-2 [&>input]:border [&>input]:rounded-md 
-      [&>input]:rtl:text-right [&>div]:rtl:ml-1 [&>input]:placeholder:text-gray-400'
+      [&>input]:rtl:text-right [&>div]:rtl:ml-1 [&>input]:placeholder:text-gray-400
+      [&>input]:placeholder:text-sm'
       value={phone}
       onChange={onChange}
       defaultCountry='KW'

@@ -13,11 +13,22 @@ import {
 } from '@/components/ui/carousel'
 import ProductCard from './Product-Card'
 import { products } from '@/demo/products'
-type Props = {}
+import { useMediaQuery } from '@/hooks/useMediaQuery'
+type Props = {
+  isMainPage?: boolean
+}
 
-export default function MoreProductsSliders({}: Props) {
+export default function MoreProductsSliders({ isMainPage }: Props) {
   const t = useTranslations('Main_Page')
+  const [productsCards, setProductsCards] = React.useState(products(t))
   const locale = useLocale()
+  const isSmallScreen = useMediaQuery('(max-width: 640px)')
+
+  React.useEffect(() => {
+    if (!isMainPage && isSmallScreen) {
+      setProductsCards(products(t).slice(0, 4))
+    }
+  }, [])
   return (
     <div className='flex flex-col items-center w-full'>
       <div className='flex w-full items-center justify-center space-x-10 py-7'>
@@ -32,7 +43,7 @@ export default function MoreProductsSliders({}: Props) {
         </button>
       </div>
       <ul className='grid place-items-center grid-cols-2 sm:flex items-center justify-center flex-wrap gap-4'>
-        {products(t).map((product, index) => (
+        {productsCards.map((product, index) => (
           <li key={product.id}>
             <Link href='/products/1'>
               <ProductCard

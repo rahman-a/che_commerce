@@ -77,6 +77,9 @@ importers:
       react-hook-form:
         specifier: ^7.52.0
         version: 7.52.0(react@18.3.1)
+      react-inner-image-zoom:
+        specifier: ^3.0.2
+        version: 3.0.2(prop-types@15.8.1)(react@18.3.1)
       react-instantsearch:
         specifier: ^7.11.3
         version: 7.11.3(algoliasearch@4.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -111,6 +114,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
+      '@types/react-inner-image-zoom':
+        specifier: ^3.0.3
+        version: 3.0.3
       '@types/rtl-detect':
         specifier: ^1.0.3
         version: 1.0.3
@@ -944,6 +950,9 @@ packages:
 
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
+
+  '@types/react-inner-image-zoom@3.0.3':
+    resolution: {integrity: sha512-/6aqz34arNTp3w1A6RKPxuGRKaSQYtowuzym2lSmSlYrtn5e7cKut9An9dLzM8lC8+i1lkR/hmD88aQ22aRpzw==}
 
   '@types/react@18.3.3':
     resolution: {integrity: sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==}
@@ -2092,6 +2101,12 @@ packages:
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
+
+  react-inner-image-zoom@3.0.2:
+    resolution: {integrity: sha512-ICjyz0wdKmLufuQkUyg4iyP0yIF2elDeHjY1+S1pOKPggrW0g9V2SCmOSA39405ZX8GVVaxadmUYWwz3OF4V5A==}
+    peerDependencies:
+      prop-types: '>=15.6.2'
+      react: '>=16.8.0'
 
   react-instantsearch-core@7.11.3:
     resolution: {integrity: sha512-c5/odLJVc8hZgTzOXhC+IfXmC/M4UALZ2vvF9ts5TNbn7KB2M+AexmJt4g279X57sBSeUXHhOzFLrj3jAKvYvQ==}
@@ -3320,6 +3335,10 @@ snapshots:
       '@types/react': 18.3.3
 
   '@types/react-dom@18.3.0':
+    dependencies:
+      '@types/react': 18.3.3
+
+  '@types/react-inner-image-zoom@3.0.3':
     dependencies:
       '@types/react': 18.3.3
 
@@ -4666,6 +4685,11 @@ snapshots:
 
   react-hook-form@7.52.0(react@18.3.1):
     dependencies:
+      react: 18.3.1
+
+  react-inner-image-zoom@3.0.2(prop-types@15.8.1)(react@18.3.1):
+    dependencies:
+      prop-types: 15.8.1
       react: 18.3.1
 
   react-instantsearch-core@7.11.3(algoliasearch@4.23.3)(react@18.3.1):
