@@ -60,18 +60,18 @@ export default function HorizontalProductSlider({}: Props) {
           ))}
         </CarouselContent>
         <CarouselPrevious
-          className='[&>svg]:w-12 [&>svg]:h-12 w-12 h-12 text-secondary 
+          className='[&>svg]:w-12 [&>svg]:h-12 w-12 h-12 text-primary
         bg-transparent border-0 translate-x-12 sm:translate-x-auto md:left-4'
         />
         <CarouselNext
-          className='[&>svg]:w-12 [&>svg]:h-12 w-12 h-12 text-secondary 
+          className='[&>svg]:w-12 [&>svg]:h-12 w-12 h-12 text-primary 
         bg-transparent border-0 -translate-x-12 sm:translate-x-auto md:right-4'
         />
       </Carousel>
       <div>
         <p className='text-3xl sm:text-4xl py-2'>
           {t('more_than')}{' '}
-          <span className='text-secondary italic'>{t('a_clause')}</span>
+          <span className='text-primary italic'>{t('a_clause')}</span>
         </p>
       </div>
     </section>

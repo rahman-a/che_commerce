@@ -16,7 +16,7 @@ export default function Cart({ params: { locale } }: ICartProps) {
   const t = useTranslations('Cart')
   unstable_setRequestLocale(locale)
   return (
-    <main className='relative flex  flex-col mt-10 pt-10 px-3 md:p-10 mt-20'>
+    <main className='relative flex  flex-col pt-10 px-3 md:p-10 mt-20'>
       <Title title={t('cart')} direction={getLangDir(locale)} />
       <h2 className='text-xl md:text-3xl space-x-1 rtl:space-x-0 mt-5'>
         {t('cart_items')}&nbsp;:
@@ -27,7 +27,7 @@ export default function Cart({ params: { locale } }: ICartProps) {
         <CartProductCard />
       </section>
       <section className='w-full sm:w-auto'>
-        <div className='flex sm:justify-end bg-primary sm:bg-transparent px-4 py-5 rounded-xl'>
+        <div className='flex sm:justify-end shadow-sm sm:shadow-none bg-primary/5 sm:bg-transparent px-4 py-5 rounded-xl'>
           <CartItemsTotal />
         </div>
       </section>

@@ -34,19 +34,19 @@ export default function SliderImage({
             .map((st: string, idx: number) => (
               <p
                 key={idx}
-                className='first:text-secondary rtl:first:text-black rtl:last:text-secondary last:translate-x-3'
+                className='first:text-primary rtl:first:text-black rtl:last:text-primary last:translate-x-3'
               >
                 {st}
               </p>
             ))}
         </h3>
       )}
-      {isLogo && (
+      {/* {isLogo && (
         <div className='absolute h-full w-full flex items-center justify-center'>
           <Logo className='h-full absolute w-72 sm:w-96 z-0' />
           <LogoTransparent className='h-full absolute w-72 sm:w-96 z-20 transparent-slider-logo' />
         </div>
-      )}
+      )} */}
       <Image
         src={src}
         alt={alt}

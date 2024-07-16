@@ -26,18 +26,21 @@ export default function ForgetPassword({}: Props) {
         </div>
         <Button
           type='submit'
-          className='w-full mt-5 bg-secondary text-white text-sm font-bold hover:bg-secondary'
+          className='w-full mt-5 bg-primary text-white text-sm font-bold hover:bg-primary'
         >
           {t('send_reset_link')}
         </Button>
         <div className='flex items-center space-x-5 rtl:space-x-auto'>
           <Link
             href='/login'
-            className='text-xs text-primary font-bold rtl:ml-5'
+            className='text-xs text-secondary underline underline-offset-2 font-bold rtl:ml-5'
           >
             {t('login')}
           </Link>
-          <Link href='/register' className='text-xs text-primary font-bold'>
+          <Link
+            href='/register'
+            className='text-xs text-secondary underline underline-offset-2 font-bold'
+          >
             {t('signup')}
           </Link>
         </div>

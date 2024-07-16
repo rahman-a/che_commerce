@@ -15,11 +15,11 @@ export default function ShoppingCart(props: IShoppingCartProps) {
         className='absolute flex items-center justify-center -right-2 
         -top-1 rounded-full bg-white h-5 w-5'
       >
-        <span className='text-secondary text-sm font-semibold'>2</span>
+        <span className='text-highlight text-sm font-semibold'>2</span>
       </div>
       <CartIcon
         size={26}
-        className={cn(isCurrentPage('/cart') && 'stroke-secondary')}
+        className={cn(isCurrentPage('/cart') && 'stroke-highlight')}
       />
     </Link>
   )

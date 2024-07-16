@@ -38,7 +38,7 @@ export default function Product({}: Props) {
     <main className='flex min-h-screen flex-col'>
       <Title
         title={tp('classic_abaya')}
-        className='flex md:hidden top-24 [&>h1]:-translate-x-4'
+        className='flex md:hidden top-24'
         direction={getLangDir(locale)}
       />
       <section
@@ -60,7 +60,7 @@ export default function Product({}: Props) {
       <section className='relative' id='product_info'>
         <Title
           title={tp('classic_abaya')}
-          className='hidden md:flex top-4 [&>h1]:-translate-x-4'
+          className='hidden md:flex top-4'
           direction={getLangDir(locale)}
         />
         <ProductNamePrice

@@ -139,7 +139,7 @@ function FloatTitle({
       {title.split(' ').map((st, idx) => (
         <p
           key={idx}
-          className='first:text-secondary rtl:first:text-black rtl:last:text-secondary first:translate-x-5'
+          className='first:text-primary rtl:first:text-black rtl:last:text-primary first:translate-x-5'
         >
           {st}
         </p>

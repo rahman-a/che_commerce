@@ -37,7 +37,7 @@ export default function ProductCard({
           {discount && (
             <DiscountBadge
               discount={discount}
-              className='text-sm sm:text-md absolute top-2 left-2'
+              className='[&>p]:!text-sm absolute top-2 left-2'
             />
           )}
           <figure className='relative w-full h-[85%] rounded-md overflow-hidden'>

@@ -28,13 +28,13 @@ export default function CartItemsTotal({ className }: Props) {
         <Button
           asChild
           variant='secondary'
-          className='text-white hover:text-white hover:bg-secondary'
+          className='text-white hover:text-white bg-primary hover:bg-primary'
         >
           <Link href='/checkout/invoice-details'>{t('checkout')}</Link>
         </Button>
         <Button
           variant='outline'
-          className='border-secondary text-secondary'
+          className='border-primary text-primary'
           asChild
         >
           <Link href='/categories'>{t('continue_shopping')}</Link>

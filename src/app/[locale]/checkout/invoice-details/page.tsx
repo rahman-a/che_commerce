@@ -20,11 +20,7 @@ export default function GuestCheckout({}: Props) {
 
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10 mt-20'>
-      <Title
-        title={t('invoice_details')}
-        direction={getLangDir(locale)}
-        className='[&>h1]:-translate-x-4'
-      />
+      <Title title={t('invoice_details')} direction={getLangDir(locale)} />
       <div
         className='absolute top-16 md:top-3 left-2 md:left-72 flex items-center justify-center
       space-x-1 rtl:space-x-0 rtl:left-auto rtl:right-2 md:rtl:right-56'
@@ -41,7 +37,7 @@ export default function GuestCheckout({}: Props) {
       <Title
         title={t('shipping_address')}
         direction={getLangDir(locale)}
-        className='top-[30rem] md:top-60 [&>h1]:-translate-x-4'
+        className='top-[30rem] md:top-60 '
       />
       <section className='flex flex-col space-y-5 pt-8 pb-5 mt-10 md:mt-0'>
         <h2>{t('create_order_once')}</h2>
@@ -59,7 +55,7 @@ export default function GuestCheckout({}: Props) {
       <section className='py-5'>
         <Button
           variant='secondary'
-          className='text-white hover:bg-secondary'
+          className='text-white bg-primary hover:bg-primary'
           asChild
         >
           <Link href='/checkout/order-details'>{tc('checkout')}</Link>

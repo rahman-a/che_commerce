@@ -16,11 +16,7 @@ export default function Profile({}: Props) {
 
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10 mt-20'>
-      <Title
-        title={t('account_info')}
-        direction={getLangDir(locale)}
-        className='[&>h1]:-translate-x-4'
-      />
+      <Title title={t('account_info')} direction={getLangDir(locale)} />
       <section className='flex md:items-center flex-col md:flex-row space-x-0 md:space-x-5 space-y-8 md:space-y-0 justify-between pt-8 pb-5'>
         <ProfileInfo />
       </section>
@@ -33,7 +29,10 @@ export default function Profile({}: Props) {
         <ProfileAddress />
       </section>
       <section className='py-5'>
-        <Button variant='secondary' className='text-white hover:bg-secondary'>
+        <Button
+          variant='secondary'
+          className='text-white bg-primary hover:bg-primary'
+        >
           {t('save_continue')}
         </Button>
       </section>

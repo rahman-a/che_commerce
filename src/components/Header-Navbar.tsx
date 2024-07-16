@@ -17,8 +17,8 @@ export default function HeaderNavbar({}: Props) {
         text={t('home')}
         url='/'
         className={cn(
-          'hover:text-secondary rtl:ml-28',
-          isCurrentPage('') && 'text-secondary'
+          'hover:text-highlight rtl:ml-28',
+          isCurrentPage('') && 'text-highlight'
         )}
       >
         <HomeIcon className='w-6 h-6' />
@@ -27,8 +27,8 @@ export default function HeaderNavbar({}: Props) {
         text={t('categories')}
         url='/categories'
         className={cn(
-          'hover:text-secondary',
-          isCurrentPage('/categories/*') && 'text-secondary'
+          'hover:text-highlight',
+          isCurrentPage('/categories/*') && 'text-highlight'
         )}
       >
         <CategoryIcon className='w-6 h-6' />

@@ -15,11 +15,7 @@ export default function Register({}: Props) {
   unstable_setRequestLocale(locale)
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10 mt-20'>
-      <Title
-        title={t('create_account')}
-        direction={getLangDir(locale)}
-        className='[&>h1]:-translate-x-4'
-      />
+      <Title title={t('create_account')} direction={getLangDir(locale)} />
       <Title
         title={t('address')}
         direction={getLangDir(locale)}
@@ -32,7 +28,10 @@ export default function Register({}: Props) {
         <ProfileAddress />
       </section>
       <section className='py-5'>
-        <Button variant='secondary' className='text-white hover:bg-secondary'>
+        <Button
+          variant='secondary'
+          className='text-white hover:bg-primary bg-primary'
+        >
           {t('save_continue')}
         </Button>
       </section>

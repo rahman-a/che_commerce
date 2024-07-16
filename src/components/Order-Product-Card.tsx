@@ -114,7 +114,7 @@ export default function OrdersItems({}: Props) {
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type='submit' className='hover:bg-primary'>
+            <Button type='submit' className='bg-secondary hover:bg-secondary'>
               {t('close')}
             </Button>
           </SheetClose>

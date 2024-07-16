@@ -27,7 +27,7 @@ export default function ProductNamePrice({
       </h3>
       <div className='relative flex items-center justify-between mt-4 xl:mt-8'>
         <h3 className='text-xl sm:text-3xl md:text-4xl xl:text-5xl'>{name}</h3>
-        <h3 className='text-xl sm:text-3xl md:text-4xl xl:text-5xl text-secondary'>
+        <h3 className='text-xl sm:text-3xl md:text-4xl xl:text-5xl text-primary'>
           {price} {t('kw')}
         </h3>
       </div>

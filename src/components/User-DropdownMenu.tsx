@@ -23,18 +23,17 @@ export default function UserDropdownMenu({}: Props) {
   const isCurrentPage = useCurrentPage()
   return (
     <DropdownMenu modal={false}>
-      <DropdownMenuTrigger>
-        <UserIcon
-          className={cn(
-            'w-6 h-6',
-            isCurrentPage(['/profile', '/orders']) && 'stroke-secondary'
-          )}
-        />
+      <DropdownMenuTrigger
+        className={
+          isCurrentPage(['/profile', '/orders']) ? 'text-highlight' : ''
+        }
+      >
+        <UserIcon className={cn('w-6 h-6')} />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <div>
           <DropdownMenuLabel>
-            <p className='text-secondary text-center w-full'>
+            <p className='text-primary text-center w-full'>
               {t('welcome', {
                 name: locale === 'en' ? 'Abdelaziz' : 'عبد العزيز',
               })}

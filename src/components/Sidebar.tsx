@@ -38,48 +38,48 @@ export default function Sidebar(props: ISidebarProps) {
             <LinkItem
               text={t('home')}
               url='/'
-              className={isCurrentPage('') ? 'text-secondary' : ''}
+              className={isCurrentPage('') ? 'text-highlight' : ''}
             >
               <HomeIcon
                 className={cn(
                   'text-primary w-6 h-6',
-                  isCurrentPage('') && 'text-secondary'
+                  isCurrentPage('') && 'text-highlight'
                 )}
               />
             </LinkItem>
             <LinkItem
               text={t('categories')}
               url='/categories'
-              className={isCurrentPage('/categories/*') ? 'text-secondary' : ''}
+              className={isCurrentPage('/categories/*') ? 'text-highlight' : ''}
             >
               <CategoryIcon
                 className={cn(
                   'text-primary w-6 h-6',
-                  isCurrentPage('/categories/*') && 'text-secondary'
+                  isCurrentPage('/categories/*') && 'text-highlight'
                 )}
               />
             </LinkItem>
             <LinkItem
               text={t('cart')}
               url='/cart'
-              className={isCurrentPage('/cart') ? 'text-secondary' : ''}
+              className={isCurrentPage('/cart') ? 'text-highlight' : ''}
             >
               <CartIcon
                 className={cn(
                   'text-primary w-6 h-6',
-                  isCurrentPage('/cart') && 'text-secondary'
+                  isCurrentPage('/cart') && 'text-highlight'
                 )}
               />
             </LinkItem>
             <LinkItem
               text={t('orders')}
               url='/orders'
-              className={isCurrentPage('/orders') ? 'text-secondary' : ''}
+              className={isCurrentPage('/orders') ? 'text-highlight' : ''}
             >
               <OrdersIcon
                 className={cn(
                   'text-primary w-6 h-6',
-                  isCurrentPage('/orders') && 'text-secondary'
+                  isCurrentPage('/orders') && 'text-highlight'
                 )}
               />
             </LinkItem>
@@ -91,12 +91,12 @@ export default function Sidebar(props: ISidebarProps) {
               <LinkItem
                 text={t('account_setting')}
                 url='/profile'
-                className={isCurrentPage('/profile') ? 'text-secondary' : ''}
+                className={isCurrentPage('/profile') ? 'text-highlight' : ''}
               >
                 <UserIcon
                   className={cn(
                     'text-primary w-6 h-6',
-                    isCurrentPage('/profile') && 'text-secondary'
+                    isCurrentPage('/profile') && 'text-highlight'
                   )}
                 />
               </LinkItem>
@@ -107,7 +107,7 @@ export default function Sidebar(props: ISidebarProps) {
                 locale={locale}
                 className={cn(
                   'text-sm text-primary underline text-center',
-                  isCurrentPage('/login') ? 'text-secondary' : ''
+                  isCurrentPage('/login') ? 'text-highlight' : ''
                 )}
                 href='/login'
               >
@@ -118,7 +118,7 @@ export default function Sidebar(props: ISidebarProps) {
                 locale={locale}
                 className={cn(
                   'text-sm text-primary underline text-center',
-                  isCurrentPage('/register') ? 'text-secondary' : ''
+                  isCurrentPage('/register') ? 'text-highlight' : ''
                 )}
                 href='/register'
               >

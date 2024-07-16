@@ -50,13 +50,16 @@ export default function Login({ params: { locale } }: LoginProps) {
         </div>
         <Button
           type='submit'
-          className='w-full mt-5 bg-secondary text-white text-sm font-bold hover:bg-secondary'
+          className='w-full mt-5 bg-primary text-white text-sm font-bold hover:bg-primary'
         >
           {t('login')}
         </Button>
         <div className='flex items-center space-x-5 rtl:space-x-auto'>
           <p className='text-xs font-bold rtl:ml-5'>{t('dont_have_account')}</p>
-          <Link href='/register' className='text-xs text-primary font-bold'>
+          <Link
+            href='/register'
+            className='text-xs text-secondary underline underline-offset-1 font-bold'
+          >
             {t('signup')}
           </Link>
         </div>

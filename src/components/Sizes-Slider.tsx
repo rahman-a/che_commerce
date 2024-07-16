@@ -24,14 +24,12 @@ export default function SizesSlider({}: Props) {
         {Array.from({ length: 20 }).map((_, index) => (
           <Fragment key={index}>
             <CarouselItem className='basis-8 flex items-center'>
-              <div className='cursor-pointer hover:text-secondary text-lg'>
+              <div className='cursor-pointer hover:text-primary text-lg'>
                 {index}5
               </div>
             </CarouselItem>
             <CarouselItem className='basis-1 flex items-center'>
-              <div className='cursor-pointer hover:text-secondary text-lg'>
-                -
-              </div>
+              <div className='cursor-pointer hover:text-primary text-lg'>-</div>
             </CarouselItem>
           </Fragment>
         ))}

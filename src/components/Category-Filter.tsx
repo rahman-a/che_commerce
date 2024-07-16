@@ -63,7 +63,7 @@ export default function CategoryFilter({}: Props) {
       </DialogTrigger>
       <DialogContent className='w-full max-w-[23rem] md:max-w-lg overflow-hidden rounded-lg opacity-80'>
         <div className='flex flex-col items-center justify-center space-y-10'>
-          <h3 className='text-secondary text-xl'>{t('price_range')}</h3>
+          <h3 className='text-primary text-xl'>{t('price_range')}</h3>
           <Slider
             defaultValue={[120, 500]}
             max={570}
@@ -74,19 +74,19 @@ export default function CategoryFilter({}: Props) {
           />
         </div>
         <div className='flex flex-col items-center justify-center space-y-3'>
-          <h3 className='text-secondary text-xl'>{t('sizes')}</h3>
+          <h3 className='text-primary text-xl'>{t('sizes')}</h3>
           <SizesSlider />
         </div>
         <div className='flex flex-col items-center justify-center space-y-3'>
-          <h3 className='text-secondary text-xl'>{t('abaya_types')}</h3>
+          <h3 className='text-primary text-xl'>{t('abaya_types')}</h3>
           <div className='flex items-center flex-wrap space-x-4 space-x-reverse'>
             {abayasType.map((item) => (
               <Button
                 key={item.id}
                 variant='outline'
                 className={cn(
-                  'border-2 border-black mr-2 mb-2 rounded-md capitalize h-auto p-2 hover:bg-secondary hover:text-white',
-                  type === item.name && 'bg-secondary text-white'
+                  'border border-black mr-2 mb-2 rounded-md capitalize h-auto p-2 hover:border-primary hover:bg-primary hover:text-white',
+                  type === item.name && 'bg-primary border-primary text-white'
                 )}
                 onClick={() => setType(item.name)}
               >

@@ -58,7 +58,7 @@ export default function AddToCart({ className }: Props) {
       ></FormField>
       <button
         type='submit'
-        className='bg-secondary text-white h-7 w-36 md:w-40 md:h-auto 
+        className='bg-primary text-white h-7 w-36 md:w-40 md:h-auto 
             text-base md:text-lg font-bold py-1 px-2 md:py-2 md:px-5 rounded-lg'
       >
         {t('add_to_cart')}
@@ -73,7 +73,7 @@ function QuantityInputController({ field }: QuantityInputProps) {
       <span
         role='button'
         className='flex items-center justify-center w-8 h-8 
-                    rounded-full text-secondary text-lg shadow-xl hover:shadow-md active:shadow-none font-bold'
+                    rounded-full text-primary text-lg shadow-xl hover:shadow-md active:shadow-none font-bold'
         onClick={() =>
           field.value >= 1 && field.onChange(Number(field.value) + 1)
         }
@@ -81,8 +81,8 @@ function QuantityInputController({ field }: QuantityInputProps) {
         +
       </span>
       <Input
-        className='w-8 block text-secondary text-base font-bold 
-                      underline underline-offset-4 decoration-secondary border-0 focus:outline-none 
+        className='w-8 block text-primary text-base font-bold 
+                      underline underline-offset-4 decoration-primary border-0 focus:outline-none 
                       p-0 text-center'
         type='text'
         id='quantity'
@@ -91,7 +91,7 @@ function QuantityInputController({ field }: QuantityInputProps) {
       <span
         role='button'
         className='flex items-center justify-center w-8 h-8 
-                    rounded-full text-secondary text-lg shadow-xl 
+                    rounded-full text-primary text-lg shadow-xl 
                     hover:shadow-md active:shadow-none font-bold'
         onClick={() =>
           field.value > 1 && field.onChange(Number(field.value) - 1)
