@@ -45,6 +45,7 @@ export default function Product({}: Props) {
         className='relative grid grid-cols-[1fr_300px] place-content-center sm:flex sm:items-center 
         sm:flex-row-reverse sm:rtl:flex-row mt-32 md:mt-16 xl:mt-8 pt-4 px-2 sm:px-5 md:p-10'
       >
+        <div className='absolute top-0 left-0 w-full h-full opacity-10 pattern' />
         <div
           className='absolute -top-5 right-5 rtl:right-auto rtl:left-5 md:left-20 md:top-20 
         flex flex-col items-end md:items-start md:rtl:items-end space-y-3'

@@ -28,6 +28,7 @@ export default function HorizontalProductSlider({}: Props) {
 
   return (
     <section className='relative w-full flex flex-col mt-8 items-center justify-center'>
+      <div className='absolute top-0 left-0 w-full h-full opacity-10 pattern' />
       <Carousel
         className='mt-8 w-full'
         opts={{

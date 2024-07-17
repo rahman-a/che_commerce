@@ -110,3 +110,9 @@
   width: 100%;
   background-color: hsl(var(--primary) / 0.1);
 }
+
+.pattern {
+  background-image: url('/images/pattern.svg');
+  background-size: cover;
+  background-position: center;
+}

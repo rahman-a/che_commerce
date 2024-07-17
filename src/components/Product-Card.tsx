@@ -27,8 +27,8 @@ export default function ProductCard({
   return (
     <Card
       className={cn(
-        `w-44 sm:w-48 h-72 md:h-80 relative bg-card shadow-md hover:shadow-none 
-        transition-all duration-300 ease-in-out`,
+        `w-44 sm:w-48 h-72 md:h-80 relative bg-card shadow-sm md:shadow-md hover:shadow-none 
+        transition-all duration-300 ease-in-out border-none`,
         className
       )}
     >

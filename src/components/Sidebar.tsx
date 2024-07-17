@@ -27,6 +27,7 @@ export default function Sidebar(props: ISidebarProps) {
   const isCurrentPage = useCurrentPage()
   return (
     <SheetContent className='w-[225px]'>
+      <div className='absolute top-0 left-0 w-full h-full opacity-15 pattern' />
       <div className='flex flex-col items-center justify-between h-full'>
         <div className='flex flex-col space-y-16'>
           <h3 className='text-primary text-[16px] text-center mt-8'>
