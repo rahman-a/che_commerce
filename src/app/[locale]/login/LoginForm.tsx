@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation'
 import { useFormState } from 'react-dom'
 import { toast } from 'sonner'
 import { login } from './actions'
+import { signIn, useSession } from 'next-auth/react'
 
 type Props = {}
 
@@ -19,6 +20,7 @@ const LoginForm = (props: Props) => {
   const [phoneNo, setPhoneNo] = React.useState<Value>()
   const [pending, setPending] = React.useState(false)
   const formRef = React.useRef<HTMLFormElement>(null)
+  const session = useSession()
   const router = useRouter()
   const [state, formAction] = useFormState(login, {
     message: '',
@@ -33,16 +35,37 @@ const LoginForm = (props: Props) => {
     }
     formAction(formData)
   }
+
+  const signInHandler = async (user: any) => {
+    const response = await signIn('credentials', {
+      redirect: false,
+      callbackUrl: '/',
+      user: JSON.stringify({
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        image: user.image,
+      }),
+    })
+    if (!response?.ok) {
+      setPending(false)
+      toast.error('Error signing in')
+    } else {
+      setPending(false)
+      formRef.current?.reset()
+      toast.success(t('Form.login_successful'))
+      console.log('session-login', session)
+      router.replace('/')
+      router.refresh()
+    }
+  }
   React.useEffect(() => {
     if (state && state.response === 'error') {
       setPending(false)
       toast.error(state.message)
     }
-    if (state && state.response === 'OK') {
-      setPending(false)
-      formRef.current?.reset()
-      toast.success(state.message)
-      router.replace('/')
+    if (state && state.response === 'proceed') {
+      signInHandler(state.data)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state])

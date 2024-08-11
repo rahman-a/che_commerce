@@ -1,5 +1,4 @@
 'use server'
-
 import { signIn } from '@/auth'
 import prisma from '@/lib/prisma'
 import { getTranslations } from 'next-intl/server'
@@ -49,17 +48,15 @@ export async function login(prevState: any, formData: FormData) {
     if (user.status === 'inactive') {
       return { response: 'error', message: t('Profile.account_inactive') }
     }
-    await signIn('credentials', {
-      redirect: false,
-      callbackUrl: '/',
-      user: JSON.stringify({
+    return {
+      response: 'proceed',
+      data: {
         id: user.id,
         name: user.name,
         email: user.email,
         image: user.image,
-      }),
-    })
-    return { response: 'OK', message: t('Form.login_successful') }
+      },
+    }
   } catch (error: any) {
     console.log('Error: ', error)
     return { response: 'error', message: error.message }

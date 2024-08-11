@@ -31,7 +31,7 @@ export default function Header(props: IHeaderProps) {
         <div className='flex items-center rtl:flex-row-reverse space-x-5 space-x-reverse md:space-x-5 rtl:md:space-x-5'>
           <div className='hidden md:block'>
             {user ? (
-              <UserDropdownMenu />
+              <UserDropdownMenu user={user} />
             ) : (
               <Link href='/login'>
                 <User className='w-6 h-6 cursor-pointer' />

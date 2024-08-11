@@ -14,10 +14,13 @@ import LinkItem from './Link-Item'
 import LogoutBtn from './Logout-Btn'
 import { useCurrentPage } from '@/hooks/useCurrentPage'
 import { cn } from '@/lib/utils'
+import { User } from 'next-auth'
 
-type Props = {}
+type Props = {
+  user: User
+}
 
-export default function UserDropdownMenu({}: Props) {
+export default function UserDropdownMenu({ user }: Props) {
   const t = useTranslations('Navigation')
   const locale = useLocale()
   const isCurrentPage = useCurrentPage()
@@ -34,9 +37,10 @@ export default function UserDropdownMenu({}: Props) {
         <div>
           <DropdownMenuLabel>
             <p className='text-primary text-center w-full'>
-              {t('welcome', {
+              {user.name}
+              {/* {t('welcome', {
                 name: locale === 'en' ? 'Abdelaziz' : 'عبد العزيز',
-              })}
+              })} */}
             </p>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />

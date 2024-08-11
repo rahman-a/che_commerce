@@ -1,12 +1,14 @@
 import createMiddleware from 'next-intl/middleware'
 import { localePrefix, defaultLocale, locales, pathnames, host } from './config'
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from './auth'
-
+import { withAuth } from 'next-auth/middleware'
 const publicPages = [
   '/',
   '/categories',
   '/categories(.*)',
+  '/products(.*)',
+  '/offers(.*)',
+  '/checkout(.*)',
   '/cart',
   '/login',
   '/forgot-password',
@@ -20,15 +22,27 @@ const intlMiddleware = createMiddleware({
   pathnames,
 })
 
-const authMiddleware = auth((req) => {
-  console.log('authMiddleware', req.auth)
-  if (req.auth) return intlMiddleware(req)
-  const reqUrl = new URL(req.url)
-  if (!req.auth && reqUrl?.pathname !== '/') {
-    return NextResponse.redirect(new URL(`${host}/login`, req.url))
+const authMiddleware = withAuth(
+  // Note that this callback is only invoked if
+  // the `authorized` callback has returned `true`
+  // and not for pages listed in `pages`.
+  function onSuccess(req) {
+    return intlMiddleware(req)
+  },
+  {
+    callbacks: {
+      authorized: ({ token }) => {
+        console.log('authorized', { token })
+        // If no token is found, the user is not signed in
+        if (!token) {
+          return false
+        }
+        return true
+      },
+    },
+    secret: process.env.AUTH_SECRET,
   }
-})
-
+)
 export default function middleware(req: NextRequest) {
   const publicRoutes = publicPages
     .flatMap((p) => (p === '/' ? ['', '/'] : p))
