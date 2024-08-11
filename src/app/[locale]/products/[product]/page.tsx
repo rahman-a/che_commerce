@@ -5,6 +5,9 @@ import { ArrowDown } from 'lucide-react'
 import abaya1 from '@/images/demo/products/abaya_1.png'
 import abaya2 from '@/images/demo/products/abaya_2.png'
 import abaya3 from '@/images/demo/products/abaya_3.png'
+import abayaAlt1 from '@/images/demo/products/product_1/abaya_1.jpg'
+import abayaAlt2 from '@/images/demo/products/product_1/abaya_2.jpg'
+import abayaAlt3 from '@/images/demo/products/product_1/abaya_3.jpg'
 // import abaya4 from '@/images/demo/products/abaya_4.png'
 // import abaya5 from '@/images/demo/products/abaya_5.png'
 import { type Product } from '@/types/products'
@@ -24,15 +27,15 @@ export default function Product({}: Props) {
   const tp = useTranslations('Product')
   const locale = useLocale()
   const products: Product[] = [
-    { id: 1, src: abaya1.src, alt: 'abaya1' },
-    { id: 2, src: abaya2.src, alt: 'abaya2' },
-    { id: 3, src: abaya3.src, alt: 'abaya3' },
-    { id: 4, src: abaya1.src, alt: 'abaya4' },
-    { id: 5, src: abaya2.src, alt: 'abaya5' },
-    { id: 6, src: abaya3.src, alt: 'abaya6' },
-    { id: 7, src: abaya1.src, alt: 'abaya7' },
-    { id: 8, src: abaya2.src, alt: 'abaya8' },
-    { id: 9, src: abaya3.src, alt: 'abaya9' },
+    { id: 1, src: abayaAlt1.src, alt: 'abaya1' },
+    { id: 2, src: abayaAlt2.src, alt: 'abaya2' },
+    { id: 3, src: abayaAlt3.src, alt: 'abaya3' },
+    { id: 4, src: abayaAlt1.src, alt: 'abaya4' },
+    { id: 5, src: abayaAlt2.src, alt: 'abaya5' },
+    { id: 6, src: abayaAlt3.src, alt: 'abaya6' },
+    { id: 7, src: abayaAlt1.src, alt: 'abaya7' },
+    { id: 8, src: abayaAlt2.src, alt: 'abaya8' },
+    { id: 9, src: abayaAlt3.src, alt: 'abaya9' },
   ]
   return (
     <main className='flex min-h-screen flex-col'>

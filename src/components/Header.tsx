@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 import { Search } from 'lucide-react'
 import {
@@ -17,20 +18,25 @@ import LinkItem from './Link-Item'
 import UserDropdownMenu from './User-DropdownMenu'
 import LanguageChanger from './Language-Changer'
 import HeaderNavbar from './Header-Navbar'
+import { useSession } from 'next-auth/react'
 export interface IHeaderProps {}
 
 export default function Header(props: IHeaderProps) {
   const t = useTranslations('Navigation')
-
+  const session = useSession()
+  const user = session.data?.user
   return (
     <header className='fixed w-full top-0 left-0 z-20 bg-primary h-14 md:px-5 shadow-md'>
       <div className='flex items-center justify-between rtl:flex-row-reverse h-full px-4'>
         <div className='flex items-center rtl:flex-row-reverse space-x-5 space-x-reverse md:space-x-5 rtl:md:space-x-5'>
           <div className='hidden md:block'>
-            {/* <Link href='/login'>
-              <User className='w-6 h-6 cursor-pointer' />
-            </Link> */}
-            <UserDropdownMenu />
+            {user ? (
+              <UserDropdownMenu />
+            ) : (
+              <Link href='/login'>
+                <User className='w-6 h-6 cursor-pointer' />
+              </Link>
+            )}
           </div>
           <ShoppingCart />
           <div className='grid place-content-center w-7 h-7  circle bg-white md:bg-transparent'>

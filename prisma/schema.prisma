@@ -1,0 +1,80 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String            @id @default(cuid())
+  name             String?
+  email            String?           @unique
+  emailVerified    DateTime?
+  image            String?
+  phone            String            @unique
+  phoneVerified    DateTime?
+  password         String
+  role             Role              @default(user)
+  status           UserStatus        @default(active)
+  sessions         Session[]
+  shippingAddress  ShippingAddress[]
+  resetToken       String?           @unique
+  resetTokenExpiry DateTime?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  @@map("users")
+}
+
+model ShippingAddress {
+  id           String       @id @default(cuid())
+  country      String?
+  governorate  String?
+  region       String?
+  block        String?
+  street       String?
+  neighborhood String?
+  building     String?
+  floor        String?
+  apartment    String?
+  addressLine  String?
+  type         AddressType? @default(home)
+  primary      Boolean?
+  note         String?
+  userId       String
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("addresses")
+}
+
+model Session {
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("sessions")
+}
+
+enum AddressType {
+  home
+  office
+  other
+}
+
+enum Role {
+  user
+  employee
+  manager
+}
+
+enum UserStatus {
+  active
+  inactive
+}

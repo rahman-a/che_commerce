@@ -6,10 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "sms": "tsx send-sms.ts"
   },
   "dependencies": {
+    "@auth/core": "^0.34.2",
+    "@auth/prisma-adapter": "^2.4.2",
     "@hookform/resolvers": "^3.6.0",
+    "@neondatabase/serverless": "^0.9.4",
+    "@prisma/adapter-neon": "^5.18.0",
+    "@prisma/client": "^5.18.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.1.0",
     "@radix-ui/react-label": "^2.1.0",
@@ -20,13 +27,17 @@
     "@radix-ui/react-slider": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.0",
+    "@vonage/server-sdk": "^3.16.0",
+    "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "easy-magnify": "^1.1.4",
     "embla-carousel-autoplay": "^8.1.5",
     "embla-carousel-react": "^8.1.5",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.395.0",
     "next": "14.2.4",
+    "next-auth": "5.0.0-beta.20",
     "next-intl": "^3.15.0",
     "react": "^18",
     "react-copy-to-clipboard": "^5.1.0",
@@ -35,13 +46,17 @@
     "react-inner-image-zoom": "^3.0.2",
     "react-instantsearch": "^7.11.3",
     "react-phone-number-input": "^3.4.3",
+    "resend": "^3.5.0",
     "rtl-detect": "^1.1.2",
+    "sonner": "^1.5.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-copy-to-clipboard": "^5.0.7",
@@ -51,7 +66,12 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
+    "prisma": "^5.18.0",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.17.0",
     "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   }
 }

@@ -3,15 +3,10 @@ import React from 'react'
 import Image from 'next/image'
 import { getLangDir } from 'rtl-detect'
 import { useTranslations, useLocale } from 'next-intl'
-// import dynamic from 'next/dynamic'
 import { cn } from '@/lib/utils'
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
 import { Product } from '@/types/products'
-import abaya1 from '@/images/demo/products/abaya_1.png'
-import abaya1Alt from '@/images/demo/products/abaya_1_alt.png'
-import abaya7 from '@/images/demo/products/abaya_7_alt.png'
 import abayaZoom1 from '@/images/demo/products/abaya_zoom_1.png'
-// const EasyZoomOnHover = dynamic(() => import('./ImageMagnify'), { ssr: false })
 import InnerImageZoom from 'react-inner-image-zoom'
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css'
 
@@ -33,6 +28,8 @@ export default function VerticalProductSlider({
   const t = useTranslations('Slider')
 
   React.useEffect(() => {
+    // setCurrentSrc(products[0].src)
+    // setCurrentZoomSrc(products[0].src)
     setCurrentSrc(abayaZoom1.src)
     setCurrentZoomSrc(abayaZoom1.src)
     let offerTimer: NodeJS.Timeout
@@ -64,7 +61,7 @@ export default function VerticalProductSlider({
           <InnerImageZoom
             src={currentSrc}
             zoomSrc={currentZoomSrc}
-            className='!max-w-[60%] md:!max-w-[30%] xl:!max-w-[40%] 
+            className='!mt-8 !max-w-[60%] md:!max-w-[30%] xl:!max-w-[35%] 
             [&>span]:w-2/4 [&>span]:bottom-[15%] [&>span]:lg:bottom-[10%] 
             [&>span]:right-[20%] [&>span]:rounded-xl'
           />
@@ -101,7 +98,7 @@ function ProductImagesThumbnails({
         className='h-full w-full md:absolute md:inset-y-0 
         md:left-4 md:overflow-y-scroll rtl:right-4 rtl:left-0 space-y-1 md:space-y-4'
       >
-        {Array.from({ length: 5 }).map((product, index) => (
+        {products.map((product, index) => (
           <CarouselItem
             key={index}
             className='grid place-content-center h-20 w-full shrink cursor-pointer'

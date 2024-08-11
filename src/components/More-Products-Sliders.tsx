@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/carousel'
 import ProductCard from './Product-Card'
 import { products } from '@/demo/products'
+import abayaZoom from '@/images/demo/products/abaya_zoom_1.png'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 type Props = {
   isMainPage?: boolean

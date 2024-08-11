@@ -7,6 +7,8 @@ import { getMessages } from 'next-intl/server'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { Toaster } from 'sonner'
+import { SessionProvider } from 'next-auth/react'
 
 const almarai = Almarai({
   subsets: ['arabic'],
@@ -59,11 +61,14 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={direction}>
       <body className={`${dubia.variable} ${almarai.className}`}>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+        <SessionProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Toaster richColors position='top-center' />
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
+        </SessionProvider>
       </body>
     </html>
   )

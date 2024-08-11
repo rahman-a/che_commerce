@@ -1,8 +1,14 @@
-import abaya1 from '@/images/demo/products/abaya_1.png'
-import abaya2 from '@/images/demo/products/abaya_2.png'
-import abaya3 from '@/images/demo/products/abaya_3.png'
-import abaya4 from '@/images/demo/products/abaya_4.png'
-import abaya5 from '@/images/demo/products/abaya_5.png'
+// import abaya1 from '@/images/demo/products/abaya_1.png'
+// import abaya2 from '@/images/demo/products/abaya_2.png'
+// import abaya3 from '@/images/demo/products/abaya_3.png'
+// import abaya4 from '@/images/demo/products/abaya_4.png'
+// import abaya5 from '@/images/demo/products/abaya_5.png'
+///////////////////////////////////////////////////////
+import abaya1 from '@/images/demo/products/product_2/abaya_11.jpg'
+import abaya2 from '@/images/demo/products/product_2/abaya_12.jpg'
+import abaya3 from '@/images/demo/products/product_2/abaya_13.jpg'
+import abaya4 from '@/images/demo/products/product_2/abaya_14.jpg'
+import abaya5 from '@/images/demo/products/product_2/abaya_15.jpg'
 export const products = (t: any) => [
   {
     id: 5,
