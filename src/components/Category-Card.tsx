@@ -22,7 +22,7 @@ export default function CategoryCard({ category }: Props) {
         className='flex items-center justify-center text-[13px] font-medium sm:text-sm md:text-2xl md:font-bold 
       space-x-1 rtl:flex-row-reverse rtl:space-x-0'
       >
-        <span className='text-primary rtl:mr-1'>{t(category)}</span>
+        <span className='text-primary rtl:mr-1'>{t(category as any)}</span>
         <span>{t('abayas')}</span>
       </h2>
     </Link>
