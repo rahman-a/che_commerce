@@ -1,131 +1,295 @@
 'use client'
 import React from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
-import SelectInput, { SelectItem, SelectLabel } from './Select-Input'
+import SelectInput from './Select-Input'
 import { Textarea } from './ui/textarea'
-
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form'
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { useFormContext } from 'react-hook-form'
+import { RequiredAsterisk } from './Required-Asterisk'
+import { getLangDir } from 'rtl-detect'
+import countries from '../../countries.json'
 type Props = {}
 
 export default function ProfileAddress({}: Props) {
-  const t = useTranslations('Profile')
+  const [states, setStates] = React.useState<any[]>([])
+  const [cities, setCities] = React.useState<any[]>([])
+  const t = useTranslations()
+  const locale = useLocale() as 'en' | 'ar'
+  const { control, formState, watch } = useFormContext()
+  const countryName = watch('address.country')
+  const governorate = watch('address.governorate')
+
+  React.useEffect(() => {
+    if (countryName) {
+      countries.map((country) => {
+        if (
+          country.name[locale].toLocaleLowerCase() ===
+          countryName.toLocaleLowerCase()
+        ) {
+          setStates(country.states)
+        }
+      })
+    }
+  }, [countryName, locale])
+  React.useEffect(() => {
+    if (governorate) {
+      setCities([])
+      countries.map((country) => {
+        if (
+          country.name[locale].toLocaleLowerCase() ===
+          countryName.toLocaleLowerCase()
+        ) {
+          country.states.map((state) => {
+            if (
+              state.name[locale].toLocaleLowerCase() ===
+              governorate.toLocaleLowerCase()
+            ) {
+              setCities(state.cities)
+            }
+          })
+        }
+      })
+    }
+  }, [governorate, locale, countryName])
   return (
     <>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='country' className='hidden md:flex' aria-required>
-          {t('country')}: <span className='text-secondary'>*</span>
-        </Label>
-        <SelectInput
-          id='country'
-          onValueChange={(value) => console.log('Country: ', value)}
-          placeholder={t('enter_country')}
-        >
-          <SelectLabel>{t('select_country')}</SelectLabel>
-          <SelectItem value='kuwait'>Kuwait</SelectItem>
-          <SelectItem value='egypt'>Egypt</SelectItem>
-          <SelectItem value='usa'>USA</SelectItem>
-          <SelectItem value='canada'>Canada</SelectItem>
-        </SelectInput>
-      </div>
-      <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='governorate' className='hidden md:flex' aria-required>
-          {t('governorate')}: <span className='text-secondary'>*</span>
-        </Label>
-        <SelectInput
-          id='governorate'
-          onValueChange={(value) => console.log('governorate: ', value)}
-          placeholder={t('enter_governorate')}
-        >
-          <SelectLabel>{t('select_governorate')}</SelectLabel>
-          <SelectItem value='kuwait'>Kuwait</SelectItem>
-          <SelectItem value='egypt'>Egypt</SelectItem>
-          <SelectItem value='usa'>USA</SelectItem>
-          <SelectItem value='canada'>Canada</SelectItem>
-        </SelectInput>
-      </div>
-      <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='region' className='hidden md:flex' aria-required>
-          {t('region')}: <span className='text-secondary'>*</span>
-        </Label>
-        <SelectInput
-          id='region'
-          onValueChange={(value) => console.log('region: ', value)}
-          placeholder={t('enter_region')}
-        >
-          <SelectLabel>{t('select_region')}</SelectLabel>
-          <SelectItem value='kuwait'>Kuwait</SelectItem>
-          <SelectItem value='egypt'>Egypt</SelectItem>
-          <SelectItem value='usa'>USA</SelectItem>
-          <SelectItem value='canada'>Canada</SelectItem>
-        </SelectInput>
-      </div>
-      <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='block'>{t('block')}:</Label>
-        <Input
-          name='block'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_block')}
+        <FormField
+          control={control}
+          name='address.country'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>
+                {t('Profile.country')}
+                <RequiredAsterisk />
+              </FormLabel>
+              <FormControl>
+                <Select
+                  dir={getLangDir(locale)}
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <SelectTrigger>
+                    <SelectValue
+                      placeholder={t('Form.select_country')}
+                      onFocus={(e) => e.stopPropagation()}
+                    />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>{t('Profile.countries')}</SelectLabel>
+                      {countries.map((country) => (
+                        <SelectItem
+                          key={country.id}
+                          value={country.name[locale]}
+                        >
+                          {country.name[locale]}
+                        </SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='street'>{t('street')}:</Label>
-        <Input
-          name='street'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_street')}
+        <FormField
+          control={control}
+          name='address.governorate'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>
+                {t('Profile.governorate')}
+                <RequiredAsterisk />
+              </FormLabel>
+              <FormControl>
+                <Select
+                  dir={getLangDir(locale)}
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder={t('Form.select_governorate')} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>{t('Profile.governorate')}</SelectLabel>
+                      {states.map((state) => (
+                        <SelectItem key={state.id} value={state.name[locale]}>
+                          {state.name[locale]}
+                        </SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='neighborhood'>{t('neighborhood')}:</Label>
-        <Input
-          name='neighborhood'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_neighborhood')}
+        <FormField
+          control={control}
+          name='address.region'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>
+                {t('Profile.region')}
+                <RequiredAsterisk />
+              </FormLabel>
+              <FormControl>
+                <Select
+                  dir={getLangDir(locale)}
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder={t('Form.select_region')} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>{t('Profile.region')}</SelectLabel>
+                      {cities.map((city) => (
+                        <SelectItem key={city.id} value={city.name[locale]}>
+                          {city.name[locale]}
+                        </SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='building'>{t('building')}:</Label>
-        <Input
-          name='building'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_building')}
+        <FormField
+          control={control}
+          name='address.block'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Profile.block')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('Form.enter_block')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='floor'>{t('floor')}:</Label>
-        <Input
-          name='floor'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_floor')}
+        <FormField
+          control={control}
+          name='address.street'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Profile.street')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('Form.enter_street')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='apartment'>{t('apartment')}:</Label>
-        <Input
-          name='apartment'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_apartment')}
+        <FormField
+          control={control}
+          name='address.neighborhood'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Profile.neighborhood')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('Form.enter_neighborhood')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
-      {/* <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='address'>
-          {t('address')}
-        </Label>
-        <Textarea
-          id='address'
-          name='address'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_address')}
-        />
-      </div> */}
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='details'>{t('other_details')}:</Label>
-        <Textarea
-          id='details'
-          name='details'
-          className='placeholder:text-gray-400'
-          placeholder={t('other_details_needed')}
+        <FormField
+          control={control}
+          name='address.building'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Profile.building')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('Form.enter_building')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <FormField
+          control={control}
+          name='address.floor'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Profile.floor')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('Form.enter_floor')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <FormField
+          control={control}
+          name='address.apartment'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Profile.apartment')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('Form.enter_apartment')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <FormField
+          control={control}
+          name='address.note'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Profile.other_details')}</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder={t('Form.other_address_details_needed')}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
     </>

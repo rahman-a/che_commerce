@@ -1,16 +1,7 @@
 import en from './messages/en.json'
 import { DefaultSession } from 'next-auth'
 
-// type Messages = typeof en
-
-type FilterMessageNotStartWith__<
-  Set,
-  Needle extends string
-> = Set extends `${Needle}${infer __X}` ? never : Set
-
-type FilteredKeys = FilterMessageNotStartWith__<keyof typeof en, '__'>
-
-type Messages = Pick<typeof en, FilteredKeys>
+type Messages = typeof en
 
 declare global {
   interface IntlMessages extends Messages {}

@@ -9,6 +9,7 @@ const publicPages = [
   '/products(.*)',
   '/offers(.*)',
   '/checkout(.*)',
+  '/register',
   '/cart',
   '/login',
   '/forgot-password',

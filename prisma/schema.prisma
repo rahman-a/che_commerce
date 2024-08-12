@@ -21,6 +21,7 @@ model User {
   status           UserStatus        @default(active)
   sessions         Session[]
   shippingAddress  ShippingAddress[]
+  registeredAt     DateTime?
   resetToken       String?           @unique
   resetTokenExpiry DateTime?
   createdAt        DateTime          @default(now())

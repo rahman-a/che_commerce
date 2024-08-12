@@ -124,7 +124,6 @@
     "select_city": "Select City",
     "select_region": "Select Region",
     "select_governorate": "Select Governorate",
-    "save_continue": "Save & Continue",
     "enter_name": "Enter your name",
     "enter_phone_number": "Enter phone number",
     "enter_email": "Enter your email",
@@ -149,7 +148,12 @@
     "dont_have_account": "Don't have an account?",
     "send_reset_link": "Send Password Reset Link",
     "create_account": "Create a new account",
-    "account_inactive": "Your account is inactive, please contact the admin"
+    "account_inactive": "Your account is inactive, please contact the admin",
+    "countries": "Countries",
+    "email_not_verified": "Please, verify your email address",
+    "email_not_verified_description": "We've sent you an email with a link to verify your email address. Please check your inbox and click on the link to verify your email address.",
+    "phone_not_verified": "Please, verify your phone number",
+    "phone_not_verified_description": "We've sent you an SMS with a code to verify your phone number. Please check your messages and enter the code to verify your phone number."
   },
   "Product": {
     "free_scarf": "Free Scarf",
@@ -236,7 +240,23 @@
     "invalid_link_msg": "Please reset your password again to get a new link",
     "reset_password": "Reset the password",
     "password_reset_successful": "Password has been Reset Successfully",
-    "redirecting_to_login": "Redirecting to login page..."
+    "redirecting_to_login": "Redirecting to login page...",
+    "select_country": "Select your Country...",
+    "select_governorate": "Select your Governorate...",
+    "select_region": "Select your Region...",
+    "enter_block": "ُEnter your Block...",
+    "enter_street": "ُEnter your Street...",
+    "enter_neighborhood": "ُEnter your Neighborhood...",
+    "enter_building": "ُEnter your Building...",
+    "enter_floor": "ُEnter your Floor...",
+    "enter_apartment": "ُEnter your Apartment...",
+    "other_address_details_needed": "Other details if needed for address",
+    "save_continue": "Save & Continue",
+    "account_already_exist": "Account already exists",
+    "account_already_exist_msg": "An account with this email or phone number already exists",
+    "account_created": "Account has been Created Successfully",
+    "error_sign_in": "Error in Signing In, Please try again",
+    "email_sent": "Email has been sent Successfully"
   },
   "Demo": {
     "product_name": "Golden White Abaya",

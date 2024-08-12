@@ -1,46 +1,102 @@
 'use client'
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { type Value } from 'react-phone-number-input'
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import PhoneInput from './Phone-Input'
+import { PhoneInput } from './Phone-Input'
+import { useFormContext } from 'react-hook-form'
 type Props = {}
 
 export default function ProfileInfo({}: Props) {
   const t = useTranslations('Profile')
-  const [phone, setPhone] = React.useState<Value>()
-
+  const form = useFormContext()
   return (
     <>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='name' className='font-bold' aria-required>
-          {t('name')}: <span className='text-secondary'>*</span>
-        </Label>
-        <Input
-          id='name'
+        <FormField
+          control={form.control}
           name='name'
-          type='text'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_name')}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className='font-bold'>
+                {t('name')}: <span className='text-secondary'>*</span>
+              </FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  className='placeholder:text-gray-400'
+                  placeholder={t('enter_name')}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='phone' className='font-bold' aria-required>
-          {t('phone')}: <span className='text-secondary'>*</span>
-        </Label>
-        <PhoneInput onChange={setPhone} phone={phone} />
+        <FormField
+          control={form.control}
+          name='phone'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className='font-bold'>
+                {t('phone')}: <span className='text-secondary'>*</span>
+              </FormLabel>
+              <FormControl>
+                <PhoneInput onChange={field.onChange} phone={field.value} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
       </div>
       <div className='grid w-full max-w-sm items-center gap-4'>
-        <Label htmlFor='email' className='font-bold' aria-required>
-          {t('email')}: <span className='text-secondary'>*</span>
-        </Label>
-        <Input
-          id='email'
+        <FormField
+          control={form.control}
           name='email'
-          type='email'
-          className='placeholder:text-gray-400'
-          placeholder={t('enter_email')}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className='font-bold'>
+                {t('email')}: <span className='text-secondary'>*</span>
+              </FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  className='placeholder:text-gray-400'
+                  placeholder={t('enter_name')}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-4'>
+        <FormField
+          control={form.control}
+          name='password'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className='font-bold'>
+                {t('password')}: <span className='text-secondary'>*</span>
+              </FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  type='password'
+                  className='placeholder:text-gray-400'
+                  placeholder={t('enter_password')}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </div>
     </>

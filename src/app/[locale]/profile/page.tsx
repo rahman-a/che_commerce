@@ -17,25 +17,12 @@ export default function Profile({}: Props) {
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10 mt-20'>
       <Title title={t('account_info')} direction={getLangDir(locale)} />
-      <section className='flex md:items-center flex-col md:flex-row space-x-0 md:space-x-5 space-y-8 md:space-y-0 justify-between pt-8 pb-5'>
-        <ProfileInfo />
-      </section>
       <Title
         title={t('address')}
         direction={getLangDir(locale)}
         className='top-[25rem] md:top-48'
       />
-      <section className='flex items-center flex-wrap space-y-6 justify-between py-5 mt-20'>
-        <ProfileAddress />
-      </section>
-      <section className='py-5'>
-        <Button
-          variant='secondary'
-          className='text-white bg-primary hover:bg-primary'
-        >
-          {t('save_continue')}
-        </Button>
-      </section>
+      <ProfileInfo />
     </main>
   )
 }

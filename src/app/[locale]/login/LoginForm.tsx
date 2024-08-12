@@ -24,6 +24,7 @@ const LoginForm = (props: Props) => {
   const router = useRouter()
   const [state, formAction] = useFormState(login, {
     message: '',
+    description: '',
     response: '',
   })
   const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -49,12 +50,11 @@ const LoginForm = (props: Props) => {
     })
     if (!response?.ok) {
       setPending(false)
-      toast.error('Error signing in')
+      toast.error(t('Form.error_sign_in'))
     } else {
       setPending(false)
       formRef.current?.reset()
       toast.success(t('Form.login_successful'))
-      console.log('session-login', session)
       router.replace('/')
       router.refresh()
     }
@@ -62,7 +62,10 @@ const LoginForm = (props: Props) => {
   React.useEffect(() => {
     if (state && state.response === 'error') {
       setPending(false)
-      toast.error(state.message)
+      toast.error(state.message, {
+        description: state.description,
+        duration: 5000,
+      })
     }
     if (state && state.response === 'proceed') {
       signInHandler(state.data)

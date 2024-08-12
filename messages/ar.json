@@ -124,7 +124,6 @@
     "select_city": "إختر المدينة",
     "select_region": "إختر المنطقة",
     "select_governorate": "إختر المحافظة",
-    "save_continue": "حفظ ومتابعة",
     "enter_name": "أدخل اسمك",
     "enter_phone_number": "أدخل رقم الهاتف",
     "enter_email": "أدخل بريدك الإلكترونى",
@@ -149,7 +148,12 @@
     "dont_have_account": "ليس لديك حساب؟",
     "send_reset_link": "إرسال رابط إعادة تعيين كلمة المرور",
     "create_account": "إنشاء حساب جديد",
-    "account_inactive": "حسابك غير مفعل, يرجى التواصل مع الإدارة"
+    "account_inactive": "حسابك غير مفعل, يرجى التواصل مع الإدارة",
+    "countries": "الدول",
+    "email_not_verified": "يرجى تفعيل بريدك الإلكترونى",
+    "email_not_verified_description": "لقد قمنا بإرسال رابط تفعيل إلى بريدك الإلكترونى, يرجى الضغط على الرابط لتفعيل حسابك",
+    "phone_not_verified": "يرجى تفعيل رقم هاتفك",
+    "phone_not_verified_description": "لقد قمنا بإرسال رمز تفعيل إلى رقم هاتفك, يرجى إدخال الرمز لتفعيل حسابك"
   },
   "Product": {
     "free_scarf": "ملفع مجانى",
@@ -236,7 +240,23 @@
     "invalid_link_msg": "من فضلك أعد ضبط كلمة المرور للحصول على رابط جديد",
     "reset_password": "إعادة ضبط كلمة المرور",
     "password_reset_successful": "تم إعادة ضبط كلمة المرور بنجاح",
-    "redirecting_to_login": "جاري تحويلك لصفحة تسجيل الدخول"
+    "redirecting_to_login": "جاري تحويلك لصفحة تسجيل الدخول",
+    "select_country": "إختر دولتك...",
+    "select_governorate": "إختر محافظتك...",
+    "select_region": "إختر منطقتك...",
+    "enter_block": "أدخل عنوان القطعة...",
+    "enter_street": "أدخل إسم الشارع...",
+    "enter_neighborhood": "أدخل الحي السكنى...",
+    "enter_building": "أدخل اسم البناية...",
+    "enter_floor": "أدخل رقم الطابق...",
+    "enter_apartment": "أدخل رقم الشقة...",
+    "other_address_details_needed": "تفاصيل أخرى إذا لزم الأمر للعنوان",
+    "save_continue": "حفظ ومتابعة",
+    "account_already_exist": " هذا الحساب موجود بالفعل",
+    "account_already_exist_msg": "إذا كنت تمتلك حساب بالفعل, يمكنك تسجيل الدخول من هنا",
+    "account_created": "تم إنشاء الحساب بنجاح",
+    "error_sign_in": "حدث خطأ أثناء تسجيل الدخول, من فضلك حاول مرة أخرى",
+    "email_sent": "تم إرسال البريد الإلكتروني بنجاح"
   },
   "Demo": {
     "product_name": "عباية تطريز ذهبي",

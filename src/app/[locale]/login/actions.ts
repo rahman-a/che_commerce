@@ -48,6 +48,21 @@ export async function login(prevState: any, formData: FormData) {
     if (user.status === 'inactive') {
       return { response: 'error', message: t('Profile.account_inactive') }
     }
+    if (user.phoneVerified === null) {
+      return {
+        response: 'error',
+        message: t('Profile.phone_not_verified'),
+        description: t('Profile.phone_not_verified_description'),
+      }
+    }
+    if (user.emailVerified === null) {
+      return {
+        response: 'error',
+        message: t('Profile.email_not_verified'),
+        description: t('Profile.email_not_verified_description'),
+      }
+    }
+
     return {
       response: 'proceed',
       data: {

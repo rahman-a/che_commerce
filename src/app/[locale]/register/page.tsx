@@ -2,10 +2,8 @@ import React from 'react'
 import { getLangDir } from 'rtl-detect'
 import { useTranslations, useLocale } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
-import ProfileAddress from '@/components/Profile-Address'
-import ProfileInfo from '@/components/Profile-Info'
 import Title from '@/components/Title'
-import { Button } from '@/components/ui/button'
+import ProfileForm from '@/components/Profile-Form'
 
 type Props = {}
 
@@ -16,25 +14,7 @@ export default function Register({}: Props) {
   return (
     <main className='relative flex min-h-screen flex-col my-10 py-10 px-8 md:p-10 mt-20'>
       <Title title={t('create_account')} direction={getLangDir(locale)} />
-      <Title
-        title={t('address')}
-        direction={getLangDir(locale)}
-        className='top-[25rem] md:top-48'
-      />
-      <section className='flex md:items-center flex-col md:flex-row space-x-0 md:space-x-5 space-y-8 md:space-y-0 justify-between pt-8 pb-5'>
-        <ProfileInfo />
-      </section>
-      <section className='flex items-center flex-wrap space-y-6 justify-between py-5 mt-20'>
-        <ProfileAddress />
-      </section>
-      <section className='py-5'>
-        <Button
-          variant='secondary'
-          className='text-white hover:bg-primary bg-primary'
-        >
-          {t('save_continue')}
-        </Button>
-      </section>
+      <ProfileForm />
     </main>
   )
 }

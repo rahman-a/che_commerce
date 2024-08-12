@@ -1,0 +1,4664 @@
+[
+  {
+    "id": "965",
+    "name": {
+      "en": "Kuwait",
+      "ar": "الكويت"
+    },
+    "code": "KW",
+    "states": [
+      {
+        "id": "96501",
+        "name": {
+          "en": "AL ASIMAH",
+          "ar": "العاصمة"
+        },
+        "country_id": "965",
+        "cities": [
+          {
+            "id": "9650101",
+            "name": {
+              "en": "Kuwait City",
+              "ar": "مدينة الكويت"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650102",
+            "name": {
+              "en": "Alsour Alqadeem",
+              "ar": "داخل السور القديم"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650103",
+            "name": {
+              "en": "Al Shuwikh Suburb",
+              "ar": "ضواحي الشويخ"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650104",
+            "name": {
+              "en": "AL Mina'a",
+              "ar": "الميناء "
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650105",
+            "name": {
+              "en": "Sulaibikhat",
+              "ar": "الصليبخات"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650106",
+            "name": {
+              "en": "AL Shamiya",
+              "ar": "الشامية"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650107",
+            "name": {
+              "en": "Kaifan",
+              "ar": "كيفان"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650108",
+            "name": {
+              "en": "Faiha",
+              "ar": "الفيحاء"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650109",
+            "name": {
+              "en": "Qadsiya",
+              "ar": "القادسية"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650110",
+            "name": {
+              "en": "Daʿiya",
+              "ar": "الدعية"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650111",
+            "name": {
+              "en": "Mansūriya",
+              "ar": "المنصورية"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650112",
+            "name": {
+              "en": "Rawda",
+              "ar": "الروضة"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650113",
+            "name": {
+              "en": "Bnaid Al-Qar",
+              "ar": "بنيد القار"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650114",
+            "name": {
+              "en": "Jahra",
+              "ar": "الجهراء"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650115",
+            "name": {
+              "en": "Amghara",
+              "ar": "مغرة"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650116",
+            "name": {
+              "en": "Doha",
+              "ar": "الدوحة"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650117",
+            "name": {
+              "en": "Umm an Namil Island",
+              "ar": "جزيرة أم النمل"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650118",
+            "name": {
+              "en": "Bubian Island",
+              "ar": "جزيرة بوبيان"
+            },
+            "state_id": "96501"
+          },
+          {
+            "id": "9650119",
+            "name": {
+              "en": "Warbah Island",
+              "ar": "جزيرة وربة."
+            },
+            "state_id": "96501"
+          }
+        ]
+      },
+      {
+        "id": "96502",
+        "name": {
+          "en": "AL AHMADI",
+          "ar": "الأحمدي"
+        },
+        "country_id": "965",
+        "cities": [
+          {
+            "id": "9650201",
+            "name": {
+              "en": "Abu Halifa",
+              "ar": "أبو حليفة"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650202",
+            "name": {
+              "en": "Ahmadi",
+              "ar": "الأحمدي"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650203",
+            "name": {
+              "en": "Jilei'a",
+              "ar": "الجليعة"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650204",
+            "name": {
+              "en": "Khairan",
+              "ar": "الخيران"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650205",
+            "name": {
+              "en": "Riqqa",
+              "ar": "الرقة"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650206",
+            "name": {
+              "en": "Zoor",
+              "ar": "الزور"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650207",
+            "name": {
+              "en": "Shu'aiba",
+              "ar": "الشعيبة"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650208",
+            "name": {
+              "en": "Sabahiya",
+              "ar": "الصباحية"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650209",
+            "name": {
+              "en": "Al Daba'eya",
+              "ar": "الضباعية"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650210",
+            "name": {
+              "en": "Zuhar",
+              "ar": "الظهر"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650211",
+            "name": {
+              "en": "Aqila",
+              "ar": "العقيلة"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650212",
+            "name": {
+              "en": "Fahaheel",
+              "ar": "الفحيحيل"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650213",
+            "name": {
+              "en": "Fintās",
+              "ar": "الفنطاس"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650215",
+            "name": {
+              "en": "Miqwa'",
+              "ar": "المقوع"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650216",
+            "name": {
+              "en": "Mangaf",
+              "ar": "المنقف"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650217",
+            "name": {
+              "en": "Mahbula",
+              "ar": "المهبولة"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650218",
+            "name": {
+              "en": "Nuwaiseeb",
+              "ar": "النويصيب"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650219",
+            "name": {
+              "en": "Wafra",
+              "ar": "الوفرة"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650220",
+            "name": {
+              "en": "Agricultural Wafra",
+              "ar": "الوفرة الزراعية"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650221",
+            "name": {
+              "en": "Bneidar",
+              "ar": "بنيدر"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650222",
+            "name": {
+              "en": "Jaber Al-Ali",
+              "ar": "ضاحية جابر العلي"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650223",
+            "name": {
+              "en": "Abdulla Al-Salem",
+              "ar": "ضاحية علي صباح السالم"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650224",
+            "name": {
+              "en": "Fahad Al-Ahmad",
+              "ar": "ضاحية فهد الأحمد"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650226",
+            "name": {
+              "en": "Khairan City",
+              "ar": "مدينة الخيران"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650227",
+            "name": {
+              "en": "Sabah Al-Ahmad City",
+              "ar": "مدينة صباح الأحمد"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650228",
+            "name": {
+              "en": "Sabah Al Ahmad Sea City",
+              "ar": "مدينة صباح الأحمد البحرية"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650229",
+            "name": {
+              "en": "Abdulla Port",
+              "ar": "ميناء عبد الله"
+            },
+            "state_id": "96502"
+          },
+          {
+            "id": "9650230",
+            "name": {
+              "en": "Hadiya",
+              "ar": "هدية"
+            },
+            "state_id": "96502"
+          }
+        ]
+      },
+      {
+        "id": "96503",
+        "name": {
+          "en": "AL FARWANIYAH",
+          "ar": "الفروانية"
+        },
+        "country_id": "965",
+        "cities": [
+          {
+            "id": "9650301",
+            "name": {
+              "en": "Khaitan",
+              "ar": "أبرق خيطان"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650302",
+            "name": {
+              "en": "Andalous",
+              "ar": "الأندلس"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650303",
+            "name": {
+              "en": "Ashbelya",
+              "ar": "اشبيلية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650304",
+            "name": {
+              "en": "Jleeb Al-Shuyoukh",
+              "ar": "جليب الشيوخ"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650305",
+            "name": {
+              "en": "Khaitan",
+              "ar": "خيطان"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650306",
+            "name": {
+              "en": "",
+              "ar": "العمرية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650307",
+            "name": {
+              "en": "Ardiya",
+              "ar": "العارضية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650308",
+            "name": {
+              "en": "Ardiya Industrial Area",
+              "ar": "العارضية الصناعية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650309",
+            "name": {
+              "en": "Fordous",
+              "ar": "الفردوس"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650310",
+            "name": {
+              "en": "West Abdullah Al-Mubarak",
+              "ar": "عبد الله المبارك"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650311",
+            "name": {
+              "en": "Farwaniya",
+              "ar": "الفروانية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650312",
+            "name": {
+              "en": "Al Shidadiya",
+              "ar": "الشدادية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650313",
+            "name": {
+              "en": "Al Rabia",
+              "ar": "الرابية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650314",
+            "name": {
+              "en": "Al Rehab",
+              "ar": "الرحاب"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650315",
+            "name": {
+              "en": "Al Raq'ee",
+              "ar": "الرقعي"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650316",
+            "name": {
+              "en": "Industria Al Rai",
+              "ar": "الري الصناعية"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650317",
+            "name": {
+              "en": "Sabah Al-Nasser",
+              "ar": "ضاحية صباح الناصر"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650318",
+            "name": {
+              "en": "Abdullah Al-Mubarak District",
+              "ar": "ضاحية عبد الله المبارك"
+            },
+            "state_id": "96503"
+          },
+          {
+            "id": "9650319",
+            "name": {
+              "en": "Dhajeej",
+              "ar": "الضجيج"
+            },
+            "state_id": "96503"
+          }
+        ]
+      },
+      {
+        "id": "96504",
+        "name": {
+          "en": "AL JAHRA'",
+          "ar": "الجهراء"
+        },
+        "country_id": "965",
+        "cities": [
+          {
+            "id": "9650401",
+            "name": {
+              "en": "Amghara",
+              "ar": "أمغرة"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650402",
+            "name": {
+              "en": "Jahra",
+              "ar": "الجهراء"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650403",
+            "name": {
+              "en": "New Jahra",
+              "ar": "الجهراء الجديدة"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650404",
+            "name": {
+              "en": "Al Rawdatayn",
+              "ar": "الروضتين"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650405",
+            "name": {
+              "en": "Salmiya",
+              "ar": "السالمي"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650406",
+            "name": {
+              "en": "Subiya",
+              "ar": "الصبية"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650407",
+            "name": {
+              "en": "Sulaibiya",
+              "ar": "الصليبية"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650408",
+            "name": {
+              "en": "Abdali",
+              "ar": "العبدلي"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650409",
+            "name": {
+              "en": "Oyoun",
+              "ar": "العيون"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650410",
+            "name": {
+              "en": "Qasr",
+              "ar": "القصر"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650411",
+            "name": {
+              "en": "Al Qaisaria",
+              "ar": "القيصرية"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650414",
+            "name": {
+              "en": "AL Mitlaa",
+              "ar": "المطلاع"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650415",
+            "name": {
+              "en": "Al Naseem",
+              "ar": "النسيم"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650416",
+            "name": {
+              "en": "Al Nae'em",
+              "ar": "النعيم"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650417",
+            "name": {
+              "en": "AL Wahaa",
+              "ar": "الواحة"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650418",
+            "name": {
+              "en": "Bubiyan",
+              "ar": "بوبيان"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650419",
+            "name": {
+              "en": "Taima",
+              "ar": "تيماء"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650420",
+            "name": {
+              "en": "Al Rawdatayn Field",
+              "ar": "حقل الروضتين"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650421",
+            "name": {
+              "en": "Khabari Al Awazem",
+              "ar": "خباري العوازم"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650422",
+            "name": {
+              "en": "Sa'ad Al Abdullah City",
+              "ar": "سعد العبد الله (مدينة)"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650423",
+            "name": {
+              "en": "Kazema",
+              "ar": "كاظمة"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650424",
+            "name": {
+              "en": "Kabad",
+              "ar": "كبد"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650425",
+            "name": {
+              "en": "Jahra",
+              "ar": "الجهراء"
+            },
+            "state_id": "96504"
+          },
+          {
+            "id": "9650427",
+            "name": {
+              "en": "Al Harir City",
+              "ar": "مدينة الحرير"
+            },
+            "state_id": "96504"
+          }
+        ]
+      },
+      {
+        "id": "96505",
+        "name": {
+          "en": "HAWALLI",
+          "ar": "حولي"
+        },
+        "country_id": "965",
+        "cities": [
+          {
+            "id": "9650501",
+            "name": {
+              "en": "Al Salmiya",
+              "ar": "السالمية"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650502",
+            "name": {
+              "en": "Hawally",
+              "ar": "حولي"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650503",
+            "name": {
+              "en": "Salwa",
+              "ar": "سلوى"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650504",
+            "name": {
+              "en": "Jabriya",
+              "ar": "الجابرية"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650505",
+            "name": {
+              "en": "Rumaithiya",
+              "ar": "الرميثية"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650506",
+            "name": {
+              "en": "Bayān",
+              "ar": "بيان"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650507",
+            "name": {
+              "en": "Mishrif",
+              "ar": "مشرف"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650508",
+            "name": {
+              "en": "Sha'ab",
+              "ar": "الشعب"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650509",
+            "name": {
+              "en": "Al Salam",
+              "ar": "السلام"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650510",
+            "name": {
+              "en": "Hittin",
+              "ar": "حطين"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650511",
+            "name": {
+              "en": "Zahra",
+              "ar": "الزهراء"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650512",
+            "name": {
+              "en": "Mubarak Al-Jabir Suburb",
+              "ar": "ضاحية مبارك العبد الله الجابر"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650513",
+            "name": {
+              "en": "Shuhada",
+              "ar": "الشهداء"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650514",
+            "name": {
+              "en": "Bi'da",
+              "ar": "البدع"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650515",
+            "name": {
+              "en": "Siddiq",
+              "ar": "الصديق"
+            },
+            "state_id": "96505"
+          },
+          {
+            "id": "9650516",
+            "name": {
+              "en": "Nigra",
+              "ar": "النقرة"
+            },
+            "state_id": "96505"
+          }
+        ]
+      },
+      {
+        "id": "96506",
+        "name": {
+          "en": "MUBARAK AL-KABEER",
+          "ar": "مبارك الكبير"
+        },
+        "country_id": "965",
+        "cities": [
+          {
+            "id": "9650601",
+            "name": {
+              "en": "Abu Al Hasaniya",
+              "ar": "أبو الحصانية"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650602",
+            "name": {
+              "en": "Abu Futaira",
+              "ar": "أبو فطيرة"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650604",
+            "name": {
+              "en": "Adān",
+              "ar": "العدان"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650605",
+            "name": {
+              "en": "Funaitīs",
+              "ar": "الفنيطيس"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650606",
+            "name": {
+              "en": "Al Qurain",
+              "ar": "القرين"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650607",
+            "name": {
+              "en": "Al-Qusour",
+              "ar": "القصور"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650609",
+            "name": {
+              "en": "Al-Masayel",
+              "ar": "المسايل"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650610",
+            "name": {
+              "en": "Missila",
+              "ar": "المسيلة"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650611",
+            "name": {
+              "en": "Wista",
+              "ar": "الوسطى"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650612",
+            "name": {
+              "en": "Sabhān",
+              "ar": "صبحان"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650613",
+            "name": {
+              "en": "Sabah Al-Salem",
+              "ar": "ضاحية صباح السالم"
+            },
+            "state_id": "96506"
+          },
+          {
+            "id": "9650614",
+            "name": {
+              "en": "Mubarak Al-Kabeer",
+              "ar": "مبارك الكبير"
+            },
+            "state_id": "96506"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "966",
+    "name": {
+      "en": "Saudi Arabia",
+      "ar": "السعودية"
+    },
+    "code": "SA",
+    "states": [
+      {
+        "id": "96601",
+        "name": {
+          "en": "Riyadh",
+          "ar": "الرياض"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660101",
+            "name": {
+              "en": "Riyadh",
+              "ar": "الرياض"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660102",
+            "name": {
+              "en": "Al-Dereiyah",
+              "ar": "الدرعية"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660103",
+            "name": {
+              "en": "Al-Kharj",
+              "ar": "الخرج"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660105",
+            "name": {
+              "en": "Al-Dawadmi",
+              "ar": "الدوادمي"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660107",
+            "name": {
+              "en": "Al-Queyah",
+              "ar": "القويعية"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660108",
+            "name": {
+              "en": "Al-Aflaj",
+              "ar": "الأفلاج"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660109",
+            "name": {
+              "en": "Wadil-Dawaser",
+              "ar": "وادي الدواسر"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660110",
+            "name": {
+              "en": "Al-Zulfi",
+              "ar": "الزلفي"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660111",
+            "name": {
+              "en": "Shagraa",
+              "ar": "شقراء"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660112",
+            "name": {
+              "en": "Hutat-bani-Tameem",
+              "ar": "حوطة بني تميم"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660113",
+            "name": {
+              "en": "Afeef",
+              "ar": "عفيف"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660114",
+            "name": {
+              "en": "Al-Gatt",
+              "ar": "الغاط"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660115",
+            "name": {
+              "en": "Al-Selail",
+              "ar": "السليل"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660116",
+            "name": {
+              "en": "Darmah",
+              "ar": "ضرما"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660117",
+            "name": {
+              "en": "Al-Muzahmiya",
+              "ar": "المزاحمية"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660118",
+            "name": {
+              "en": "Rumah",
+              "ar": "رماح"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660119",
+            "name": {
+              "en": "Thadeg",
+              "ar": "ثادق"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660120",
+            "name": {
+              "en": "Huraimelaa",
+              "ar": "حريملاء"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660121",
+            "name": {
+              "en": "Al-Hareeg",
+              "ar": "الحريق"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660122",
+            "name": {
+              "en": "",
+              "ar": "مرات"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660123",
+            "name": {
+              "en": "Rayn",
+              "ar": "الرين"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660124",
+            "name": {
+              "en": "Ad-Dilam",
+              "ar": "الدلم"
+            },
+            "state_id": "96601"
+          },
+          {
+            "id": "9660125",
+            "name": {
+              "en": "Al-Majma'a",
+              "ar": "المجمعة"
+            },
+            "state_id": "96601"
+          }
+        ]
+      },
+      {
+        "id": "96602",
+        "name": {
+          "en": "Makkah",
+          "ar": "مكة المكرمة"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660201",
+            "name": {
+              "en": "Makkah",
+              "ar": "مكة المكرمة"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660202",
+            "name": {
+              "en": "Jeddah",
+              "ar": "جدة"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660203",
+            "name": {
+              "en": "Al-Tayef",
+              "ar": "الطائف"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660204",
+            "name": {
+              "en": "Al-Gunfudah,",
+              "ar": "القنفذة"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660205",
+            "name": {
+              "en": "Al-laith",
+              "ar": "الليث"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660206",
+            "name": {
+              "en": "Rabehg",
+              "ar": "رابغ"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660207",
+            "name": {
+              "en": "Khulais",
+              "ar": "خليص"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660208",
+            "name": {
+              "en": "Al-Khurma",
+              "ar": "الخرمة"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660209",
+            "name": {
+              "en": "Ranya",
+              "ar": "رنية"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660210",
+            "name": {
+              "en": "Turba",
+              "ar": "تربة"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660211",
+            "name": {
+              "en": "Al-Jammom",
+              "ar": "الجموم"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660212",
+            "name": {
+              "en": "Al-Kamel",
+              "ar": "الكامل"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660213",
+            "name": {
+              "en": "Al Muwayh",
+              "ar": "المويه"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660214",
+            "name": {
+              "en": "Misan",
+              "ar": "ميسان"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660215",
+            "name": {
+              "en": "Adham",
+              "ar": "أضم"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660216",
+            "name": {
+              "en": "Al Ardiyat",
+              "ar": "العرضيات"
+            },
+            "state_id": "96602"
+          },
+          {
+            "id": "9660217",
+            "name": {
+              "en": "Bahrah",
+              "ar": "بحرة"
+            },
+            "state_id": "96602"
+          }
+        ]
+      },
+      {
+        "id": "96603",
+        "name": {
+          "en": "Madinah",
+          "ar": "المدينة المنورة"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660301",
+            "name": {
+              "en": "Al-Madinah",
+              "ar": "المدينة المنورة"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660302",
+            "name": {
+              "en": "Yanbu",
+              "ar": "ينبع"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660303",
+            "name": {
+              "en": "Al-Ola",
+              "ar": "العلا"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660304",
+            "name": {
+              "en": "Al-Mahd",
+              "ar": "المهد"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660305",
+            "name": {
+              "en": "Al-Hannakiyah",
+              "ar": "الحناكية"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660306",
+            "name": {
+              "en": "Badr",
+              "ar": "بدر"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660307",
+            "name": {
+              "en": "Khaibar",
+              "ar": "خيبر"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660308",
+            "name": {
+              "en": "Al Ais",
+              "ar": "العيص"
+            },
+            "state_id": "96603"
+          },
+          {
+            "id": "9660309",
+            "name": {
+              "en": "Wadi Al-Far",
+              "ar": "وادي الفرع"
+            },
+            "state_id": "96603"
+          }
+        ]
+      },
+      {
+        "id": "96604",
+        "name": {
+          "en": "Qassim",
+          "ar": "القصيم"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660401",
+            "name": {
+              "en": "Buraidah",
+              "ar": "بريدة"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660402",
+            "name": {
+              "en": "Onaizah",
+              "ar": "عنيزة"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660403",
+            "name": {
+              "en": "Al-Rass",
+              "ar": "الرس"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660404",
+            "name": {
+              "en": "Al-Meznab",
+              "ar": "المذنب"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660405",
+            "name": {
+              "en": "Al-Bekairiyah",
+              "ar": "البكيرية"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660406",
+            "name": {
+              "en": "Al-Badaea",
+              "ar": "البدائع"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660407",
+            "name": {
+              "en": "Al-Asyah",
+              "ar": "الأسياح"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660408",
+            "name": {
+              "en": " Al-Nabahaniyah",
+              "ar": "النبهانية"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660409",
+            "name": {
+              "en": "Al-Shmmasiyah",
+              "ar": "الشماسية"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660410",
+            "name": {
+              "en": "Oyonal-Jawa",
+              "ar": "عيون الجواء"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660411",
+            "name": {
+              "en": "Riyadel-Khubara",
+              "ar": "رياض الخبراء"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660412",
+            "name": {
+              "en": "Aqala Al-Suqur",
+              "ar": "عقلة الصقور"
+            },
+            "state_id": "96604"
+          },
+          {
+            "id": "9660413",
+            "name": {
+              "en": "Dariyah",
+              "ar": "ضرية"
+            },
+            "state_id": "96604"
+          }
+        ]
+      },
+      {
+        "id": "96605",
+        "name": {
+          "en": "Eastern Province",
+          "ar": "المنطقة الشرقية"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660501",
+            "name": {
+              "en": "Dammam",
+              "ar": "الدمام"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660502",
+            "name": {
+              "en": "Al-Ahsa",
+              "ar": "الأحساء"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660503",
+            "name": {
+              "en": "Hafrel-Batin",
+              "ar": "حفر الباطن"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660504",
+            "name": {
+              "en": "Al-Jubail",
+              "ar": "الجبيل"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660505",
+            "name": {
+              "en": "Al-Qateef",
+              "ar": "القطيف"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660506",
+            "name": {
+              "en": "Al-Khubar",
+              "ar": "الخبر"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660507",
+            "name": {
+              "en": "Al-Khafji",
+              "ar": "الخفجي"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660508",
+            "name": {
+              "en": "Rastannorah",
+              "ar": "رأس تنورة"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660509",
+            "name": {
+              "en": "Abgeeg",
+              "ar": "بقيق"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660510",
+            "name": {
+              "en": "Al-Neairiyah",
+              "ar": "النعيرية"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660511",
+            "name": {
+              "en": "Gariat-Alolaiya",
+              "ar": "قرية العليا"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660512",
+            "name": {
+              "en": "Alo'died",
+              "ar": "العديد"
+            },
+            "state_id": "96605"
+          },
+          {
+            "id": "9660513",
+            "name": {
+              "en": "Al Bayda",
+              "ar": "البيضاء"
+            },
+            "state_id": "96605"
+          }
+        ]
+      },
+      {
+        "id": "96606",
+        "name": {
+          "en": "Asir",
+          "ar": "عسير"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660601",
+            "name": {
+              "en": "Abha",
+              "ar": "أبها"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660602",
+            "name": {
+              "en": "Khamis-Mushait",
+              "ar": "خميس مشيط"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660603",
+            "name": {
+              "en": "Besha",
+              "ar": "بيشة"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660604",
+            "name": {
+              "en": "Al-Nammas",
+              "ar": "النماص"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660605",
+            "name": {
+              "en": "Mahayel Asir",
+              "ar": "محايل عسير"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660606",
+            "name": {
+              "en": "South Dhahran",
+              "ar": "ظهران الجنوب"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660607",
+            "name": {
+              "en": "Tathleeth",
+              "ar": "تثليث"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660608",
+            "name": {
+              "en": "Surat-Obaid",
+              "ar": "سراة عبيدة"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660609",
+            "name": {
+              "en": "Rejal-Almaa",
+              "ar": "رجال ألمع"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660610",
+            "name": {
+              "en": "Belgaran",
+              "ar": "بلقرن"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660611",
+            "name": {
+              "en": "Ahad-Rufaidah",
+              "ar": "أحد رفيدة"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660612",
+            "name": {
+              "en": "Al-Majardah",
+              "ar": "المجاردة"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660613",
+            "name": {
+              "en": "Al Barak",
+              "ar": "البرك"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660614",
+            "name": {
+              "en": "Bareq",
+              "ar": "بارق"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660615",
+            "name": {
+              "en": "Tanoumah",
+              "ar": "تنومة"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660616",
+            "name": {
+              "en": "Tareeb",
+              "ar": "طريب"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660617",
+            "name": {
+              "en": "Al Harajah",
+              "ar": "الحرجة"
+            },
+            "state_id": "96606"
+          },
+          {
+            "id": "9660618",
+            "name": {
+              "en": "Al Amoah",
+              "ar": "الأمواه"
+            },
+            "state_id": "96606"
+          }
+        ]
+      },
+      {
+        "id": "96607",
+        "name": {
+          "en": "Tabuk",
+          "ar": "تبوك"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660701",
+            "name": {
+              "en": "Tabouk",
+              "ar": "تبوك"
+            },
+            "state_id": "96607"
+          },
+          {
+            "id": "9660702",
+            "name": {
+              "en": "Al-Wajh",
+              "ar": "الوجه"
+            },
+            "state_id": "96607"
+          },
+          {
+            "id": "9660703",
+            "name": {
+              "en": "Debaa",
+              "ar": "ضباء"
+            },
+            "state_id": "96607"
+          },
+          {
+            "id": "9660704",
+            "name": {
+              "en": "Taima",
+              "ar": "تيماء"
+            },
+            "state_id": "96607"
+          },
+          {
+            "id": "9660705",
+            "name": {
+              "en": "Amluj",
+              "ar": "أملج"
+            },
+            "state_id": "96607"
+          },
+          {
+            "id": "9660706",
+            "name": {
+              "en": "Hagl",
+              "ar": "حقل"
+            },
+            "state_id": "96607"
+          },
+          {
+            "id": "9660707",
+            "name": {
+              "en": "Al Bada'a",
+              "ar": "البدع"
+            },
+            "state_id": "96607"
+          }
+        ]
+      },
+      {
+        "id": "96608",
+        "name": {
+          "en": "Hayel",
+          "ar": "حائل"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660801",
+            "name": {
+              "en": "Hayel",
+              "ar": "حائل"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660802",
+            "name": {
+              "en": "Bagaa",
+              "ar": "بقعاء"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660803",
+            "name": {
+              "en": "Al-Ghazala",
+              "ar": "الغزالة"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660804",
+            "name": {
+              "en": "Al-Shanan",
+              "ar": "الشنان"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660805",
+            "name": {
+              "en": "Al Hait",
+              "ar": "الحائط"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660806",
+            "name": {
+              "en": "Al Sulaimi",
+              "ar": "السليمي"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660807",
+            "name": {
+              "en": "Ash Shamli",
+              "ar": "الشملي"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660808",
+            "name": {
+              "en": "Mawqaq",
+              "ar": "موقق"
+            },
+            "state_id": "96608"
+          },
+          {
+            "id": "9660809",
+            "name": {
+              "en": "Sumaria'a",
+              "ar": "سميراء"
+            },
+            "state_id": "96608"
+          }
+        ]
+      },
+      {
+        "id": "96609",
+        "name": {
+          "en": "Northern Borders",
+          "ar": "الحدود الشمالية"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9660901",
+            "name": {
+              "en": "Ar'ar",
+              "ar": "عرعر"
+            },
+            "state_id": "96609"
+          },
+          {
+            "id": "9660902",
+            "name": {
+              "en": "Rafha",
+              "ar": "رفحاء"
+            },
+            "state_id": "96609"
+          },
+          {
+            "id": "9660903",
+            "name": {
+              "en": "Rafha",
+              "ar": "طريف"
+            },
+            "state_id": "96609"
+          }
+        ]
+      },
+      {
+        "id": "96610",
+        "name": {
+          "en": "Jazan",
+          "ar": "جازان"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9661001",
+            "name": {
+              "en": "Jazan",
+              "ar": "جازان"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661002",
+            "name": {
+              "en": "Sabya",
+              "ar": "صبيا"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661003",
+            "name": {
+              "en": "Abu-Areesh",
+              "ar": "أبو عريش"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661004",
+            "name": {
+              "en": "Samta",
+              "ar": "صامطة"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661005",
+            "name": {
+              "en": "Baish",
+              "ar": "بيش"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661006",
+            "name": {
+              "en": "Al-Darb",
+              "ar": "الدرب"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661007",
+            "name": {
+              "en": "Al-Harth",
+              "ar": "الحرث"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661008",
+            "name": {
+              "en": "Damad",
+              "ar": "ضمد"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661009",
+            "name": {
+              "en": "Al-Raith",
+              "ar": "الريث"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661010",
+            "name": {
+              "en": "Farasan",
+              "ar": "فرسان"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661011",
+            "name": {
+              "en": "Al-Dayer",
+              "ar": "الدائر"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661012",
+            "name": {
+              "en": "Al-Aardah",
+              "ar": "العارضة"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661013",
+            "name": {
+              "en": "Ahad-Almasarha",
+              "ar": "أحد المسارحة"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661014",
+            "name": {
+              "en": "Al Edabi",
+              "ar": "العيدابي"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661015",
+            "name": {
+              "en": "Fayfa",
+              "ar": "فيفاء"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661016",
+            "name": {
+              "en": "Al Tuwal",
+              "ar": "الطوال"
+            },
+            "state_id": "96610"
+          },
+          {
+            "id": "9661017",
+            "name": {
+              "en": "Harub",
+              "ar": "هروب"
+            },
+            "state_id": "96610"
+          }
+        ]
+      },
+      {
+        "id": "96611",
+        "name": {
+          "en": "Najran",
+          "ar": "نجران"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9661101",
+            "name": {
+              "en": "Najran",
+              "ar": "نجران"
+            },
+            "state_id": "96611"
+          },
+          {
+            "id": "9661102",
+            "name": {
+              "en": "Sharora",
+              "ar": "شرورة"
+            },
+            "state_id": "96611"
+          },
+          {
+            "id": "9661103",
+            "name": {
+              "en": "Habuna",
+              "ar": "حبونا"
+            },
+            "state_id": "96611"
+          },
+          {
+            "id": "9661104",
+            "name": {
+              "en": "Badrel-Janoub",
+              "ar": "بدر الجنوب"
+            },
+            "state_id": "96611"
+          },
+          {
+            "id": "9661105",
+            "name": {
+              "en": "Yedemah",
+              "ar": "يدمة"
+            },
+            "state_id": "96611"
+          },
+          {
+            "id": "9661106",
+            "name": {
+              "en": "Thar",
+              "ar": "ثار"
+            },
+            "state_id": "96611"
+          },
+          {
+            "id": "9661107",
+            "name": {
+              "en": "Khabbash",
+              "ar": "خباش"
+            },
+            "state_id": "96611"
+          },
+          {
+            "id": "9661108",
+            "name": {
+              "en": "Al-Khirkheer",
+              "ar": "الخرخير"
+            },
+            "state_id": "96611"
+          }
+        ]
+      },
+      {
+        "id": "96612",
+        "name": {
+          "en": "Al-Baha",
+          "ar": "الباحة"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9661201",
+            "name": {
+              "en": "Al-Baha",
+              "ar": "الباحة"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661202",
+            "name": {
+              "en": "Bulgurashi",
+              "ar": "بلجرشي"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661203",
+            "name": {
+              "en": "Al-Mendaq",
+              "ar": "المندق"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661204",
+            "name": {
+              "en": "Al-Mekhat",
+              "ar": "المخواة"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661205",
+            "name": {
+              "en": "Galwah",
+              "ar": "قلوة"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661206",
+            "name": {
+              "en": "Al-Ageeg",
+              "ar": "العقيق"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661207",
+            "name": {
+              "en": "Al-Gura",
+              "ar": "القرى"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661208",
+            "name": {
+              "en": "Ghamid Alzinad",
+              "ar": "غامد الزناد"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661209",
+            "name": {
+              "en": "Hajrah",
+              "ar": "الحجرة"
+            },
+            "state_id": "96612"
+          },
+          {
+            "id": "9661210",
+            "name": {
+              "en": "Bani Hassan",
+              "ar": "بني حسن"
+            },
+            "state_id": "96612"
+          }
+        ]
+      },
+      {
+        "id": "96613",
+        "name": {
+          "en": "Al Jawf",
+          "ar": "الجوف"
+        },
+        "country_id": "966",
+        "cities": [
+          {
+            "id": "9661301",
+            "name": {
+              "en": "Sakaka",
+              "ar": "سكاكا"
+            },
+            "state_id": "96613"
+          },
+          {
+            "id": "9661302",
+            "name": {
+              "en": " Al-Qurayyat",
+              "ar": "القريات"
+            },
+            "state_id": "96613"
+          },
+          {
+            "id": "9661303",
+            "name": {
+              "en": "Domat-aljandal",
+              "ar": "دومة الجندل"
+            },
+            "state_id": "96613"
+          },
+          {
+            "id": "9661304",
+            "name": {
+              "en": "Tubarjal",
+              "ar": "طبرجل"
+            },
+            "state_id": "96613"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "971",
+    "name": {
+      "en": "United Arab Emirates",
+      "ar": "الإمارات العربية المتحدة"
+    },
+    "code": "AE",
+    "states": [
+      {
+        "id": "97101",
+        "name": {
+          "en": "Abu Dhabi",
+          "ar": " أبو ظبي"
+        },
+        "country_id": "971",
+        "cities": [
+          {
+            "id": "9710101",
+            "name": {
+              "en": "Abu Dhabi",
+              "ar": "أبوظبي"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710102",
+            "name": {
+              "en": "Al Ain",
+              "ar": "العين"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710103",
+            "name": {
+              "en": "Liwa",
+              "ar": "ليوا"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710104",
+            "name": {
+              "en": "Ad Dafrah",
+              "ar": "الظفرة"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710105",
+            "name": {
+              "en": "Al Shahama",
+              "ar": "الشهامة"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710106",
+            "name": {
+              "en": "Al Marfa'a",
+              "ar": "المرفأ"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710107",
+            "name": {
+              "en": "Zayed City",
+              "ar": "مدينة زايد"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710108",
+            "name": {
+              "en": "Al Rahba",
+              "ar": "الرحبة"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710109",
+            "name": {
+              "en": "Al Bahyah",
+              "ar": "الباهية"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710110",
+            "name": {
+              "en": "Al khaznah",
+              "ar": "الخزنة"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710111",
+            "name": {
+              "en": "Al Sad",
+              "ar": "الساد"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710112",
+            "name": {
+              "en": "Al Salamat",
+              "ar": "السلامات (العين)"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710113",
+            "name": {
+              "en": "Al Sila'a",
+              "ar": "السلع"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710114",
+            "name": {
+              "en": "Al Smeeh",
+              "ar": "السميح"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710115",
+            "name": {
+              "en": "Al Shaleela",
+              "ar": "الشليلة"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710116",
+            "name": {
+              "en": "Al Arad",
+              "ar": "العراد"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710117",
+            "name": {
+              "en": "Al Quo'a",
+              "ar": "القوع"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710118",
+            "name": {
+              "en": "Al Hiyar",
+              "ar": "الهير"
+            },
+            "state_id": "97101"
+          },
+          {
+            "id": "9710119",
+            "name": {
+              "en": "Al Wagan",
+              "ar": "الوقن"
+            },
+            "state_id": "97101"
+          }
+        ]
+      },
+      {
+        "id": "97102",
+        "name": {
+          "en": "Ajman",
+          "ar": "عجمان"
+        },
+        "country_id": "971",
+        "cities": [
+          {
+            "id": "9710201",
+            "name": {
+              "en": "Ajman",
+              "ar": "مدينة عجمان"
+            },
+            "state_id": "97102"
+          },
+          {
+            "id": "9710202",
+            "name": {
+              "en": "Masfut",
+              "ar": "منطقة مصفوت"
+            },
+            "state_id": "97102"
+          },
+          {
+            "id": "9710203",
+            "name": {
+              "en": "Al Manama",
+              "ar": "منطقة المنامة"
+            },
+            "state_id": "97102"
+          }
+        ]
+      },
+      {
+        "id": "97103",
+        "name": {
+          "en": "Dubai",
+          "ar": "دبي"
+        },
+        "country_id": "971",
+        "cities": [
+          {
+            "id": "9710301",
+            "name": {
+              "en": "Dubai",
+              "ar": "دبي"
+            },
+            "state_id": "97103"
+          },
+          {
+            "id": "9710302",
+            "name": {
+              "en": "Ali Mountain",
+              "ar": "جبل علي"
+            },
+            "state_id": "97103"
+          },
+          {
+            "id": "9710302",
+            "name": {
+              "en": "Hatta",
+              "ar": "حتا"
+            },
+            "state_id": "97103"
+          }
+        ]
+      },
+      {
+        "id": "97104",
+        "name": {
+          "en": "Sharjah",
+          "ar": "الشارقة"
+        },
+        "country_id": "971",
+        "cities": [
+          {
+            "id": "9710401",
+            "name": {
+              "en": "Sharjah",
+              "ar": "الشارقة"
+            },
+            "state_id": "97104"
+          },
+          {
+            "id": "9710402",
+            "name": {
+              "en": "Khor Fakkan",
+              "ar": "خورفكان"
+            },
+            "state_id": "97104"
+          },
+          {
+            "id": "9710403",
+            "name": {
+              "en": "Kalba",
+              "ar": "كلباء"
+            },
+            "state_id": "97104"
+          },
+          {
+            "id": "9710404",
+            "name": {
+              "en": "Al Daid",
+              "ar": "الذيد"
+            },
+            "state_id": "97104"
+          },
+          {
+            "id": "9710405",
+            "name": {
+              "en": "Dibba Al-Hisn",
+              "ar": "دبا الحصن"
+            },
+            "state_id": "97104"
+          },
+          {
+            "id": "9710406",
+            "name": {
+              "en": "Al Madam",
+              "ar": "المدام"
+            },
+            "state_id": "97104"
+          }
+        ]
+      },
+      {
+        "id": "97105",
+        "name": {
+          "en": "Ras Al Khaimah",
+          "ar": "رأس الخيمة"
+        },
+        "country_id": "971",
+        "cities": [
+          {
+            "id": "9710501",
+            "name": {
+              "en": "Ras Elkhaimah",
+              "ar": "رأس الخيمة"
+            },
+            "state_id": "97105"
+          },
+          {
+            "id": "9710502",
+            "name": {
+              "en": "Al Rams",
+              "ar": "الرمس"
+            },
+            "state_id": "97105"
+          }
+        ]
+      },
+      {
+        "id": "97106",
+        "name": {
+          "en": "Umm Al Quwain",
+          "ar": "أم القيوين"
+        },
+        "country_id": "971",
+        "cities": [
+          {
+            "id": "9710601",
+            "name": {
+              "en": "Umm Al Quwain",
+              "ar": "ام القيوين"
+            },
+            "state_id": "97106"
+          }
+        ]
+      },
+      {
+        "id": "97107",
+        "name": {
+          "en": "Fujairah",
+          "ar": "الفجيرة"
+        },
+        "country_id": "971",
+        "cities": [
+          {
+            "id": "9710701",
+            "name": {
+              "en": "",
+              "ar": "الفجيرة"
+            },
+            "state_id": "97107"
+          },
+          {
+            "id": "9710702",
+            "name": {
+              "en": "",
+              "ar": "دبا الفجيرة"
+            },
+            "state_id": "97107"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "968",
+    "name": {
+      "en": "Oman",
+      "ar": "عمان"
+    },
+    "code": "OM",
+    "states": [
+      {
+        "id": "96801",
+        "name": {
+          "en": "Muscat",
+          "ar": "مسقط"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680101",
+            "name": {
+              "en": "",
+              "ar": "مسقط"
+            },
+            "state_id": "96801"
+          },
+          {
+            "id": "9680102",
+            "name": {
+              "en": "",
+              "ar": "مطرح"
+            },
+            "state_id": "96801"
+          },
+          {
+            "id": "9680103",
+            "name": {
+              "en": "",
+              "ar": "بوشر"
+            },
+            "state_id": "96801"
+          },
+          {
+            "id": "9680104",
+            "name": {
+              "en": "",
+              "ar": "السيب"
+            },
+            "state_id": "96801"
+          },
+          {
+            "id": "9680105",
+            "name": {
+              "en": "",
+              "ar": "العامرات"
+            },
+            "state_id": "96801"
+          },
+          {
+            "id": "9680106",
+            "name": {
+              "en": "",
+              "ar": "قريات"
+            },
+            "state_id": "96801"
+          }
+        ]
+      },
+      {
+        "id": "96802",
+        "name": {
+          "en": "Dhofar",
+          "ar": "ظفار"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680201",
+            "name": {
+              "en": "",
+              "ar": "ولاية صلالة"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680202",
+            "name": {
+              "en": "",
+              "ar": "ولاية طاقة"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680203",
+            "name": {
+              "en": "",
+              "ar": "ولاية مرباط"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680204",
+            "name": {
+              "en": "",
+              "ar": "ولاية رخيوت"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680205",
+            "name": {
+              "en": "",
+              "ar": "ولاية ثمريت"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680206",
+            "name": {
+              "en": "",
+              "ar": "ولاية ضلكوت"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680207",
+            "name": {
+              "en": "",
+              "ar": "ولاية المزيونة"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680208",
+            "name": {
+              "en": "",
+              "ar": "ولاية مقشن"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680209",
+            "name": {
+              "en": "",
+              "ar": "ولاية شليم وجزر الحلانيات"
+            },
+            "state_id": "96802"
+          },
+          {
+            "id": "9680210",
+            "name": {
+              "en": "",
+              "ar": "ولاية سدح"
+            },
+            "state_id": "96802"
+          }
+        ]
+      },
+      {
+        "id": "96803",
+        "name": {
+          "en": "Musandam",
+          "ar": "مسندم"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680301",
+            "name": {
+              "en": "",
+              "ar": "خصب"
+            },
+            "state_id": "96803"
+          },
+          {
+            "id": "9680302",
+            "name": {
+              "en": "",
+              "ar": "دبا"
+            },
+            "state_id": "96803"
+          },
+          {
+            "id": "9680303",
+            "name": {
+              "en": "",
+              "ar": "بخا"
+            },
+            "state_id": "96803"
+          },
+          {
+            "id": "9680304",
+            "name": {
+              "en": "",
+              "ar": "مدحاء"
+            },
+            "state_id": "96803"
+          }
+        ]
+      },
+      {
+        "id": "96804",
+        "name": {
+          "en": "Al Batinah",
+          "ar": "البريمي"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680401",
+            "name": {
+              "en": "",
+              "ar": "البريمي"
+            },
+            "state_id": "96804"
+          },
+          {
+            "id": "9680402",
+            "name": {
+              "en": "",
+              "ar": "محضة"
+            },
+            "state_id": "96804"
+          },
+          {
+            "id": "9680403",
+            "name": {
+              "en": "",
+              "ar": "السنينة"
+            },
+            "state_id": "96804"
+          }
+        ]
+      },
+      {
+        "id": "96805",
+        "name": {
+          "en": "Ad Dakhiliyah",
+          "ar": "الداخلية"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680501",
+            "name": {
+              "en": "",
+              "ar": "نزوى"
+            },
+            "state_id": "96805"
+          },
+          {
+            "id": "9680502",
+            "name": {
+              "en": "",
+              "ar": "بهلا"
+            },
+            "state_id": "96805"
+          },
+          {
+            "id": "9680503",
+            "name": {
+              "en": "",
+              "ar": "منح"
+            },
+            "state_id": "96805"
+          },
+          {
+            "id": "9680504",
+            "name": {
+              "en": "",
+              "ar": "الحمراء"
+            },
+            "state_id": "96805"
+          },
+          {
+            "id": "9680505",
+            "name": {
+              "en": "",
+              "ar": "أدم"
+            },
+            "state_id": "96805"
+          },
+          {
+            "id": "9680506",
+            "name": {
+              "en": "",
+              "ar": "إزكي"
+            },
+            "state_id": "96805"
+          },
+          {
+            "id": "9680507",
+            "name": {
+              "en": "",
+              "ar": "سمائل"
+            },
+            "state_id": "96805"
+          },
+          {
+            "id": "9680508",
+            "name": {
+              "en": "",
+              "ar": "بدبد"
+            },
+            "state_id": "96805"
+          }
+        ]
+      },
+      {
+        "id": "96806",
+        "name": {
+          "en": "Shamal Al Batinah",
+          "ar": "شمال الباطنة"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680601",
+            "name": {
+              "en": "",
+              "ar": "صحار"
+            },
+            "state_id": "96806"
+          },
+          {
+            "id": "9680602",
+            "name": {
+              "en": "",
+              "ar": "شناص"
+            },
+            "state_id": "96806"
+          },
+          {
+            "id": "9680603",
+            "name": {
+              "en": "",
+              "ar": "لوى"
+            },
+            "state_id": "96806"
+          },
+          {
+            "id": "9680604",
+            "name": {
+              "en": "",
+              "ar": "صحم"
+            },
+            "state_id": "96806"
+          },
+          {
+            "id": "9680605",
+            "name": {
+              "en": "",
+              "ar": "الخابورة"
+            },
+            "state_id": "96806"
+          },
+          {
+            "id": "9680606",
+            "name": {
+              "en": "",
+              "ar": "السويق"
+            },
+            "state_id": "96806"
+          }
+        ]
+      },
+      {
+        "id": "96807",
+        "name": {
+          "en": "Janub Al Batinah",
+          "ar": "جنوب الباطنة"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680701",
+            "name": {
+              "en": "",
+              "ar": "الرستاق"
+            },
+            "state_id": "96807"
+          },
+          {
+            "id": "9680702",
+            "name": {
+              "en": "",
+              "ar": "العوابي"
+            },
+            "state_id": "96807"
+          },
+          {
+            "id": "9680703",
+            "name": {
+              "en": "",
+              "ar": "نخل"
+            },
+            "state_id": "96807"
+          },
+          {
+            "id": "9680704",
+            "name": {
+              "en": "",
+              "ar": "وادي المعاول"
+            },
+            "state_id": "96807"
+          },
+          {
+            "id": "9680705",
+            "name": {
+              "en": "",
+              "ar": "بركاء"
+            },
+            "state_id": "96807"
+          },
+          {
+            "id": "9680706",
+            "name": {
+              "en": "",
+              "ar": "المصنعة"
+            },
+            "state_id": "96807"
+          }
+        ]
+      },
+      {
+        "id": "96808",
+        "name": {
+          "en": "Janub ash sharqiyah",
+          "ar": "جنوب الشرقية"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680801",
+            "name": {
+              "en": "",
+              "ar": "صور"
+            },
+            "state_id": "96808"
+          },
+          {
+            "id": "9680802",
+            "name": {
+              "en": "",
+              "ar": "الكامل والوافي"
+            },
+            "state_id": "96808"
+          },
+          {
+            "id": "9680803",
+            "name": {
+              "en": "",
+              "ar": "جعلان بني بو حسن"
+            },
+            "state_id": "96808"
+          },
+          {
+            "id": "9680804",
+            "name": {
+              "en": "",
+              "ar": "جعلان بني بو علي"
+            },
+            "state_id": "96808"
+          },
+          {
+            "id": "9680805",
+            "name": {
+              "en": "",
+              "ar": "مصيرة"
+            },
+            "state_id": "96808"
+          }
+        ]
+      },
+      {
+        "id": "96809",
+        "name": {
+          "en": "Shamal ash sharqiyah",
+          "ar": "شمال الشرقية"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9680901",
+            "name": {
+              "en": "",
+              "ar": "إبراء"
+            },
+            "state_id": "96809"
+          },
+          {
+            "id": "9680902",
+            "name": {
+              "en": "",
+              "ar": "المضيبي"
+            },
+            "state_id": "96809"
+          },
+          {
+            "id": "9680903",
+            "name": {
+              "en": "",
+              "ar": "بدية"
+            },
+            "state_id": "96809"
+          },
+          {
+            "id": "9680904",
+            "name": {
+              "en": "",
+              "ar": "القابل"
+            },
+            "state_id": "96809"
+          },
+          {
+            "id": "9680905",
+            "name": {
+              "en": "",
+              "ar": "وادي بني خالد"
+            },
+            "state_id": "96809"
+          },
+          {
+            "id": "9680906",
+            "name": {
+              "en": "",
+              "ar": "دماء والطائيين"
+            },
+            "state_id": "96809"
+          }
+        ]
+      },
+      {
+        "id": "96810",
+        "name": {
+          "en": "Al DHaherah",
+          "ar": "الظاهرة"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9681001",
+            "name": {
+              "en": "",
+              "ar": "عبري"
+            },
+            "state_id": "96810"
+          },
+          {
+            "id": "9681002",
+            "name": {
+              "en": "",
+              "ar": "ينقل"
+            },
+            "state_id": "96810"
+          },
+          {
+            "id": "9681003",
+            "name": {
+              "en": "",
+              "ar": "ضنك"
+            },
+            "state_id": "96810"
+          }
+        ]
+      },
+      {
+        "id": "96811",
+        "name": {
+          "en": "Al Wusta",
+          "ar": "الوسطى"
+        },
+        "country_id": "968",
+        "cities": [
+          {
+            "id": "9681101",
+            "name": {
+              "en": "",
+              "ar": "هيما"
+            },
+            "state_id": "96811"
+          },
+          {
+            "id": "9681102",
+            "name": {
+              "en": "",
+              "ar": "محوت"
+            },
+            "state_id": "96811"
+          },
+          {
+            "id": "9681103",
+            "name": {
+              "en": "",
+              "ar": "الدقم"
+            },
+            "state_id": "96811"
+          },
+          {
+            "id": "9681104",
+            "name": {
+              "en": "",
+              "ar": "الجازر"
+            },
+            "state_id": "96811"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "973",
+    "name": {
+      "en": "Bahrain",
+      "ar": "البحرين"
+    },
+    "code": "BH",
+    "states": [
+      {
+        "id": "97301",
+        "name": {
+          "en": "Al Asimah",
+          "ar": "العاصمة"
+        },
+        "country_id": "973",
+        "cities": [
+          {
+            "id": "9730101",
+            "name": {
+              "en": "",
+              "ar": "أم الحصم"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730102",
+            "name": {
+              "en": "",
+              "ar": "بو عشيرة"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730103",
+            "name": {
+              "en": "",
+              "ar": "بو غزال"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730104",
+            "name": {
+              "en": "",
+              "ar": "الجفير"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730105",
+            "name": {
+              "en": "",
+              "ar": "الحورة"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730106",
+            "name": {
+              "en": "",
+              "ar": "النعيم"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730107",
+            "name": {
+              "en": "",
+              "ar": "السقية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730108",
+            "name": {
+              "en": "",
+              "ar": "السلمانية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730109",
+            "name": {
+              "en": "",
+              "ar": "السويفية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730110",
+            "name": {
+              "en": "",
+              "ar": "العدلية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730111",
+            "name": {
+              "en": "",
+              "ar": "الغريفة"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730112",
+            "name": {
+              "en": "",
+              "ar": "الفاتح"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730113",
+            "name": {
+              "en": "",
+              "ar": "القضيبية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730114",
+            "name": {
+              "en": "",
+              "ar": "القفول"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730115",
+            "name": {
+              "en": "",
+              "ar": "الكورنيش"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730116",
+            "name": {
+              "en": "",
+              "ar": "الماحوز"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730117",
+            "name": {
+              "en": "",
+              "ar": "المنطقة الدبلوماسية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730118",
+            "name": {
+              "en": "",
+              "ar": "ميناء سلمان الصناعية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730119",
+            "name": {
+              "en": "",
+              "ar": "الواجهة البحرية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730120",
+            "name": {
+              "en": "",
+              "ar": "وسط المنامة"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730121",
+            "name": {
+              "en": "",
+              "ar": "أَبُو بَهَام"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730122",
+            "name": {
+              "en": "",
+              "ar": "البرهامة"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730123",
+            "name": {
+              "en": "",
+              "ar": "البلاد القديم"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730124",
+            "name": {
+              "en": "",
+              "ar": "توبلي"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730125",
+            "name": {
+              "en": "",
+              "ar": "جد حفص"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730126",
+            "name": {
+              "en": "",
+              "ar": "جد علي"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730127",
+            "name": {
+              "en": "",
+              "ar": "جرداب"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730128",
+            "name": {
+              "en": "",
+              "ar": "النبيه صالح"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730129",
+            "name": {
+              "en": "",
+              "ar": "الخميس"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730130",
+            "name": {
+              "en": "",
+              "ar": "الديه"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730131",
+            "name": {
+              "en": "",
+              "ar": "الزنج"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730132",
+            "name": {
+              "en": "",
+              "ar": "سترة"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730133",
+            "name": {
+              "en": "",
+              "ar": "السنابس"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730134",
+            "name": {
+              "en": "",
+              "ar": "سند"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730135",
+            "name": {
+              "en": "",
+              "ar": "السهلة الجنوبية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730136",
+            "name": {
+              "en": "",
+              "ar": "الصالحية"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730137",
+            "name": {
+              "en": "",
+              "ar": "السيف"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730138",
+            "name": {
+              "en": "",
+              "ar": "طشان"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730139",
+            "name": {
+              "en": "",
+              "ar": "عذاري"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730140",
+            "name": {
+              "en": "",
+              "ar": "العكر"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730141",
+            "name": {
+              "en": "",
+              "ar": "كرباباد"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730142",
+            "name": {
+              "en": "",
+              "ar": "مدينة عيسى"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730143",
+            "name": {
+              "en": "",
+              "ar": "المصلّى"
+            },
+            "state_id": "97301"
+          },
+          {
+            "id": "9730144",
+            "name": {
+              "en": "",
+              "ar": "النويدرات"
+            },
+            "state_id": "97301"
+          }
+        ]
+      },
+      {
+        "id": "97302",
+        "name": {
+          "en": "Northern Governorate",
+          "ar": "المحافظة الشمالية"
+        },
+        "country_id": "973",
+        "cities": [
+          {
+            "id": "9730201",
+            "name": {
+              "en": "",
+              "ar": "البديع"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730202",
+            "name": {
+              "en": "",
+              "ar": "سار"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730203",
+            "name": {
+              "en": "",
+              "ar": "المرخ"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730204",
+            "name": {
+              "en": "",
+              "ar": "القرية"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730205",
+            "name": {
+              "en": "",
+              "ar": "مقابة"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730206",
+            "name": {
+              "en": "",
+              "ar": "باربار"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730207",
+            "name": {
+              "en": "",
+              "ar": "الدراز"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730208",
+            "name": {
+              "en": "",
+              "ar": "مدينة حمد"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730209",
+            "name": {
+              "en": "",
+              "ar": "قرية المالكية"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730210",
+            "name": {
+              "en": "",
+              "ar": "قرية دمستان"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730211",
+            "name": {
+              "en": "",
+              "ar": "قرية كرزكان"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730212",
+            "name": {
+              "en": "",
+              "ar": "قرية بني جمرة"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730213",
+            "name": {
+              "en": "",
+              "ar": "قرية داركليب"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730214",
+            "name": {
+              "en": "",
+              "ar": "قرية شهركان"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730215",
+            "name": {
+              "en": "",
+              "ar": "قرية صدد"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730216",
+            "name": {
+              "en": "",
+              "ar": "قرية الهملة"
+            },
+            "state_id": "97302"
+          },
+          {
+            "id": "9730217",
+            "name": {
+              "en": "",
+              "ar": "منطقة الجنبية"
+            },
+            "state_id": "97302"
+          }
+        ]
+      },
+      {
+        "id": "97303",
+        "name": {
+          "en": "Muharraq",
+          "ar": "المحرق"
+        },
+        "country_id": "973",
+        "cities": [
+          {
+            "id": "9730301",
+            "name": {
+              "en": "",
+              "ar": "قرية البسيتين"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730302",
+            "name": {
+              "en": "",
+              "ar": "بن هندي"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730303",
+            "name": {
+              "en": "",
+              "ar": "حيّ ستيشن"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730304",
+            "name": {
+              "en": "",
+              "ar": "المحرق"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730305",
+            "name": {
+              "en": "",
+              "ar": "قلالي"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730306",
+            "name": {
+              "en": "",
+              "ar": "جزر أمواج"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730307",
+            "name": {
+              "en": "",
+              "ar": "بوماهر"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730308",
+            "name": {
+              "en": "",
+              "ar": "الدير"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730309",
+            "name": {
+              "en": "",
+              "ar": "سماهيج"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730310",
+            "name": {
+              "en": "",
+              "ar": "عراد"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730311",
+            "name": {
+              "en": "",
+              "ar": "الحالتين"
+            },
+            "state_id": "97303"
+          },
+          {
+            "id": "9730312",
+            "name": {
+              "en": "",
+              "ar": "الحدّ"
+            },
+            "state_id": "97303"
+          }
+        ]
+      },
+      {
+        "id": "97304",
+        "name": {
+          "en": "Southern Governorate",
+          "ar": "المحافظة الجنوبية"
+        },
+        "country_id": "973",
+        "cities": [
+          {
+            "id": "9730401",
+            "name": {
+              "en": "",
+              "ar": "الرفاع"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730402",
+            "name": {
+              "en": "",
+              "ar": "مدينة عيسى"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730403",
+            "name": {
+              "en": "",
+              "ar": "معامير"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730404",
+            "name": {
+              "en": "",
+              "ar": "عوالي"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730405",
+            "name": {
+              "en": "",
+              "ar": "عسكر"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730406",
+            "name": {
+              "en": "",
+              "ar": "جو"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730407",
+            "name": {
+              "en": "",
+              "ar": "الدور"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730408",
+            "name": {
+              "en": "",
+              "ar": "الزلاق"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730409",
+            "name": {
+              "en": "",
+              "ar": "جزر حوار"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730410",
+            "name": {
+              "en": "",
+              "ar": "مدينة خليفة"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730411",
+            "name": {
+              "en": "",
+              "ar": "الصخير"
+            },
+            "state_id": "97304"
+          },
+          {
+            "id": "9730412",
+            "name": {
+              "en": "",
+              "ar": "درة البحرين"
+            },
+            "state_id": "97304"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "974",
+    "name": {
+      "en": "Qatar",
+      "ar": "قطر"
+    },
+    "code": "QA",
+    "states": [
+      {
+        "id": "97401",
+        "name": {
+          "en": "Doha",
+          "ar": "الدوحة"
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740101",
+            "name": {
+              "en": "",
+              "ar": "المرخية"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740102",
+            "name": {
+              "en": "",
+              "ar": "مريخ"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740103",
+            "name": {
+              "en": "",
+              "ar": "الدحيل"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740104",
+            "name": {
+              "en": "",
+              "ar": "السودان"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740105",
+            "name": {
+              "en": "",
+              "ar": "المنتزة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740106",
+            "name": {
+              "en": "",
+              "ar": "ابوهامور"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740107",
+            "name": {
+              "en": "",
+              "ar": "بن محمود"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740108",
+            "name": {
+              "en": "",
+              "ar": "نعيجة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740109",
+            "name": {
+              "en": "",
+              "ar": "الثمامة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740110",
+            "name": {
+              "en": "",
+              "ar": "المطار القديم"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740111",
+            "name": {
+              "en": "",
+              "ar": "النجمة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740112",
+            "name": {
+              "en": "",
+              "ar": "الهلال"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740113",
+            "name": {
+              "en": "",
+              "ar": "خليفة الجديدة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740114",
+            "name": {
+              "en": "",
+              "ar": "المنصور"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740115",
+            "name": {
+              "en": "",
+              "ar": "العسيري"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740116",
+            "name": {
+              "en": "",
+              "ar": "السلطة القديمة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740117",
+            "name": {
+              "en": "",
+              "ar": "السلطة الجديدة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740118",
+            "name": {
+              "en": "",
+              "ar": "الغانم"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740119",
+            "name": {
+              "en": "",
+              "ar": "أم غويلينة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740120",
+            "name": {
+              "en": "",
+              "ar": "مشيرب"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740121",
+            "name": {
+              "en": "",
+              "ar": "النصر"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740122",
+            "name": {
+              "en": "",
+              "ar": "جنوب شارع سلوى"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740123",
+            "name": {
+              "en": "",
+              "ar": "العزيزية"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740124",
+            "name": {
+              "en": "",
+              "ar": "الوعب"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740125",
+            "name": {
+              "en": "",
+              "ar": "عنيزة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740126",
+            "name": {
+              "en": "",
+              "ar": "المعمورة"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740127",
+            "name": {
+              "en": "",
+              "ar": "غرب خليج لاغون"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740128",
+            "name": {
+              "en": "",
+              "ar": "الحي الثقافي كتارا"
+            },
+            "state_id": "97401"
+          },
+          {
+            "id": "9740129",
+            "name": {
+              "en": "",
+              "ar": "الجسرة"
+            },
+            "state_id": "97401"
+          }
+        ]
+      },
+      {
+        "id": "97402",
+        "name": {
+          "en": "Al Rayyan",
+          "ar": "الريان"
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740201",
+            "name": {
+              "en": "",
+              "ar": "الريان القديم"
+            },
+            "state_id": "97402"
+          },
+          {
+            "id": "9740202",
+            "name": {
+              "en": "",
+              "ar": "الريان الجديد "
+            },
+            "state_id": "97402"
+          }
+        ]
+      },
+      {
+        "id": "97403",
+        "name": {
+          "en": "Al Khor",
+          "ar": "الخور "
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740301",
+            "name": {
+              "en": "",
+              "ar": "الخور"
+            },
+            "state_id": "97403"
+          }
+        ]
+      },
+      {
+        "id": "97404",
+        "name": {
+          "en": "Al Wakrah",
+          "ar": "الوكرة"
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740401",
+            "name": {
+              "en": "",
+              "ar": "الوكرة"
+            },
+            "state_id": "97404"
+          }
+        ]
+      },
+      {
+        "id": "97405",
+        "name": {
+          "en": "Al Shamal",
+          "ar": "الشمال"
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740501",
+            "name": {
+              "en": "",
+              "ar": "عين سنان"
+            },
+            "state_id": "97405"
+          },
+          {
+            "id": "9740502",
+            "name": {
+              "en": "",
+              "ar": "مدينة الكعبان"
+            },
+            "state_id": "97405"
+          },
+          {
+            "id": "9740503",
+            "name": {
+              "en": "",
+              "ar": "فويرط"
+            },
+            "state_id": "97405"
+          },
+          {
+            "id": "9740504",
+            "name": {
+              "en": "",
+              "ar": "أبو ظلف"
+            },
+            "state_id": "97405"
+          },
+          {
+            "id": "9740505",
+            "name": {
+              "en": "",
+              "ar": "الزبارة"
+            },
+            "state_id": "97405"
+          },
+          {
+            "id": "9740506",
+            "name": {
+              "en": "",
+              "ar": "مدينة الشمال"
+            },
+            "state_id": "97405"
+          },
+          {
+            "id": "9740507",
+            "name": {
+              "en": "",
+              "ar": "رويس"
+            },
+            "state_id": "97405"
+          }
+        ]
+      },
+      {
+        "id": "97406",
+        "name": {
+          "en": "Umm Salal",
+          "ar": "أم صلال"
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740601",
+            "name": {
+              "en": "",
+              "ar": "الخريطيات"
+            },
+            "state_id": "97406"
+          },
+          {
+            "id": "9740602",
+            "name": {
+              "en": "",
+              "ar": "أم صلال محمد"
+            },
+            "state_id": "97406"
+          },
+          {
+            "id": "9740603",
+            "name": {
+              "en": "",
+              "ar": "أم صلال علي "
+            },
+            "state_id": "97406"
+          },
+          {
+            "id": "9740604",
+            "name": {
+              "en": "",
+              "ar": "أم العمد"
+            },
+            "state_id": "97406"
+          },
+          {
+            "id": "9740605",
+            "name": {
+              "en": "",
+              "ar": "أم عبيرية"
+            },
+            "state_id": "97406"
+          },
+          {
+            "id": "9740606",
+            "name": {
+              "en": "",
+              "ar": "صنيع الحميدي"
+            },
+            "state_id": "97406"
+          }
+        ]
+      },
+      {
+        "id": "97407",
+        "name": {
+          "en": "Al Daayen",
+          "ar": "الضعاين"
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740701",
+            "name": {
+              "en": "",
+              "ar": "جبل ثويلب"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740702",
+            "name": {
+              "en": "",
+              "ar": "الخرايج"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740703",
+            "name": {
+              "en": "",
+              "ar": "لوسيل"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740704",
+            "name": {
+              "en": "",
+              "ar": "العقلة"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740705",
+            "name": {
+              "en": "",
+              "ar": "وادي البنات"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740706",
+            "name": {
+              "en": "",
+              "ar": "لعبيب"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740707",
+            "name": {
+              "en": "",
+              "ar": "العب"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740708",
+            "name": {
+              "en": "",
+              "ar": "جريان جنيهات"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740709",
+            "name": {
+              "en": "",
+              "ar": "الخيصة"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740710",
+            "name": {
+              "en": "",
+              "ar": "روضة الحمامة"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740711",
+            "name": {
+              "en": "",
+              "ar": "وادي الوساح"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740712",
+            "name": {
+              "en": "",
+              "ar": "الصخامة"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740713",
+            "name": {
+              "en": "",
+              "ar": "المسروحية"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740714",
+            "name": {
+              "en": "",
+              "ar": "وادي لوسيل"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740715",
+            "name": {
+              "en": "",
+              "ar": "وادي لوسيل"
+            },
+            "state_id": "97407"
+          },
+          {
+            "id": "9740716",
+            "name": {
+              "en": "",
+              "ar": "الظعاين"
+            },
+            "state_id": "97407"
+          }
+        ]
+      },
+      {
+        "id": "97408",
+        "name": {
+          "en": "Al Sheehaniya",
+          "ar": "الشحانية"
+        },
+        "country_id": "974",
+        "cities": [
+          {
+            "id": "9740801",
+            "name": {
+              "en": "",
+              "ar": "الشحانية"
+            },
+            "state_id": "97408"
+          }
+        ]
+      }
+    ]
+  }
+]

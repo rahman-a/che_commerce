@@ -8,14 +8,15 @@ import 'react-phone-number-input/style.css'
 type Props = {
   onChange: (value: Value) => void
   phone?: Value
+  name?: string
 }
 
-export default function PhoneInput({ onChange, phone }: Props) {
-  const t = useTranslations('Profile')
+export function PhoneInput({ onChange, phone, name }: Props) {
+  const t = useTranslations()
   const locale = useLocale()
   return (
     <PhoneInputNumber
-      placeholder={t('enter_phone_number')}
+      placeholder={t('Profile.enter_phone_number')}
       labels={locale === 'ar' ? ar : undefined}
       direction={getLangDir(locale)}
       className='[&>input]:p-2 [&>input]:border [&>input]:rounded-md 
@@ -24,6 +25,7 @@ export default function PhoneInput({ onChange, phone }: Props) {
       value={phone}
       onChange={onChange}
       defaultCountry='KW'
+      name={name || 'phone'}
     />
   )
 }
