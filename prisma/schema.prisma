@@ -9,23 +9,25 @@ datasource db {
 }
 
 model User {
-  id               String            @id @default(cuid())
-  name             String?
-  email            String?           @unique
-  emailVerified    DateTime?
-  image            String?
-  phone            String            @unique
-  phoneVerified    DateTime?
-  password         String
-  role             Role              @default(user)
-  status           UserStatus        @default(active)
-  sessions         Session[]
-  shippingAddress  ShippingAddress[]
-  registeredAt     DateTime?
-  resetToken       String?           @unique
-  resetTokenExpiry DateTime?
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
+  id                     String            @id @default(cuid())
+  name                   String?
+  email                  String?           @unique
+  emailVerified          DateTime?
+  image                  String?
+  phone                  String            @unique
+  phoneVerified          DateTime?
+  password               String
+  role                   Role              @default(user)
+  status                 UserStatus        @default(active)
+  sessions               Session[]
+  shippingAddress        ShippingAddress[]
+  phoneVerificationCode  String?
+  emailVerificationToken String?
+  registeredAt           DateTime?
+  resetToken             String?           @unique
+  resetTokenExpiry       DateTime?
+  createdAt              DateTime          @default(now())
+  updatedAt              DateTime          @updatedAt
 
   @@map("users")
 }

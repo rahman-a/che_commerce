@@ -112,10 +112,10 @@ const buttonContainer = {
 }
 
 const button = {
-  backgroundColor: '#5e6ad2',
+  backgroundColor: '#d0c2b9',
   borderRadius: '3px',
   fontWeight: '600',
-  color: '#fff',
+  color: '#353535',
   fontSize: '15px',
   textDecoration: 'none',
   textAlign: 'center' as const,

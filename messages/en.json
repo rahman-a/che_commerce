@@ -256,7 +256,19 @@
     "account_already_exist_msg": "An account with this email or phone number already exists",
     "account_created": "Account has been Created Successfully",
     "error_sign_in": "Error in Signing In, Please try again",
-    "email_sent": "Email has been sent Successfully"
+    "email_sent": "Email has been sent Successfully",
+    "Phone_verification": "Phone Verification",
+    "phone_verification_msg": "A code has been sent to your phone number. Please enter it below.",
+    "phone_verification_send": "verification code has been sent to your phone",
+    "phone_verification_code_wrong": "verification code is wrong, please type the correct one",
+    "phone_verification_code_expired": "verification code has expired, please request a new one",
+    "phone_verification_code_success": "phone number has been verified successfully",
+    "email_verification_send": "verification link has been sent to your email",
+    "email_verification_token_wrong": "verification link could be expired or wrong, please request a new one",
+    "email_verification_success": "email has been verified successfully",
+    "verification_process_msg": "To continue our verification process, a link has been sent to your email. Please click on the link to verify your email address.",
+    "send_code": "Send Code",
+    "send_code_again": "Send Code Again"
   },
   "Demo": {
     "product_name": "Golden White Abaya",

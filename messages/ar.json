@@ -256,7 +256,19 @@
     "account_already_exist_msg": "إذا كنت تمتلك حساب بالفعل, يمكنك تسجيل الدخول من هنا",
     "account_created": "تم إنشاء الحساب بنجاح",
     "error_sign_in": "حدث خطأ أثناء تسجيل الدخول, من فضلك حاول مرة أخرى",
-    "email_sent": "تم إرسال البريد الإلكتروني بنجاح"
+    "email_sent": "تم إرسال البريد الإلكتروني بنجاح",
+    "Phone_verification": "التحقق من رقم الهاتف",
+    "phone_verification_msg": "للتحقق من رقم هاتفك, من فضلك أدخل الرمز المرسل إليك",
+    "phone_verification_send": "تم إرسال رمز التحقق إلى رقم هاتفك",
+    "phone_verification_code_wrong": "رمز التحقق غير صحيح, من فضلك أدخل الرمز الصحيح",
+    "phone_verification_code_expired": "رمز التحقق قد يكون منتهي الصلاحية, من فضلك اطلب رمز جديد",
+    "phone_verification_code_success": "تم التحقق من رقم الهاتف بنجاح",
+    "email_verification_send": "تم إرسال رابط التحقق إلى بريدك الإلكتروني",
+    "email_verification_token_wrong": "رابط التحقق قد يكون غير صحيح او منتهي الصلاحية, من فضلك اطلب رابط جديد",
+    "email_verification_success": "تم التحقق من البريد الإلكتروني بنجاح",
+    "verification_process_msg": "لإستكمال عملية التحقق, تم إرسال رابط الى بريدك الإلكترونى, من فضلك اضغط عليه لتأكيد بريدك الإلكترونى",
+    "send_code": "إرسال الكود",
+    "send_code_again": "إرسال الكود مرة أخرى"
   },
   "Demo": {
     "product_name": "عباية تطريز ذهبي",
