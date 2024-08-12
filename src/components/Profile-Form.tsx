@@ -28,7 +28,7 @@ export default function ProfileForm({ data }: Props) {
   const [pending, setPending] = React.useState(false)
   const [userId, setUserId] = React.useState('')
   const [phoneVerificationProcess, setPhoneVerificationProcess] =
-    React.useState(true)
+    React.useState(false)
   const router = useRouter()
   const locale = useLocale()
   const [state, formAction] = useFormState(registerUser, {
