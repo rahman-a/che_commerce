@@ -1,8 +1,9 @@
 'use server'
 import twilio from 'twilio'
 import dotenv from 'dotenv'
-import { getTranslations } from 'next-intl/server'
 import prisma from '@/lib/prisma'
+import { sendEmailVerificationToken } from '@/app/[locale]/verify-email/actions'
+import { getTranslations } from 'next-intl/server'
 dotenv.config()
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID
@@ -28,7 +29,7 @@ export async function sendVerificationCode({ phone }: SendVerification) {
         to: phone,
       })
     // pending => code sent,
-    console.log('Send Status: ', verification)
+    console.log('Send Status: ', verification.status)
     return { response: verification.status }
   } catch (error: any) {
     if (error) {
@@ -43,6 +44,7 @@ export async function checkVerificationCode({
   code,
   userId,
 }: CheckVerification) {
+  const t = await getTranslations()
   try {
     const verificationCheck = await client.verify.v2
       .services(serviceSid!)
@@ -52,30 +54,27 @@ export async function checkVerificationCode({
       })
     // pending => incorrect code, approved =>  correct code
     if (verificationCheck.status === 'approved' && userId) {
-      const user = await prisma.user.findUnique({
+      const user = await prisma.user.update({
         where: {
           id: userId,
         },
+        data: {
+          phone,
+          phoneVerified: new Date(),
+        },
       })
-      if (user?.phone !== phone) {
-        await prisma.user.update({
-          where: {
-            id: userId,
-          },
-          data: {
-            phone,
-          },
-        })
-      }
+      user &&
+        (await sendEmailVerificationToken({ email: user.email!, id: user.id }))
     }
-    console.log('Check Status: ', verificationCheck)
+    console.log('Check Status: ', verificationCheck.status)
     return { response: verificationCheck.status }
   } catch (error: any) {
     if (error) {
       console.log('Check Error: ', error.message)
-      return { response: 'error', message: error.message }
+      return { response: 'error', message: t('Form.something_went_wrong') }
     }
   }
 }
+
 // sendVerificationCode({ phone: '+201117490786' })
-checkVerificationCode({ phone: '+201117490786', code: '268416' })
+// checkVerificationCode({ phone: '+201117490786', code: '268416' })

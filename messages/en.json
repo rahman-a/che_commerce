@@ -8,7 +8,8 @@
     "edit": "edit",
     "close": "close",
     "confirm_delete": "Confirm Delete?",
-    "change": "Change"
+    "change": "Change",
+    "send": "Send"
   },
   "Navigation": {
     "welcome": "Welcome {name}",
@@ -263,12 +264,20 @@
     "phone_verification_code_wrong": "verification code is wrong, please type the correct one",
     "phone_verification_code_expired": "verification code has expired, please request a new one",
     "phone_verification_code_success": "phone number has been verified successfully",
+    "email_verification": "Email Verification",
     "email_verification_send": "verification link has been sent to your email",
     "email_verification_token_wrong": "verification link could be expired or wrong, please request a new one",
-    "email_verification_success": "email has been verified successfully",
+    "email_verification_success": "E-mail has been verified successfully, you can login now",
     "verification_process_msg": "To continue our verification process, a link has been sent to your email. Please click on the link to verify your email address.",
     "send_code": "Send Code",
-    "send_code_again": "Send Code Again"
+    "send_code_again": "Send Code Again",
+    "invalid_token": "Invalid Token",
+    "invalid_token_msg": "The token is invalid or expired, please request a new one",
+    "verification_successful": "Verification Successful",
+    "error": "Error",
+    "go_to_login_page": "Go to Login Page",
+    "send_link_again": "Send Link Again",
+    "enter_valid_email": "Please enter a valid email"
   },
   "Demo": {
     "product_name": "Golden White Abaya",

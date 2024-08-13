@@ -14,6 +14,7 @@ const publicPages = [
   '/login',
   '/forgot-password',
   '/reset-password(.*)',
+  '/verify-email(.*)',
 ]
 
 const intlMiddleware = createMiddleware({

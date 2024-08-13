@@ -2,7 +2,8 @@
 import { Resend } from 'resend'
 import { PasswordReset, EmailVerification } from './templates'
 import { getLocale, getTranslations } from 'next-intl/server'
-
+import dotenv from 'dotenv'
+dotenv.config()
 type DataType = {
   template: 'email-verification' | 'password-reset'
   emails: string[]

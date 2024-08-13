@@ -24,15 +24,17 @@ interface EmailVerificationProps {
 
 const content = {
   en: {
+    hi: 'Hi',
     title: 'Verify your email address',
     paragraph:
       'thank you for signing up for Che Store. To complete your registration, please verify your email address by clicking the button below.',
     link: 'Click here',
   },
   ar: {
+    hi: 'مرحبا',
     title: 'تحقق من عنوان بريدك الإلكتروني',
     paragraph:
-      'شكرًا لك على التسجيل في Che Store. لإكمال تسجيلك، يرجى التحقق من عنوان بريدك الإلكتروني عن طريق النقر على الزر أدناه.',
+      'شكرًا لك على التسجيل فى شى ستور . لإكمال تسجيلك، يرجى التحقق من عنوان بريدك الإلكتروني عن طريق النقر على الزر أدناه.',
     link: 'اضغط هنا',
   },
 }
@@ -50,13 +52,17 @@ export const EmailVerification = ({
         <Container style={container}>
           <Img
             src='https://i.ibb.co/5srmZyC/che-logo.png'
-            width='42'
-            height='42'
-            alt='Linear'
+            width='80'
+            height='50'
+            alt='che-logo'
             style={logo}
           />
           <Heading style={heading}>{data.title}</Heading>
-          <Text style={paragraph}>{`Hi ${name}, ${data.paragraph}`}</Text>
+          <Text style={paragraph}>
+            {data.hi} {name}
+            <br />
+            {data.paragraph}
+          </Text>
           <Section style={buttonContainer}>
             <Button style={button} href={link}>
               {data.link}
@@ -73,9 +79,8 @@ export const EmailVerification = ({
 }
 
 const logo = {
-  borderRadius: 21,
-  width: 42,
-  height: 42,
+  width: 80,
+  height: 50,
 }
 
 const main = {
@@ -97,25 +102,27 @@ const heading = {
   fontWeight: '400',
   color: '#484848',
   padding: '17px 0 0',
+  textAlign: 'center' as const,
 }
 
 const paragraph = {
   margin: '0 0 15px',
   fontSize: '15px',
-  lineHeight: '1.4',
+  lineHeight: '1.6',
   color: '#3c4149',
-  padding: '20px 0',
+  padding: '15px 0',
+  textAlign: 'center' as const,
 }
 
 const buttonContainer = {
-  padding: '27px 0 27px',
+  padding: '20px 0 20px',
 }
 
 const button = {
   backgroundColor: '#d0c2b9',
   borderRadius: '3px',
   fontWeight: '600',
-  color: '#353535',
+  color: '#333',
   fontSize: '15px',
   textDecoration: 'none',
   textAlign: 'center' as const,
@@ -131,15 +138,4 @@ const reportLink = {
 const hr = {
   borderColor: '#dfe1e4',
   margin: '42px 0 26px',
-}
-
-const code = {
-  fontFamily: 'monospace',
-  fontWeight: '700',
-  padding: '1px 4px',
-  backgroundColor: '#dfe1e4',
-  letterSpacing: '-0.3px',
-  fontSize: '21px',
-  borderRadius: '4px',
-  color: '#3c4149',
 }

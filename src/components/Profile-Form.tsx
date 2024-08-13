@@ -82,7 +82,7 @@ export default function ProfileForm({ data }: Props) {
       <PhoneVerification
         open={phoneVerificationProcess}
         setOpen={setPhoneVerificationProcess}
-        phone={form.getValues('phone') || ('+201117490786' as Value)}
+        phone={form.getValues('phone')}
         userId={userId}
       />
       <form onSubmit={submitHandler} ref={formRef}>

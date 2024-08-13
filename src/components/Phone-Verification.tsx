@@ -26,6 +26,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { checkVerificationCode, sendVerificationCode } from '@/sms'
 import { getLangDir } from 'rtl-detect'
 import { toast } from 'sonner'
+import { sendEmailVerificationToken } from '@/app/[locale]/verify-email/actions'
 type Props = {
   open: boolean
   setOpen: (open: boolean) => void

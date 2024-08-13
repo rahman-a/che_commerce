@@ -89,10 +89,9 @@ export async function registerUser(prevState: any, data: User) {
       data: newUser.id,
     }
   } catch (error: any) {
-    // if (error) {
-    //   return { response: 'error', message: error.message }
-    // }
     console.error(error.message)
-    throw error
+    if (error) {
+      return { response: 'error', message: error.message }
+    }
   }
 }

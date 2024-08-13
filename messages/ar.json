@@ -8,7 +8,8 @@
     "edit": "تعديل",
     "close": "غلق",
     "confirm_delete": "تأكيد الحذف",
-    "change": "تغيير"
+    "change": "تغيير",
+    "send": "إرسال"
   },
   "Navigation": {
     "welcome": "مرحباً {name}",
@@ -263,12 +264,20 @@
     "phone_verification_code_wrong": "رمز التحقق غير صحيح, من فضلك أدخل الرمز الصحيح",
     "phone_verification_code_expired": "رمز التحقق قد يكون منتهي الصلاحية, من فضلك اطلب رمز جديد",
     "phone_verification_code_success": "تم التحقق من رقم الهاتف بنجاح",
+    "email_verification": "التحقق من البريد الإلكتروني",
     "email_verification_send": "تم إرسال رابط التحقق إلى بريدك الإلكتروني",
     "email_verification_token_wrong": "رابط التحقق قد يكون غير صحيح او منتهي الصلاحية, من فضلك اطلب رابط جديد",
-    "email_verification_success": "تم التحقق من البريد الإلكتروني بنجاح",
+    "email_verification_success": "تم التحقق من البريد الإلكتروني بنجاح, يمكنك الآن تسجيل الدخول",
     "verification_process_msg": "لإستكمال عملية التحقق, تم إرسال رابط الى بريدك الإلكترونى, من فضلك اضغط عليه لتأكيد بريدك الإلكترونى",
     "send_code": "إرسال الكود",
-    "send_code_again": "إرسال الكود مرة أخرى"
+    "send_code_again": "إرسال الكود مرة أخرى",
+    "invalid_token": "الرابط غير صالح",
+    "invalid_token_msg": "الرابط غير صالح أو منتهي الصلاحية, من فضلك ارسل رابط جديد",
+    "verification_successful": "تم التحقق بنجاح",
+    "error": "خطأ",
+    "go_to_login_page": "الذهاب لصفحة تسجيل الدخول",
+    "send_link_again": "إرسال الرابط مرة أخرى",
+    "enter_valid_email": "الرجاء إدخال بريد إلكتروني صحيح"
   },
   "Demo": {
     "product_name": "عباية تطريز ذهبي",

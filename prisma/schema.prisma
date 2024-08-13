@@ -21,7 +21,6 @@ model User {
   status                 UserStatus        @default(active)
   sessions               Session[]
   shippingAddress        ShippingAddress[]
-  phoneVerificationCode  String?
   emailVerificationToken String?
   registeredAt           DateTime?
   resetToken             String?           @unique
