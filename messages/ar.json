@@ -9,7 +9,8 @@
     "close": "غلق",
     "confirm_delete": "تأكيد الحذف",
     "change": "تغيير",
-    "send": "إرسال"
+    "send": "إرسال",
+    "continue": "إستمرار"
   },
   "Navigation": {
     "welcome": "مرحباً {name}",
@@ -127,6 +128,7 @@
     "select_governorate": "إختر المحافظة",
     "enter_name": "أدخل اسمك",
     "enter_phone_number": "أدخل رقم الهاتف",
+    "enter_phone_number_with_no_code": "أدخل رقم الهاتف بدون كود الدولة",
     "enter_email": "أدخل بريدك الإلكترونى",
     "enter_country": "أدخل بلدك",
     "enter_governorate": "أدخل محافظتك",
@@ -148,6 +150,8 @@
     "register": "تسجيل",
     "dont_have_account": "ليس لديك حساب؟",
     "send_reset_link": "إرسال رابط إعادة تعيين كلمة المرور",
+    "send_reset_code": "إرسال كود إعادة تعيين كلمة المرور",
+    "enter_reset_pass_code": "من فضلك, أدخل كود إعادة تعيين كلمة المرور",
     "create_account": "إنشاء حساب جديد",
     "account_inactive": "حسابك غير مفعل, يرجى التواصل مع الإدارة",
     "countries": "الدول",
@@ -277,7 +281,9 @@
     "error": "خطأ",
     "go_to_login_page": "الذهاب لصفحة تسجيل الدخول",
     "send_link_again": "إرسال الرابط مرة أخرى",
-    "enter_valid_email": "الرجاء إدخال بريد إلكتروني صحيح"
+    "enter_valid_email": "الرجاء إدخال بريد إلكتروني صحيح",
+    "reset_with": "إعادة تعيين كلمة المرور بـ",
+    "choose_country_first": "من فضلك, أختر الدولة أولاً"
   },
   "Demo": {
     "product_name": "عباية تطريز ذهبي",
