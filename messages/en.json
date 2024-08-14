@@ -151,7 +151,9 @@
     "dont_have_account": "Don't have an account?",
     "send_reset_link": "Send Password Reset Link",
     "send_reset_code": "Send Password Reset Code",
-    "enter_reset_pass_code": "Please, Enter reset password code",
+    "enter_reset_pass_code": "Please, Enter password reset code",
+    "reset_code_sent_phone": "Reset code has been sent to your phone",
+    "reset_code_sent_email": "Reset code has been sent to your emil",
     "create_account": "Create a new account",
     "account_inactive": "Your account is inactive, please contact the admin",
     "countries": "Countries",
@@ -268,6 +270,7 @@
     "phone_verification_code_wrong": "verification code is wrong, please type the correct one",
     "phone_verification_code_expired": "verification code has expired, please request a new one",
     "phone_verification_code_success": "phone number has been verified successfully",
+    "enter_code_below": "Please, Enter the code below",
     "email_verification": "Email Verification",
     "email_verification_send": "verification link has been sent to your email",
     "email_verification_token_wrong": "verification link could be expired or wrong, please request a new one",
@@ -283,7 +286,8 @@
     "send_link_again": "Send Link Again",
     "enter_valid_email": "Please enter a valid email",
     "reset_with": "Reset Password with",
-    "choose_country_first": "Please, choose country first"
+    "choose_country_first": "Please, choose country first",
+    "phone_code_sent_again": "A code has been sent to your phone again"
   },
   "Demo": {
     "product_name": "Golden White Abaya",

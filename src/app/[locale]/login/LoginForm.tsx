@@ -11,6 +11,8 @@ import { useFormState } from 'react-dom'
 import { toast } from 'sonner'
 import { login } from './actions'
 import { signIn, useSession } from 'next-auth/react'
+import { cn } from '@/lib/utils'
+import OTPVerification from '@/components/OTP-Verification'
 
 type Props = {}
 
@@ -20,7 +22,9 @@ const LoginForm = (props: Props) => {
   const [phoneNo, setPhoneNo] = React.useState<Value>()
   const [pending, setPending] = React.useState(false)
   const formRef = React.useRef<HTMLFormElement>(null)
-  const session = useSession()
+  const [isOTP, setIsOTP] = React.useState(false)
+  const [isPhoneVerified, setIsPhoneVerified] = React.useState(false)
+  const [userData, setUserData] = React.useState<any>()
   const router = useRouter()
   const [state, formAction] = useFormState(login, {
     message: '',
@@ -70,64 +74,112 @@ const LoginForm = (props: Props) => {
     if (state && state.response === 'proceed') {
       signInHandler(state.data)
     }
+    if (state && state.response === 'phone-verification') {
+      toast.error(state.message, {
+        description: state.description,
+        duration: 5000,
+      })
+      setUserData(state.data)
+      setPending(false)
+      setIsOTP(true)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state])
+
+  React.useEffect(() => {
+    if (isPhoneVerified) {
+      setIsOTP(false)
+      setPending(false)
+      signInHandler(userData)
+    }
+  }, [isPhoneVerified])
+
   return (
-    <form
-      onSubmit={submitHandler}
-      className='flex flex-col items-center mt-10 space-y-10 min-w-[22rem] sm:min-w-96'
-    >
-      <div className='flex flex-col w-full space-y-2'>
-        <Label htmlFor='email' className='text-center text-sm'>
-          {t('Profile.email/phone')}
-        </Label>
-        <Input
-          type='email'
-          id='email'
-          name='identifier'
-          placeholder={t('Profile.enter_email_mobile')}
-          className='w-full'
-        />
-      </div>
-      <div className='flex flex-col w-full space-y-2'>
-        <Label htmlFor='password' className='text-center text-sm'>
-          {t('Profile.password')}
-        </Label>
-        <Input
-          type='password'
-          id='password'
-          name='password'
-          placeholder={t('Profile.enter_password')}
-          className='w-full'
-        />
-        <Input type='hidden' name='type' value={loginType} />
-        <Link
-          href='/forgot-password'
-          className='text-xs text-primary font-bold'
-        >
-          {t('Profile.forgot_password')}
-        </Link>
-      </div>
-      <Button
-        type='submit'
-        disabled={pending}
-        loading={pending}
-        className='w-full mt-5 bg-primary text-white text-sm font-bold hover:bg-primary'
+    <>
+      <form
+        onSubmit={submitHandler}
+        className={cn(
+          'flex flex-col items-center mt-10 space-y-10 min-w-[22rem] sm:min-w-96',
+          {
+            hidden: isOTP,
+          }
+        )}
       >
-        {t('Profile.login')}
-      </Button>
-      <div className='flex items-center space-x-5 rtl:space-x-auto'>
-        <p className='text-xs font-bold rtl:ml-5'>
-          {t('Profile.dont_have_account')}
-        </p>
-        <Link
-          href='/register'
-          className='text-xs text-secondary underline underline-offset-1 font-bold'
+        <div className='flex flex-col w-full space-y-2'>
+          <Label htmlFor='email' className='text-center text-sm'>
+            {t('Profile.email/phone')}
+          </Label>
+          <Input
+            type='text'
+            id='email'
+            name='identifier'
+            placeholder={t('Profile.enter_email_mobile')}
+            className='w-full'
+          />
+        </div>
+        <div className='flex flex-col w-full space-y-2'>
+          <Label htmlFor='password' className='text-center text-sm'>
+            {t('Profile.password')}
+          </Label>
+          <Input
+            type='password'
+            id='password'
+            name='password'
+            placeholder={t('Profile.enter_password')}
+            className='w-full'
+          />
+          <Input type='hidden' name='type' value={loginType} />
+          <Link
+            href='/forgot-password'
+            className='text-xs text-primary font-bold'
+          >
+            {t('Profile.forgot_password')}
+          </Link>
+        </div>
+        <Button
+          type='submit'
+          disabled={pending}
+          loading={pending}
+          className='w-full mt-5 bg-primary text-white text-sm font-bold hover:bg-primary'
         >
-          {t('Profile.signup')}
-        </Link>
+          {t('Profile.login')}
+        </Button>
+        <div className='flex items-center space-x-5 rtl:space-x-auto'>
+          <p className='text-xs font-bold rtl:ml-5'>
+            {t('Profile.dont_have_account')}
+          </p>
+          <Link
+            href='/register'
+            className='text-xs text-secondary underline underline-offset-1 font-bold'
+          >
+            {t('Profile.signup')}
+          </Link>
+        </div>
+      </form>
+      <div
+        className={cn('hidden flex-col', {
+          flex: isOTP,
+        })}
+      >
+        <OTPVerification
+          message={t('Form.phone_verification_send')}
+          label={t('Form.enter_code_below')}
+          triggerVerificationOnComplete={true}
+          className='space-y-4 [&>label]:block'
+          isVerified={setIsPhoneVerified}
+          phone={userData?.phone as Value}
+          userId={userData?.id}
+        />
+        <Button
+          type='submit'
+          disabled={pending}
+          loading={pending}
+          className='w-full mt-5 bg-primary text-white text-sm font-bold hover:bg-primary'
+        >
+          {t('General.continue')}
+        </Button>
       </div>
-    </form>
+    </>
   )
 }
 

@@ -1,8 +1,10 @@
 'use server'
-import { signIn } from '@/auth'
 import prisma from '@/lib/prisma'
 import { getTranslations } from 'next-intl/server'
 import bcrypt from 'bcryptjs'
+import { sendVerificationCode } from '@/sms'
+import { sendEmailVerificationToken } from '../verify-email/actions'
+import jwt from 'jsonwebtoken'
 
 export async function login(prevState: any, formData: FormData) {
   const t = await getTranslations()
@@ -49,13 +51,45 @@ export async function login(prevState: any, formData: FormData) {
       return { response: 'error', message: t('Profile.account_inactive') }
     }
     if (user.phoneVerified === null) {
-      return {
-        response: 'error',
-        message: t('Profile.phone_not_verified'),
-        description: t('Profile.phone_not_verified_description'),
+      const verification = await sendVerificationCode({ phone: user.phone })
+      if (verification?.response === 'error') {
+        return { response: 'error', message: t('Form.something_went_wrong') }
+      }
+      if (verification?.response === 'pending') {
+        return {
+          response: 'phone-verification',
+          message: t('Profile.phone_not_verified'),
+          description: t('Profile.phone_not_verified_description'),
+          data: {
+            id: user.id,
+            name: user.name,
+            phone: user.phone,
+            email: user.email,
+            image: user.image,
+          },
+        }
       }
     }
     if (user.emailVerified === null) {
+      let isValid = false
+      if (user.emailVerificationToken) {
+        const decoded = jwt.verify(
+          user.emailVerificationToken,
+          process.env.JWT_SECRET!,
+          function (err, decoded) {
+            if (err) {
+              return { _id: '' }
+            }
+            return decoded as { _id: string }
+          }
+        ) as unknown as { _id: string }
+
+        if (decoded?._id.toString() === user.id.toString()) {
+          isValid = true
+        }
+      }
+      !isValid &&
+        (await sendEmailVerificationToken({ id: user.id, email: user.email! }))
       return {
         response: 'error',
         message: t('Profile.email_not_verified'),

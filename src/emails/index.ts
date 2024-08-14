@@ -1,5 +1,5 @@
 'use server'
-import { Resend } from 'resend'
+import { Resend } from "resend"
 import { PasswordReset, EmailVerification } from './templates'
 import { getLocale, getTranslations } from 'next-intl/server'
 import dotenv from 'dotenv'

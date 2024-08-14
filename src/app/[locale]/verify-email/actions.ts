@@ -29,8 +29,6 @@ export async function sendEmailVerificationToken({
       }
     )
 
-    console.log('Token: ', token)
-
     const user = await prisma.user.update({
       where: {
         id: isExist.id,
@@ -39,8 +37,6 @@ export async function sendEmailVerificationToken({
         emailVerificationToken: token as string,
       },
     })
-
-    console.log('User: ', user)
 
     const url = `${process.env.APP_URL}/${locale}/verify-email/${token}`
     const sendEmailProcess = await sendEmail({

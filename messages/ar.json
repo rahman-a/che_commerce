@@ -152,6 +152,8 @@
     "send_reset_link": "إرسال رابط إعادة تعيين كلمة المرور",
     "send_reset_code": "إرسال كود إعادة تعيين كلمة المرور",
     "enter_reset_pass_code": "من فضلك, أدخل كود إعادة تعيين كلمة المرور",
+    "reset_code_sent_phone": "تم إرسال كود إعادة تعيين كلمة المرور إلى رقم هاتفك",
+    "reset_code_sent_email": "تم إرسال كود إعادة تعيين كلمة المرور إلى بريدك الإلكترونى",
     "create_account": "إنشاء حساب جديد",
     "account_inactive": "حسابك غير مفعل, يرجى التواصل مع الإدارة",
     "countries": "الدول",
@@ -268,6 +270,7 @@
     "phone_verification_code_wrong": "رمز التحقق غير صحيح, من فضلك أدخل الرمز الصحيح",
     "phone_verification_code_expired": "رمز التحقق قد يكون منتهي الصلاحية, من فضلك اطلب رمز جديد",
     "phone_verification_code_success": "تم التحقق من رقم الهاتف بنجاح",
+    "enter_code_below": "من فضلك أدخل الرمز أدناه",
     "email_verification": "التحقق من البريد الإلكتروني",
     "email_verification_send": "تم إرسال رابط التحقق إلى بريدك الإلكتروني",
     "email_verification_token_wrong": "رابط التحقق قد يكون غير صحيح او منتهي الصلاحية, من فضلك اطلب رابط جديد",
@@ -283,7 +286,8 @@
     "send_link_again": "إرسال الرابط مرة أخرى",
     "enter_valid_email": "الرجاء إدخال بريد إلكتروني صحيح",
     "reset_with": "إعادة تعيين كلمة المرور بـ",
-    "choose_country_first": "من فضلك, أختر الدولة أولاً"
+    "choose_country_first": "من فضلك, أختر الدولة أولاً",
+    "phone_code_sent_again": "تم إرسال رمز التحقق مرة أخرى"
   },
   "Demo": {
     "product_name": "عباية تطريز ذهبي",

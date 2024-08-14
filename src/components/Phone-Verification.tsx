@@ -21,12 +21,11 @@ import { DialogClose } from '@radix-ui/react-dialog'
 import { XIcon } from 'lucide-react'
 import LoadingOverlay from './Loading-Overlay'
 import { cn } from '@/lib/utils'
+import { useRouter } from 'next/navigation'
 import { PhoneInput } from './Phone-Input'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { checkVerificationCode, sendVerificationCode } from '@/sms'
-import { getLangDir } from 'rtl-detect'
 import { toast } from 'sonner'
-import { sendEmailVerificationToken } from '@/app/[locale]/verify-email/actions'
 type Props = {
   open: boolean
   setOpen: (open: boolean) => void
@@ -44,6 +43,7 @@ export default function PhoneVerification({
   const [phoneNo, setPhoneNo] = React.useState<Value>(phone)
   const [pending, setPending] = React.useState(false)
   const [isPhoneVerified, setIsPhoneVerified] = React.useState(false)
+  const router = useRouter()
   const t = useTranslations()
   const sendVerificationCodeHandler = async () => {
     setPending(true)
@@ -59,6 +59,7 @@ export default function PhoneVerification({
   }
   const checkVerificationCodeHandler = async (code: string) => {
     setPending(true)
+    console.log('phoneNo: ', phoneNo)
     const verification = await checkVerificationCode({
       phone: phoneNo,
       code,
@@ -75,6 +76,17 @@ export default function PhoneVerification({
     }
     setPending(false)
   }
+
+  React.useEffect(() => {
+    let timer: any
+    if (isPhoneVerified) {
+      timer = setTimeout(() => {
+        setOpen(false)
+        router.push('/profile')
+      }, 5000)
+    }
+    return () => clearTimeout(timer)
+  }, [isPhoneVerified])
   return (
     <Dialog open={open} onOpenChange={setOpen} defaultOpen={true}>
       <DialogContent

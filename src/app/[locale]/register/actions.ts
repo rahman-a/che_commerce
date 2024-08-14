@@ -3,6 +3,8 @@ import bcrypt from 'bcryptjs'
 import prisma from '@/lib/prisma'
 import { User } from '@/types'
 import { getTranslations } from 'next-intl/server'
+import { sendEmailVerificationToken } from '../verify-email/actions'
+import { sendVerificationCode } from '@/sms'
 
 export async function registerUser(prevState: any, data: User) {
   const t = await getTranslations()
@@ -83,10 +85,12 @@ export async function registerUser(prevState: any, data: User) {
         },
       },
     })
+    await sendVerificationCode({ phone: newUser.phone })
+    await sendEmailVerificationToken({ id: newUser.id, email: newUser.email! })
     return {
       response: 'success',
       message: t('Form.account_created'),
-      data: newUser.id,
+      data: { id: newUser.id, phone: newUser.phone },
     }
   } catch (error: any) {
     console.error(error.message)

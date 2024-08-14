@@ -7,3 +7,5 @@ export type UseTranslationsType = ReturnType<
 >
 
 export type User = z.infer<ReturnType<typeof userSchema>>
+
+export type ActionResponseType = 'OK' | 'error' | 'approved'

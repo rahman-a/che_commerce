@@ -5,20 +5,16 @@ import { useTranslations } from 'next-intl'
 import { type Value } from 'react-phone-number-input'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { PhoneInput } from '@/components/Phone-Input'
 import { cn } from '@/lib/utils'
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from '@/components/ui/input-otp'
+import OTPVerification from '@/components/OTP-Verification'
 import { ResetPasswordForm } from '@/components/Reset-Password-Form'
-import { useFormState } from 'react-dom'
 import { forgotPasswordAction } from './actions'
 import { toast } from 'sonner'
+import { getUserByPhoneNumber } from '@/actions/user'
+import { sendVerificationCode } from '@/sms'
+import LoginWith from '@/components/Login-With'
+
 type Props = {}
 
 export default function ForgotPasswordForm({}: Props) {
@@ -27,6 +23,7 @@ export default function ForgotPasswordForm({}: Props) {
   const inputRef = React.useRef<HTMLInputElement>(null)
   const [phoneNo, setPhoneNo] = React.useState<Value>()
   const [isOTP, setIsOTP] = React.useState(false)
+  const [isOTPVerified, setIsOTPVerified] = React.useState(false)
   const [isResetPass, setIsResetPass] = React.useState(false)
   const [userId, setUserId] = React.useState<string | null>()
   const [pending, setPending] = React.useState(false)
@@ -40,29 +37,44 @@ export default function ForgotPasswordForm({}: Props) {
       const data = new FormData()
       data.set('email', email)
       response = await forgotPasswordAction(state, data)
-      console.log('Response: ', response)
+    }
+    if (resetType === 'phone') {
+      response = await getUserByPhoneNumber(phoneNo!)
+      if (response?.response === 'OK') {
+        const resetCode = await sendVerificationCode({ phone: phoneNo! })
+        resetCode?.response === 'pending' && setIsOTP(true)
+      }
     }
     setState(response)
     setPending(false)
   }
 
   React.useEffect(() => {
-    if (state && state.response === 'error') {
+    if (state && state.message && state.response === 'error') {
       toast.error(state.message, {
         description: state.description || '',
       })
     }
     if (state && state.response === 'OK') {
       inputRef?.current && (inputRef.current.value = '')
-      toast.success(state.message, {
-        description: state.description || '',
-      })
+      if (state.message) {
+        toast.success(state.message, {
+          description: state.description || '',
+        })
+      }
       if (state?.data) {
-        setUserId(state.data)
+        setUserId(state.data.id)
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state])
+
+  React.useEffect(() => {
+    if (isOTPVerified) {
+      setIsOTP(false)
+      setIsResetPass(true)
+    }
+  }, [isOTPVerified])
   return (
     <div
       className={cn(
@@ -94,14 +106,16 @@ export default function ForgotPasswordForm({}: Props) {
           )}
         </div>
         {/* OTP TO RESET PASSWORD */}
-        <div
-          className={cn('hidden flex-col items-center space-y-5', {
-            flex: isOTP && !isResetPass,
-          })}
-        >
-          <Label>{t('Profile.enter_reset_pass_code')}</Label>
-          <InputOTPComponent />
-        </div>
+        <OTPVerification
+          message={t('Profile.reset_code_sent_phone')}
+          label={t('Profile.enter_reset_pass_code')}
+          className={isOTP && !isResetPass ? 'flex' : 'hidden'}
+          triggerVerificationOnComplete={true}
+          loading={setPending}
+          isVerified={setIsOTPVerified}
+          phone={phoneNo!}
+          userId={userId!}
+        />
         {/* RESET PASSWORD FORM */}
         <div className={cn('hidden', { block: isResetPass })}>
           <ResetPasswordForm id={userId!} />
@@ -126,62 +140,6 @@ export default function ForgotPasswordForm({}: Props) {
           : t('Profile.send_reset_code')}
       </Button>
       <ResetPasswordFooter />
-    </div>
-  )
-}
-
-type LoginWithProps = {
-  resetType: string
-  setResetType: React.Dispatch<React.SetStateAction<string>>
-  className?: string
-}
-
-function LoginWith({ resetType, setResetType, className }: LoginWithProps) {
-  const t = useTranslations()
-  return (
-    <div className={cn('flex flex-col space-y-4 my-2', className)}>
-      <Label>{t('Form.reset_with')}</Label>
-      <RadioGroup
-        defaultValue={resetType}
-        onValueChange={setResetType}
-        className='flex rtl:flex-row-reverse items-center space-x-2'
-      >
-        <div
-          className='flex rtl:flex-row-reverse items-center space-x-2 
-              rtl:space-x-reverse cursor-pointer'
-        >
-          <RadioGroupItem value='email' id='r1' />
-          <Label htmlFor='r1'>{t('Profile.email')}</Label>
-        </div>
-        <div
-          className='flex rtl:flex-row-reverse items-center space-x-2 
-              rtl:space-x-reverse cursor-pointer'
-        >
-          <RadioGroupItem value='phone' id='r2' />
-          <Label htmlFor='r2'>{t('Profile.phone')}</Label>
-        </div>
-      </RadioGroup>
-    </div>
-  )
-}
-
-function InputOTPComponent() {
-  const t = useTranslations()
-  return (
-    <div className='w-full flex justify-center' style={{ direction: 'ltr' }}>
-      <InputOTP maxLength={6}>
-        <InputOTPGroup>
-          <InputOTPSlot index={0} />
-          <InputOTPSlot index={1} />
-          <InputOTPSlot index={2} />
-        </InputOTPGroup>
-        <InputOTPSeparator />
-        <InputOTPGroup>
-          <InputOTPSlot index={3} />
-          <InputOTPSlot index={4} />
-          <InputOTPSlot index={5} />
-        </InputOTPGroup>
-      </InputOTP>
     </div>
   )
 }

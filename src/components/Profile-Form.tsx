@@ -13,7 +13,6 @@ import { Button } from './ui/button'
 import { type Value } from 'react-phone-number-input'
 import { registerUser } from '@/app/[locale]/register/actions'
 import { toast } from 'sonner'
-import { useRouter } from 'next/navigation'
 import Title from './Title'
 import PhoneVerification from './Phone-Verification'
 import { getLangDir } from 'rtl-detect'
@@ -27,14 +26,14 @@ export default function ProfileForm({ data }: Props) {
   const formRef = React.useRef<HTMLFormElement>(null)
   const [pending, setPending] = React.useState(false)
   const [userId, setUserId] = React.useState('')
+  const [phone, setPhone] = React.useState('')
   const [phoneVerificationProcess, setPhoneVerificationProcess] =
     React.useState(false)
-  const router = useRouter()
   const locale = useLocale()
   const [state, formAction] = useFormState(registerUser, {
     message: '',
     response: '',
-    data: '',
+    data: { id: '', phone: '' },
   })
   const form = useForm({
     resolver: zodResolver(userSchema(t)),
@@ -72,19 +71,25 @@ export default function ProfileForm({ data }: Props) {
       setPending(false)
       formRef.current?.reset()
       toast.success(state.message)
-      setUserId(state.data!)
+      if (typeof state.data === 'object') {
+        console.log('state.data: ', state.data)
+        setUserId(state.data?.id!)
+        setPhone(state.data.phone)
+      }
       setPhoneVerificationProcess(true)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state])
   return (
     <Form {...form}>
-      <PhoneVerification
-        open={phoneVerificationProcess}
-        setOpen={setPhoneVerificationProcess}
-        phone={form.getValues('phone')}
-        userId={userId}
-      />
+      {phoneVerificationProcess && (
+        <PhoneVerification
+          open={phoneVerificationProcess}
+          setOpen={setPhoneVerificationProcess}
+          phone={phone! as Value}
+          userId={userId!}
+        />
+      )}
       <form onSubmit={submitHandler} ref={formRef}>
         <section className='flex items-center flex-wrap space-y-6 justify-between'>
           <ProfileInfo />

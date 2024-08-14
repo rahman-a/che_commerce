@@ -33,6 +33,7 @@ export async function sendVerificationCode({ phone }: SendVerification) {
     return { response: verification.status }
   } catch (error: any) {
     if (error) {
+      console.log('Error: ', error)
       console.log('Send Error: ', error.message)
       return { response: 'error', message: error.message }
     }
@@ -63,8 +64,6 @@ export async function checkVerificationCode({
           phoneVerified: new Date(),
         },
       })
-      user &&
-        (await sendEmailVerificationToken({ email: user.email!, id: user.id }))
     }
     console.log('Check Status: ', verificationCheck.status)
     return { response: verificationCheck.status }
@@ -75,6 +74,3 @@ export async function checkVerificationCode({
     }
   }
 }
-
-// sendVerificationCode({ phone: '+201117490786' })
-// checkVerificationCode({ phone: '+201117490786', code: '268416' })
